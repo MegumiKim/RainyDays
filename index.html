@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My first website</title>
-  </head>
-  <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my first website.</p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Find a perfect jacket for your next adventure at RAINY DAYS">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <script src="https://kit.fontawesome.com/175ecb4e25.js" crossorigin="anonymous"></script>
+  <title>RAINY DAYS | Home</title>
+</head>
+<body>
+  <header>
+    <a href='index.html' class='logo'>
+      <img src='./images/logo.png' class='logo_img' alt='Rainydays_logo'>
+    </a>
+    <label for="hamburger-menu" id=hamburger-icon><i class="fas fa-bars"></i></label>
+    <input type="checkbox" id="hamburger-menu">
+    <nav>
+      <a href="products.html">WOMEN</a>
+      <a href="products.html">MEN</a>
+      <a href="products.html">ARRIVALS</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <div class="header-right">
+      <div class="search_container">
+        <label id="search_icon" class="fas fa-search"></label>
+        <input type="text" id="search">
+        <div class="popular-searches">
+          <p>Popular searches:</p>
+          <p>New arrivals</p>
+          <p>super comfy jacket</p>
+        </div>
+      </div>
+      <label for="log-in"><i class="fas fa-user-circle"></i>
+        <a href='log-in.html' id='log-in'></a>
+      </label>
+      <label for="my_bag"><i class="fas fa-shopping-bag"></i>
+        <a href='my_bag.html' id='my_bag'></a>
+      </label>
+    </div>
+
+  </header>
+  <main>
+    <section class='welcome'>
+      <div class="welcome-container">
+        <div class="welcome_h1-h2">
+          <h1>Pushing the comfort zone</h1>
+          <h2>Find a perfect jacket for your next adventure</h2>
+        </div>
+        <a href="products.html" class='cta cta-welcome'>choose a jacket</a>
+      </div>
+    </section>
+    <section class='featured_categories'>
+      <h2>Featured Categories</h2>
+      <div class="featured_grid">
+          <div class="category women">
+            <a href="products.html" class='categories_button'>WOMEN</a>
+          </div>
+        <div class="category men">
+          <a href="products.html" class='categories_button'>MEN</a>
+        </div>
+        <div class="category new_arrivals">
+          <a href="products.html" class='categories_button'>NEW ARRIVALS</a>
+        </div>
+        <div class="category hiking">
+          <a href="products.html" class='categories_button'>HIKING</a>
+        </div>
+        <div class="category winter">
+          <a href="products.html" class='categories_button'>WINTER</a>
+        </div>
+        <div class="category spring">
+          <a href="products.html" class='categories_button'>SPRING</a>
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <footer>
+    <div class="copyright">Copyright &copy;</div>
+    <div class="social-media">
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
+  </footer>
+</body>
 </html>

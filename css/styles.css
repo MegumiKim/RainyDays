@@ -1,0 +1,305 @@
+body {
+  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
+  margin: 0px;
+  color: #323440;
+  font-size: 16px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* CTA button */
+.cta {
+  text-decoration: none;
+  background-color: #f2b441;
+  color: #323440;
+  padding: 10px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.cta:hover {
+  background-color: #096194;
+  color: #fff;
+}
+
+/* header, footer */
+header,
+footer {
+  background: #323440;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  /* position:relative; */
+  justify-content: center;
+  min-height: 50px;
+}
+
+footer {
+  padding: 10px;
+  margin-top: 5%;
+  bottom: 0px;
+}
+
+.header-right {
+  border: solid lightgreen 2px;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  right: 10px;
+}
+
+.header-right > * {
+  padding: 5px;
+}
+
+nav,
+#search,
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+#hamburger-icon {
+  order: -1;
+  position: absolute;
+  left: 5%;
+}
+
+nav {
+  flex-direction: column;
+  top: 42px;
+  left: 0px;
+  background-color: #323440;
+  z-index: 100;
+}
+
+nav a {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  /* flex: 1; */
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+.logo {
+  max-width: 100px;
+  /* margin: 10px 5px 5px 20px; */
+  /* flex:0 1 auto; */
+  /* position: absolute;
+  left: 50%;
+  transform: transformX(-50%); */
+}
+
+.logo_img {
+  max-width: 100%;
+  margin: 0px;
+}
+
+.popular-searches {
+  display: none;
+}
+
+#search:hover ~ .popular-searches {
+  display: block;
+  position: absolute;
+  top: 45px;
+  background-color: #323440;
+  color: #fff;
+  z-index: 99;
+  padding: 10px 20px 10px 10px;
+}
+
+.social-media {
+  position: absolute;
+  right: 10%;
+}
+
+/* welcome */
+
+.welcome {
+  min-height: 70vh;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-image: url("../images/home/mountain-g0229c8fed_1920.jpg");
+  background-position-y: 30%;
+  background-position-x: right;
+  background-size: cover;
+}
+
+.welcome-container {
+  position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0% 10%;
+}
+
+.welcome h1 {
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+.welcome_h1-h2 {
+  max-width: 100%;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+  top: 70px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.cta-welcome {
+  position: absolute;
+  top: 60%;
+}
+
+/* featured categories */
+
+.featured_categories {
+  margin: auto;
+  border: solid tomato 2px;
+  padding-bottom: 50%;
+}
+
+.featured_grid {
+  /* max-height: 100%; */
+  display: grid;
+  border: #f2b441 solid 2px;
+  grid-template-columns: 1;
+  gap: 3%;
+  margin: 10px 10%;
+}
+
+.featured_categories h2 {
+  margin-left: 10%;
+}
+
+.categories_button {
+  width: 100%;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: #202129;
+  font-weight: bold;
+  display: block;
+  background-color: #fff;
+  opacity: 70%;
+  position: relative;
+  top: 65%;
+  text-align: center;
+  padding: 10px;
+}
+
+.categories_button:hover {
+  opacity: 90%;
+  font-size: 1.5em;
+}
+
+.category {
+  min-height: 200px;
+  background-size: 100%;
+}
+
+.women {
+  background-image: url("../images/home/women.jpg");
+  background-position-y: 60%;
+}
+
+.men {
+  background-image: url("../images/home/men.jpg");
+  background-position-y: 35%;
+}
+
+.new_arrivals {
+  background-image: url("../images/home/arrivals.jpg");
+  background-position-y: 10%;
+}
+
+.hiking {
+  background-image: url("../images/home/hiking.jpg");
+  background-position-y: 20%;
+}
+
+.winter {
+  background-image: url("../images/home/winter.jpg");
+  background-position-y: 40%;
+}
+
+.spring {
+  background-image: url("../images/home/spring.jpg");
+  background-position-y: 20%;
+}
+
+@media (min-width: 550px) {
+  .featured_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .logo {
+    position: absolute;
+    left: 5%;
+  }
+
+  nav {
+    position: absolute;
+    left: 15%;
+    top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: solid pink 2px;
+  }
+
+  /* nav a {
+    display: inline-block;
+  } */
+
+  #hamburger-icon {
+    display: none;
+  }
+
+  #search {
+    display: inline-block;
+  }
+
+  #search_icon {
+    position: absolute;
+    right: 10%;
+    color: #323440;
+  }
+
+  .search_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+
+  .cta-welcome {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+  }
+
+  .welcome h1 {
+    font-size: 3em;
+  }
+
+  .featured_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
