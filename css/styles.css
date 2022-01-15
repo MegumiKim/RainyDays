@@ -42,12 +42,13 @@ footer {
 }
 
 .header-right {
-  border: solid lightgreen 2px;
+  /* border: solid lightgreen 2px; */
   display: flex;
   justify-content: space-between;
   position: absolute;
-  right: 10px;
-  gap: 5px;
+  align-items: center;
+  right: 8%;
+  gap: 15px;
 }
 
 nav,
@@ -61,7 +62,7 @@ nav,
   position: absolute;
   top: 42px;
   left: 0px;
-  padding: 5px;
+  /* padding: 5px; */
   background-color: #323440;
   z-index: 100;
 }
@@ -69,7 +70,7 @@ nav,
 #hamburger-icon {
   order: -1;
   position: absolute;
-  left: 5%;
+  left: 10%;
 }
 
 nav a {
@@ -114,8 +115,17 @@ nav a:hover {
   padding-top: 0%;
 }
 .social-media {
+  display: flex;
   position: absolute;
+  min-width: 80px;
   right: 10%;
+  /* border: antiquewhite solid 2px; */
+}
+
+.social-media > * {
+  max-width: 100%;
+  min-height: 100%;
+  flex: 1;
 }
 
 /* welcome */
@@ -163,15 +173,15 @@ nav a:hover {
 .cta-welcome {
   position: absolute;
   top: 60%;
-  padding: 10px 80px;
+  padding: 10px 60px;
 }
 
 /* featured categories */
 
 .featured_categories {
   margin: auto;
-  border: solid tomato 2px;
-  overflow-y: auto;
+  /* border: solid tomato 2px; */
+  /* overflow-y: auto; */
 }
 
 .featured_grid {
@@ -251,7 +261,6 @@ nav a:hover {
 
   .header-right {
     right: 10%;
-    gap: 10%;
   }
 }
 
@@ -268,7 +277,8 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    border: solid pink 2px;
+    align-items: center;
+    /* border: solid pink 2px; */
   }
 
   /* nav a {
@@ -297,7 +307,7 @@ nav a:hover {
 
   .cta-welcome {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 10%;
   }
 
