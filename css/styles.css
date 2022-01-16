@@ -133,7 +133,7 @@ nav a:hover {
 /* welcome */
 
 .welcome {
-  min-height: 500px;
+  min-height: 450px;
   background-repeat: no-repeat;
   background-image: url("../images/home/home.jpg");
   background-position-y: 10%;
@@ -149,7 +149,7 @@ nav a:hover {
 .welcome h1 {
   font-size: 2em;
   font-family: "Baloo 2";
-  margin-top: 0px;
+  margin: 5px auto;
 }
 
 .welcome h2 {
@@ -164,7 +164,7 @@ nav a:hover {
   flex-wrap: wrap;
   flex-direction: column;
   position: absolute;
-  top: 25%;
+  top: 30%;
   margin: auto 10%;
   color: #fff;
   text-transform: capitalize;
@@ -173,7 +173,7 @@ nav a:hover {
 .cta-welcome {
   font-size: 1.1em;
   position: relative;
-  top: 100px;
+  top: 120px;
   margin-top: 20px;
   padding: 10px 60px;
 }
