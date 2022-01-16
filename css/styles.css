@@ -32,7 +32,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 50px;
+  min-height: 70px;
 }
 
 footer {
@@ -135,7 +135,7 @@ nav a:hover {
   min-height: 70vh;
   background-repeat: no-repeat;
   background-image: url("../images/home/home.jpg");
-  background-position-y: 30%;
+  background-position-y: 10%;
   background-position-x: right;
   background-size: cover;
 }
@@ -166,7 +166,7 @@ nav a:hover {
   flex-wrap: wrap;
   flex-direction: column;
   position: absolute;
-  top: 20%;
+  top: 25%;
   margin: 20px;
   color: #fff;
   text-transform: capitalize;
@@ -181,7 +181,7 @@ nav a:hover {
 /* featured categories */
 
 .featured_categories {
-  margin: auto;
+  margin: 5% 15%;
   padding-bottom: 20px;
   /* border: solid tomato 2px; */
   /* overflow-y: auto; */
@@ -192,14 +192,15 @@ nav a:hover {
   display: grid;
   /* border: #f2b441 solid 2px; */
   grid-template-columns: 1;
+  grid-template-rows: auto;
   gap: 3%;
-  margin: auto 15%;
+  /* margin: auto 15%; */
   overflow-y: auto;
 }
 
-.featured_categories h2 {
-  margin-left: 10%;
-}
+/* .featured_categories h2 {
+  /* margin-left: 10%; 
+}*/
 
 .categories_button {
   width: 100%;
@@ -312,10 +313,10 @@ nav a:hover {
     align-items: center;
   }
 
-  .cta-welcome {
+  /* .cta-welcome {
     position: absolute;
-    top: 45%;
-  }
+    top: 60%;
+  } */
 
   .welcome h1 {
     font-size: 3em;
