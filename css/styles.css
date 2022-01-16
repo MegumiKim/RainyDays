@@ -111,9 +111,11 @@ nav a:hover {
 }
 
 .search-ex {
+  text-align: right;
   font: size 0.8em;
   padding-top: 0%;
 }
+
 .social-media {
   display: flex;
   position: absolute;
@@ -137,7 +139,6 @@ nav a:hover {
   background-position-y: 10%;
   background-position-x: right;
   background-size: cover;
-  position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,13 +158,13 @@ nav a:hover {
   font-family: "Jost", Verdana, Geneva, Tahoma, sans-serif;
 }
 .welcome_h1-h2 {
+  /* border: #f2b441 1px solid; */
   max-width: 100%;
   text-align: center;
   flex-wrap: wrap;
   flex-direction: column;
   position: absolute;
   top: 25%;
-  left: auto;
   margin: auto 10%;
   color: #fff;
   text-transform: capitalize;
@@ -209,6 +210,7 @@ nav a:hover {
   top: 65%;
   text-align: center;
   padding: 10px;
+  font-family: "baloo 2";
 }
 
 .categories_button:hover {
