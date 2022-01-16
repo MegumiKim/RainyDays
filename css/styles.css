@@ -194,7 +194,6 @@ nav a:hover {
   grid-template-columns: 1;
   grid-template-rows: auto;
   gap: 3%;
-  /* margin: auto 15%; */
   overflow-y: auto;
 }
 
@@ -271,6 +270,7 @@ nav a:hover {
 
 .welcome {
   min-height: 70vh;
+  background-position-y: 30%;
 }
 @media (min-width: 900px) {
   .logo {
