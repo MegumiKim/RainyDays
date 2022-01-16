@@ -164,7 +164,7 @@ nav a:hover {
   flex-wrap: wrap;
   flex-direction: column;
   position: absolute;
-  left: 0%;
+  /* left: 0%; */
   top: 120px;
   margin: auto 10%;
   color: #fff;
@@ -315,10 +315,16 @@ nav a:hover {
     align-items: center;
   }
 
+  .welcome_h1-h2 {
+    top: 200px;
+  }
   .welcome h1 {
     font-size: 3em;
   }
 
+  .cta-welcome {
+    top: 30px;
+  }
   .featured_grid {
     grid-template-columns: repeat(3, 1fr);
   }
