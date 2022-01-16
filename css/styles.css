@@ -1,5 +1,5 @@
 body {
-  font-family: "Josefin Sans", "Courier New", Courier, monospace, sans-serif;
+  font-family: "Jost", "Courier New", Courier, monospace, sans-serif;
   margin: 0px;
   color: #323440;
   font-size: 16px;
@@ -81,11 +81,11 @@ nav a {
 }
 
 nav a:hover {
-  font-weight: bold;
+  color: #f2b441;
 }
 
 .logo {
-  max-width: 100px;
+  max-width: 120px;
   margin-top: 3px;
 }
 
@@ -97,7 +97,7 @@ nav a:hover {
   display: none;
 }
 
-#search:active ~ .popular-searches {
+#search:hover ~ .popular-searches {
   display: block;
   position: absolute;
   top: 45px;
@@ -181,8 +181,8 @@ nav a:hover {
 /* featured categories */
 
 .featured_categories {
-  margin: 5% 15%;
-  padding-bottom: 20px;
+  margin: 0 15%;
+  /* padding-bottom: 20px; */
   /* border: solid tomato 2px; */
   /* overflow-y: auto; */
 }
@@ -197,10 +197,6 @@ nav a:hover {
   /* margin: auto 15%; */
   overflow-y: auto;
 }
-
-/* .featured_categories h2 {
-  /* margin-left: 10%; 
-}*/
 
 .categories_button {
   width: 100%;
@@ -233,12 +229,12 @@ nav a:hover {
 
 .women {
   background-image: url("../images/home/women.jpg");
-  background-position-y: 60%;
+  background-position-y: 55%;
 }
 
 .men {
   background-image: url("../images/home/men.jpg");
-  background-position-y: 35%;
+  background-position-y: 30%;
 }
 
 .new_arrivals {
@@ -265,6 +261,7 @@ nav a:hover {
   .featured_grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    gap: 20px;
   }
 
   .header-right {
@@ -286,7 +283,7 @@ nav a:hover {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    /* border: solid pink 2px; */
+    margin-left: 15px;
   }
 
   /* nav a {
@@ -299,11 +296,12 @@ nav a:hover {
 
   #search {
     display: inline-block;
+    padding: 5px;
   }
 
   #search_icon {
     position: absolute;
-    right: 10%;
+    right: 5%;
     color: #323440;
   }
 
@@ -312,11 +310,6 @@ nav a:hover {
     position: relative;
     align-items: center;
   }
-
-  /* .cta-welcome {
-    position: absolute;
-    top: 60%;
-  } */
 
   .welcome h1 {
     font-size: 3em;
