@@ -164,6 +164,7 @@ nav a:hover {
   flex-wrap: wrap;
   flex-direction: column;
   position: absolute;
+  left: 0%;
   top: 30%;
   margin: auto 10%;
   color: #fff;
