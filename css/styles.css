@@ -171,8 +171,8 @@ nav a:hover {
 
 .cta-welcome {
   font-size: 1.1em;
-  position: absolute;
-  top: 45%;
+  position: relative;
+  top: 100px;
   margin-top: 20px;
   padding: 10px 60px;
 }
