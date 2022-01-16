@@ -1,5 +1,5 @@
 body {
-  font-family: "Jost", "Courier New", Courier, monospace, sans-serif;
+  font-family: "Jost", "baloo 2", Verdana, Geneva, Tahoma, sans-serif;
   margin: 0px;
   color: #323440;
   font-size: 16px;
@@ -36,8 +36,7 @@ footer {
 }
 
 footer {
-  padding: 10px;
-  margin-top: 5%;
+  margin-top: 20px;
   bottom: 0px;
 }
 
@@ -138,27 +137,24 @@ nav a:hover {
   background-position-y: 10%;
   background-position-x: right;
   background-size: cover;
-}
-
-.welcome-container {
   position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 0% 10%;
 }
 
 .welcome h1 {
-  font-family: "Baloo 2", cursive, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 2em;
+  font-family: "Baloo 2";
   margin-top: 0px;
 }
 
 .welcome h2 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: normal;
+  font-family: "Jost", Verdana, Geneva, Tahoma, sans-serif;
 }
 .welcome_h1-h2 {
   max-width: 100%;
@@ -168,17 +164,17 @@ nav a:hover {
   position: absolute;
   top: 25%;
   left: auto;
-  margin: 20px;
+  margin: auto 20%;
   color: #fff;
   text-transform: capitalize;
 }
 
 .cta-welcome {
+  font-size: 1.1em;
   position: absolute;
   top: 60%;
   margin-top: 20px;
   padding: 10px 60px;
-  font-weight: bold;
 }
 
 /* featured categories */
@@ -203,10 +199,9 @@ nav a:hover {
 
 .categories_button {
   width: 100%;
-  font-size: 1em;
+  font-size: 1.2em;
   text-decoration: none;
   color: #202129;
-  font-weight: bold;
   display: block;
   background-color: #fff;
   opacity: 80%;
