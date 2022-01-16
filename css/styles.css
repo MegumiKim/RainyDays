@@ -131,7 +131,7 @@ nav a:hover {
 /* welcome */
 
 .welcome {
-  min-height: 70vh;
+  min-height: 500px;
   background-repeat: no-repeat;
   background-image: url("../images/home/home.jpg");
   background-position-y: 10%;
@@ -164,7 +164,7 @@ nav a:hover {
   position: absolute;
   top: 25%;
   left: auto;
-  margin: auto 20%;
+  margin: auto 10%;
   color: #fff;
   text-transform: capitalize;
 }
@@ -172,7 +172,7 @@ nav a:hover {
 .cta-welcome {
   font-size: 1.1em;
   position: absolute;
-  top: 60%;
+  top: 45%;
   margin-top: 20px;
   padding: 10px 60px;
 }
@@ -267,6 +267,9 @@ nav a:hover {
   }
 }
 
+.welcome {
+  min-height: 70vh;
+}
 @media (min-width: 900px) {
   .logo {
     position: absolute;
