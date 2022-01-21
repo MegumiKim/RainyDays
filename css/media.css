@@ -8,23 +8,40 @@
   .header-right {
     right: 10%;
   }
+
+  .welcome {
+    min-height: 60vh;
+    background-position-y: 30%;
+  }
+
+  .welcome_h1-h2 {
+    top: 200px;
+  }
+
+  /* Products Page */
+
+  .products_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* specific page */
+
+  .specific_page {
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
+  }
+
+  /* .spec_section {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0;
+    margin: 10px auto;
+  } */
+
+  .breadcrumb {
+    grid-column: -1/1;
+  }
 }
-
-.welcome {
-  min-height: 70vh;
-  background-position-y: 30%;
-}
-
-.welcome_h1-h2 {
-  top: 200px;
-}
-
-/* Products Page */
-
-.products_grid {
-  grid-template-columns: repeat(2, 1fr);
-}
-
 @media (min-width: 900px) {
   .logo {
     position: absolute;

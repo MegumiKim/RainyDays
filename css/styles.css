@@ -1,16 +1,15 @@
 body {
   font: 16px var(--font_p);
-  margin: 0;
+  margin: 0 auto;
   color: var(--color_header);
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  margin: 0 auto;
 }
 
 /* main {
-  /* max-width: 1000px; */
-/* margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 } */
 
 .breadcrumb {
@@ -21,6 +20,7 @@ body {
   color: grey;
 }
 
+h1,
 h3 {
   text-transform: uppercase;
 }
