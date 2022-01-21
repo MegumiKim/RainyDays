@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Find a perfect jacket for your next adventure at RAINY DAYS">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./CSS/styles.css">
+  <link rel="stylesheet" href="./CSS/variables.css">
+  <link rel="stylesheet" href="./CSS/products.css">
+  <link rel="stylesheet" href="./CSS/media.css">
+  <script src="https://kit.fontawesome.com/175ecb4e25.js" crossorigin="anonymous"></script>
+  <title>RAINY DAYS | Home</title>
+</head>
+<body>
+  <header>
+    <a href='index.html' class='logo'>
+      <img src='./images/logo.png' class='logo_img' alt='Rainydays_logo'>
+    </a>
+    <input type="checkbox" id="hamburger-menu">
+    <label for="hamburger-menu" id=hamburger-icon><i class="fas fa-bars"></i></label>
+    <nav>
+      <a href="products.html">WOMEN</a>
+      <a href="products.html">MEN</a>
+      <a href="products.html" class='current_page'>ARRIVALS</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+    <div class="header-right">
+      <div class="search_container">
+        <label for='search' id="search_icon" class="fas fa-search"></label>
+        <input type="text" id="search">
+        <div class="popular-searches">
+          <p id='search-title'>Popular searches:</p>
+          <p class='search-ex'>New arrivals</p>
+          <p class='search-ex'>super comfy jacket</p>
+        </div>
+      </div>
+      <label for="log-in"><i class="fas fa-user-circle"></i>
+        <a href='log-in.html' id='log-in'></a>
+      </label>
+      <label for="my_bag"><i class="fas fa-shopping-bag"></i>
+        <a href='my_bag.html' id='my_bag'></a>
+      </label>
+    </div>
+  </header>
+      <section class="breadcrumb">
+        <a href="index.html"><i class="fas fa-chevron-left"></i></a>
+        <a href="index.html">HOME /</a>
+        <a href="products.html">NEW ARRIVALS</a>
+      </section>
+      <section class="featured_products">
+        <h2>NEW ARRIVALS</h2>
+        <div class="products_grid">
+          <div class="product">
+              <div class="product_image">
+                <img
+                  src="images/products/model_1.jpg"
+                  alt="a woman in yellow super comfy jacket with mountain background"
+                />
+              </div>
+            <div class="product_descript">
+              <a href="product_specific.html" class="product_name">Super comfy jacket </a>
+              <button class="heart"><i class="far fa-heart"></i></button>
+              <p class="price">NOK 899</p>
+              <p class="seasons">All seasons</p>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="images/products/model_2.jpg"
+              alt="a woman in yellow super comfy jacket with mountain background"
+            />
+            <div class="product_descript">
+              <p class="product_name">Super comfy jacket</p>
+              <button class="heart"><i class="far fa-heart"></i></button>
+              <p class="price">NOK 899</p>
+              <p class="seasons">All seasons</p>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="images/products/model_3.jpg"
+              alt="a woman in yellow super comfy jacket with mountain background"
+            />
+            <div class="product_descript">
+              <p>Super comfy jacket</p>
+              <p class="price">NOK 899</p>
+              <p class="seasons">All seasons</p>
+            </div>
+          </div>
+          <div class="product">
+            <img
+              src="images/products/model_4.jpg"
+              alt="a woman in yellow super comfy jacket with mountain background"
+            />
+            <div class="product_descript">
+              <p>Super comfy jacket</p>
+              <p class="price">NOK 899</p>
+              <p class="seasons">All seasons</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="more_products"></section>
+    </main>
+    <footer>
+      <div class="copyright">Copyright &copy;</div>
+      <div class="social-media">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </footer>
+  </body>
+</html>

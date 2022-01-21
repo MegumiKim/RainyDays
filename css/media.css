@@ -1,0 +1,80 @@
+@media (min-width: 550px) {
+  .featured_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .header-right {
+    right: 10%;
+  }
+}
+
+.welcome {
+  min-height: 70vh;
+  background-position-y: 30%;
+}
+
+.welcome_h1-h2 {
+  top: 200px;
+}
+
+/* Products Page */
+
+.products_grid {
+  grid-template-columns: 2;
+}
+
+@media (min-width: 900px) {
+  .logo {
+    position: absolute;
+    left: 5%;
+  }
+
+  nav {
+    position: absolute;
+    left: 15%;
+    top: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 15px;
+  }
+
+  #hamburger-icon {
+    display: none;
+  }
+
+  #search {
+    display: inline-block;
+    padding: 5px;
+  }
+
+  #search_icon {
+    position: absolute;
+    right: 5%;
+    color: var(--color_header);
+  }
+
+  .search_container {
+    display: flex;
+    position: relative;
+    align-items: center;
+  }
+
+  .welcome h1 {
+    font-size: 3.2em;
+  }
+  .welcome h2 {
+    font-size: 1.8em;
+    font-weight: normal;
+  }
+
+  .cta-welcome {
+    top: 380px;
+  }
+  .featured_grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

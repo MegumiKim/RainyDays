@@ -1,0 +1,106 @@
+/* welcome */
+
+.welcome {
+  background: url("../images/home/home.jpg") no-repeat center/cover;
+  background-position-y: 10%;
+  background-position-x: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.welcome h1 {
+  font: 2.3em var(--font_h1);
+  margin: 5px auto;
+}
+
+.welcome h2 {
+  font: bold 1.3em var(--font_p);
+}
+
+.welcome_h1-h2 {
+  /* border: #f2b441 1px solid; */
+  max-width: 100%;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute;
+  top: 120px;
+  margin: auto 10%;
+  color: var(--color_white);
+  text-transform: capitalize;
+}
+
+.cta-welcome {
+  font-size: 1.1em;
+  position: absolute;
+  top: 450px;
+  padding: 10px 60px;
+}
+
+/* featured categories */
+
+.featured_categories {
+  margin: 0 15%;
+}
+
+.featured_grid {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: auto;
+}
+
+.categories_button {
+  text-decoration: none;
+  color: var(--color_header);
+  display: block;
+  background-color: var(--color_white);
+  opacity: 80%;
+  position: relative;
+  top: 65%;
+  text-align: center;
+  font: 1.2em var(--font_h1);
+}
+
+.categories_button:hover {
+  opacity: 90%;
+  font-size: 1.5em;
+}
+
+.category {
+  min-height: 200px;
+  background-size: 100%;
+  margin-bottom: 20px;
+}
+
+.women {
+  background-image: url("../images/home/women.jpg");
+  background-position-y: 55%;
+}
+
+.men {
+  background-image: url("../images/home/men.jpg");
+  background-position-y: 30%;
+}
+
+.new_arrivals {
+  background-image: url("../images/home/arrivals.jpg");
+  background-position-y: 10%;
+}
+
+.hiking {
+  background-image: url("../images/home/hiking.jpg");
+  background-position-y: 20%;
+}
+
+.winter {
+  background-image: url("../images/home/winter.jpg");
+  background-position-y: 40%;
+}
+
+.spring {
+  background-image: url("../images/home/spring.jpg");
+  background-position-y: 20%;
+}

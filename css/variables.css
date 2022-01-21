@@ -1,0 +1,8 @@
+:root {
+  --color_header: #323440;
+  --color_white: #fff;
+  --color_yellow: #f2b441;
+  --font_h1: "baloo 2";
+  --font_p: "Jost", "baloo 2", Verdana, Geneva, Tahoma, sans-serif;
+  --check_border: solid 2px tomato;
+}

@@ -1,0 +1,81 @@
+@import "../CSS/styles.css";
+
+.breadcrumb {
+  padding: 20px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: grey;
+}
+
+.featured_products {
+  margin: 0 5%;
+}
+
+.products_grid {
+  display: grid;
+  grid-template-columns: 1;
+  gap: 20px;
+  border: var(--check_border);
+  margin: 0 40px;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  /* max-height: 300px; */
+  margin-top: 20px;
+}
+
+.product_image {
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.product_image img {
+  max-width: 100%;
+}
+.product_descript {
+  position: relative;
+  border: grey solid 1px;
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 80px;
+}
+
+.product_name {
+  font-size: 1.2em;
+  text-decoration: none;
+  color: var(--color_header);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.heart {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  border: none;
+  background: var(--color_white);
+}
+
+.heart:active {
+  color: salmon;
+}
+
+.price {
+  position: absolute;
+  left: 10px;
+  top: 35px;
+}
+
+.seasons {
+  position: absolute;
+  left: 100px;
+  top: 35px;
+}
