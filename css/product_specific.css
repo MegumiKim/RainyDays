@@ -1,0 +1,34 @@
+main {
+  display: grid;
+  grid-template-columns: 1;
+  margin: 0 10%;
+}
+
+.specs {
+  border: var(--check_border);
+  margin: 0 auto;
+  background: darkgrey;
+  display: grid;
+  grid-template-columns: 1;
+  justify-items: center;
+}
+
+.product_img {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.cta {
+  margin: 20px auto;
+}
+
+.specs_main {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+li {
+  display: inline-block;
+  margin: 0 20px;
+}

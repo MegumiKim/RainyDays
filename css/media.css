@@ -22,7 +22,7 @@
 /* Products Page */
 
 .products_grid {
-  grid-template-columns: 2;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 @media (min-width: 900px) {
@@ -76,5 +76,9 @@
   }
   .featured_grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .products_grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

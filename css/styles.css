@@ -1,10 +1,24 @@
 body {
   font: 16px var(--font_p);
-  margin: 0px;
+  margin: 0;
   color: var(--color_header);
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  margin: 0 auto;
+}
+
+/* main {
+  /* max-width: 1000px; */
+/* margin: 0 auto;
+} */
+
+.breadcrumb {
+  padding: 20px 0;
+}
+.breadcrumb a {
+  text-decoration: none;
+  color: grey;
 }
 
 h3 {
@@ -12,8 +26,8 @@ h3 {
 }
 
 /* images */
-.img {
-  max-width: 100%;
+img {
+  width: 100%;
 }
 
 /* CTA button */
@@ -45,7 +59,6 @@ footer {
 
 footer {
   margin-top: 20px;
-  /* bottom: 0px; */
 }
 
 .header-right {
@@ -91,8 +104,7 @@ nav a:hover {
   color: var(--color_yellow);
 }
 
-.logo img {
-  background: chocolate;
+.logo {
   max-width: 120px;
   margin-top: 3px;
 }

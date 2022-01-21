@@ -1,16 +1,11 @@
 @import "../CSS/styles.css";
 
-.breadcrumb {
-  padding: 20px;
+.main {
+  max-width: 1000px;
+  padding: 10%;
 }
-
-.breadcrumb a {
-  text-decoration: none;
-  color: grey;
-}
-
 .featured_products {
-  margin: 0 5%;
+  margin: 0 10%;
 }
 
 .products_grid {
@@ -18,7 +13,6 @@
   grid-template-columns: 1;
   gap: 20px;
   border: var(--check_border);
-  margin: 0 40px;
   justify-content: center;
 }
 
@@ -35,9 +29,6 @@
   overflow: hidden;
 }
 
-.product_image img {
-  max-width: 100%;
-}
 .product_descript {
   position: relative;
   border: grey solid 1px;
