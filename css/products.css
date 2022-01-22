@@ -1,14 +1,10 @@
-@import "../CSS/styles.css";
+/* @import "../CSS/styles.css"; */
 
-.main {
-  max-width: 1000px;
-  padding: 10%;
+h1 {
+  grid-row: -1/1;
 }
+
 .featured_products {
-  margin: 0 10%;
-}
-
-.products_grid {
   display: grid;
   grid-template-columns: 1;
   gap: 20px;
@@ -27,6 +23,7 @@
 .product_image {
   max-height: 400px;
   overflow: hidden;
+  flex: 3;
 }
 
 .product_descript {
@@ -37,6 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   min-height: 80px;
+  flex: 1;
 }
 
 .product_name {
