@@ -49,6 +49,14 @@
   grid-column: -1/1;
 }
 
+/* My Bag */
+
+.two_columns_main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
 @media (min-width: 900px) {
   .logo {
     position: absolute;
@@ -107,10 +115,4 @@
   .featured_products {
     grid-template-columns: repeat(4, 1fr);
   }
-}
-
-/* My Bag */
-
-.two_columns_main {
-  grid-template-columns: repeat(2, 1fr);
 }
