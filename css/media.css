@@ -27,14 +27,6 @@
     gap: 20px;
   }
 
-  /* specific page */
-
-  .specific_page {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 60px;
-  }
-
   /* .breadcrumb {
     grid-column: -1/1;
   } */
@@ -45,6 +37,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+  }
+  .cta my_bag {
+    grid-column: 2;
+    background-color: violet;
   }
 }
 
@@ -101,5 +97,13 @@
   /* products page */
   .featured_products {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* specific page */
+
+  .specific_page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 }

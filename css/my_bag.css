@@ -1,30 +1,30 @@
-.main_column {
+/* .main_column {
   display: block;
-}
-
+} */
+/* 
 .main_column > * {
   border: var(--check_border);
-}
+} */
 
 /* h1 {
   grid-row: -1/1;
 } */
 
-.product_img {
+/* .product_img {
   max-width: 100%;
+} */
+
+h1 {
+  margin: 0 0 10px 10%;
 }
 
 h2 {
   text-align: center;
+  grid-column: -1/1;
 }
-.product-details {
-  /* display: grid;
-  grid-template-rows: 1fr auto;
-  gap: 10px; */
-  display: flex;
-  flex-direction: column;
 
-  justify-content: center;
+h3 {
+  font-size: 1rem;
 }
 
 .product_img {
@@ -33,19 +33,29 @@ h2 {
   margin: 0 auto;
 }
 
-.details_container {
+.summary {
   flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
 }
 
-.details_container > * {
-  border: var(--check_border);
+.summary h3 {
+  grid-column: 1;
 }
 
-h2 {
+.summary p {
+  grid-column: 2;
+}
+
+.bin {
+  grid-column: -1/1;
+}
+
+/* h2 {
   grid-row: -1/1;
-}
+} */
 
-h3 {
+/* h3 {
   grid-area: h3;
   margin: 20px 0 50px 20px;
 }
@@ -79,9 +89,9 @@ h3 {
   background-color: #096194;
   color: var(--color_white);
   margin-top: 10px;
-}
+} */
 
-.order_summary {
+/* .order_summary {
   display: grid;
   grid-template-areas:
     "h3 h3 item"
@@ -90,4 +100,4 @@ h3 {
     "total NOK_899 NOK_899"
     "log_in log_in log_in"
     "guest guest guest";
-}
+} */
