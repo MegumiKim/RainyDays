@@ -1,0 +1,21 @@
+.form__input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+legend {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+input {
+  border-style: solid;
+  width: 70%;
+  min-height: 23px;
+}

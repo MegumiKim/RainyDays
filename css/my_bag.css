@@ -1,7 +1,8 @@
-/* .two_columns_main {
-} */
+.main_column {
+  display: block;
+}
 
-.two_columns_main > * {
+.main_column > * {
   border: var(--check_border);
 }
 
@@ -13,10 +14,31 @@
   max-width: 100%;
 }
 
+h2 {
+  text-align: center;
+}
 .product-details {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  /* display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 10px; */
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.product_img {
+  flex: 1;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.details_container {
+  flex: 1;
+}
+
+.details_container > * {
+  border: var(--check_border);
 }
 
 h2 {
@@ -25,38 +47,47 @@ h2 {
 
 h3 {
   grid-area: h3;
-}
-.detail:nth-child(1) {
-  grid-area: item;
+  margin: 20px 0 50px 20px;
 }
 .detail:nth-child(2) {
-  grid-area: sub_total;
+  grid-area: item;
 }
 .detail:nth-child(3) {
-  grid-area: price;
+  grid-area: sub_total;
 }
 .detail:nth-child(4) {
-  grid-area: shipping;
+  grid-area: price;
 }
 .detail:nth-child(5) {
-  grid-area: NOK_0;
+  grid-area: shipping;
 }
 .detail:nth-child(6) {
-  grid-area: total;
+  grid-area: NOK_0;
 }
 .detail:nth-child(7) {
+  grid-area: total;
+}
+.detail:nth-child(8) {
   grid-area: NOK_899;
 }
-.cta {
-  grid-area: cta;
+.cta:nth-child(9) {
+  grid-area: log_in;
+  margin-top: 50px;
+}
+.cta:nth-child(10) {
+  grid-area: guest;
+  background-color: #096194;
+  color: var(--color_white);
+  margin-top: 10px;
 }
 
 .order_summary {
   display: grid;
   grid-template-areas:
-    "h3 item"
-    "sub_total price"
-    "shipping NOK_0"
-    "total NOK_899"
-    "cta cta";
+    "h3 h3 item"
+    "sub_total price price"
+    "shipping NOK_0 NOK_0"
+    "total NOK_899 NOK_899"
+    "log_in log_in log_in"
+    "guest guest guest";
 }

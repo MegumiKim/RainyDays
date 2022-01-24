@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="stylesheet" href="./CSS/variables.css">
-  <link rel="stylesheet" href="./CSS/form.css">
+  <link rel="stylesheet" href="./CSS/purchase_form.css">
   <link rel="stylesheet" href="./CSS/media.css">
   <script src="https://kit.fontawesome.com/175ecb4e25.js" crossorigin="anonymous"></script>
   <title>RAINY DAYS | CHECKOUT</title>
@@ -47,8 +47,9 @@
       </label>
     </div>
   </header>
-      <main>
-        <h1>CHECKOUT</h1>
+      <main class="main_column">
+        <section class='form'>
+          <h1>CHECKOUT</h1>
           <form action='purchase-form.php' method="post">
             <fieldset>
               <legend>Shipping Address</legend>
@@ -68,22 +69,22 @@
             <fieldset>
               <legend>Payment Details</legend>
               <label for="card_type">CARD TYPE</label>
-              <select name="card_type" id="card_type" class='form__input'  required>
+              <select name="card_type" id="card_type" class='form__input' required>
                 <option value="visa">VISA</option>
                 <option value="master">MASTER</option>
                 <option value="amex">AMERICAN EXPRESS</option>
               </select>
               <label for="card_name">CARD HOLDER'S NAME</label>
-              <input type="name" id='card_name' class='form__input'  required>
+              <input type="name" id='card_name' class='form__input' required>
               <label for="card_number">CARD NUMBER</label>
-              <input type="number" id='number' class='form__input'  required>
+              <input type="text" id='number' class='form__input' required>
               <label for="expiary">EXPIARY MONTH (ex. 12/22)</label>
-              <input type="name" id='card_name' class='form__input'  required>
+              <input type="text" id='card_name' class='form__input' required>
               <label for="ssc">SECURITY CODE</label>
-              <input type="number" id='ssc' class='form__input'  required>
+              <input type="text" id='ssc' class='form__input' required>
             </fieldset>
-            <input type="submit" value='CONFIRM & PAY' class="cta">
           </form>
+          <a href="confirm.html" class='cta'>Confirm & Pay</a>
         </section>
         <section class="order_summary">
           <div class="details_container">

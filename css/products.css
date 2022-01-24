@@ -1,44 +1,43 @@
 /* @import "../CSS/styles.css"; */
 
-h1 {
+/* h1 {
   grid-row: -1/1;
-}
+} */
 
 .featured_products {
   display: grid;
-  grid-template-columns: 1;
+  /* grid-template-columns: 1; */
   gap: 20px;
-  border: var(--check_border);
-  justify-content: center;
 }
 
 .product {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   max-width: 300px;
-  /* max-height: 300px; */
   margin-top: 20px;
 }
 
 .product_image {
   max-height: 400px;
   overflow: hidden;
-  flex: 3;
+  flex: 1.5;
 }
 
 .product_descript {
   position: relative;
   border: grey solid 1px;
-  padding: 10px;
+  padding: 10px 20px;
   margin-top: 10px;
   display: flex;
-  flex-wrap: wrap;
-  min-height: 80px;
+  flex-direction: column;
+  /* min-height: 100px; */
   flex: 1;
+  justify-content: flex-start;
 }
 
 .product_name {
-  font-size: 1.2em;
+  font-size: 1.1em;
+  font-family: var(--font_h1);
   text-decoration: none;
   color: var(--color_header);
   font-weight: bold;
@@ -57,14 +56,17 @@ h1 {
   color: salmon;
 }
 
+.find_out {
+  text-align: right;
+  color: var(--color_blue);
+}
 .price {
-  position: absolute;
-  left: 10px;
-  top: 35px;
+  text-align: right;
+  margin-right: 20px;
 }
 
-.seasons {
+/* .seasons {
   position: absolute;
   left: 100px;
   top: 35px;
-}
+} */
