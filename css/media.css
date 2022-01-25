@@ -27,6 +27,10 @@
     gap: 20px;
   }
 
+  .summary {
+    grid-row: 1;
+  }
+
   /* .breadcrumb {
     grid-column: -1/1;
   } */
@@ -36,11 +40,7 @@
   .main_column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-  .cta my_bag {
-    grid-column: 2;
-    background-color: violet;
+    gap: 20px;
   }
 }
 
