@@ -1,5 +1,5 @@
 body {
-  font: 18px var(--font_p);
+  font: 16px var(--font_p);
   margin: 0 auto;
   color: var(--color_header);
   /* min-height: 100vh; */
@@ -11,14 +11,23 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 10%;
+  /* min-height: 100vh; */
+}
+
+.main_column {
+  max-width: 400px;
 }
 
 .breadcrumb {
-  padding: 20px 10%;
+  padding: 20px 0;
+  grid-column: -1/1;
 }
-.breadcrumb a {
+
+.breadcrumb a,
+.breadcrumb p {
   text-decoration: none;
   color: grey;
+  display: inline-block;
 }
 
 h1,
@@ -30,6 +39,8 @@ h3 {
 
 h1 {
   font-size: 1.5rem;
+  margin: 10px 0;
+  max-width: 100%;
 }
 
 h2 {
@@ -62,6 +73,7 @@ img {
   border: none;
   font-size: 1rem;
   display: block;
+  margin: 30px auto;
 }
 
 .cta:hover {
@@ -132,8 +144,10 @@ nav a:hover {
 }
 
 .current_page {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  border: solid 2px var(--color_yellow);
 }
+
 .popular-searches {
   display: none;
 }
@@ -146,7 +160,7 @@ nav a:hover {
   background-color: var(--color_header);
   color: var(--color_white);
   z-index: 99;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 10px 30px 10px;
 }
 
 #search-title {

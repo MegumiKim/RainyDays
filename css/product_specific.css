@@ -1,9 +1,9 @@
-ul {
+h1 {
   margin: 0;
 }
+
 .rating {
   color: rgb(224, 224, 53);
-  /* margin-bottom: 20px; */
 }
 .rating p {
   color: grey;
@@ -18,25 +18,13 @@ li {
 
 .price {
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
-.main_img {
-  max-width: 50%;
-  margin: 0 auto;
+.product_img {
+  margin: 10% auto;
+  max-width: 100%;
 }
-
-/* .spec_grid {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-} */
-
-/* specifications */
-/* .spec_container {
-  display: flex;
-  justify-content: flex-start;
-} */
 
 .product_name_container {
   margin: 10px auto;
@@ -61,16 +49,16 @@ li {
 
 .spec_container h3 {
   width: 60px;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   flex: 2;
   font-family: var(--font_h1);
   /* text-align: right; */
-  margin-right: 30px;
+  /* margin-right: 30px; */
 }
 
-.spec_container > * {
+/* .spec_container > * {
   flex: 3;
-}
+} */
 
 .cta {
   margin: 30px 10px;

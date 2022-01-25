@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="stylesheet" href="./CSS/variables.css">
-  <link rel="stylesheet" href="./CSS/purchase_form.css">
+  <link rel="stylesheet" href="./CSS/checkout.css">
   <link rel="stylesheet" href="./CSS/media.css">
   <script src="https://kit.fontawesome.com/175ecb4e25.js" crossorigin="anonymous"></script>
   <title>RAINY DAYS | CHECKOUT</title>
@@ -23,9 +23,8 @@
     <input type="checkbox" id="hamburger-menu">
     <label for="hamburger-menu" id=hamburger-icon><i class="fas fa-bars"></i></label>
     <nav>
-      <a href="products.html">WOMEN</a>
-      <a href="products.html">MEN</a>
-      <a href="products.html">ARRIVALS</a>
+      <a href="index.html">HOME</a>
+      <a href="products.html">PRODUCTS</a>
       <a href="about.html">ABOUT</a>
       <a href="contact.html">CONTACT</a>
     </nav>
@@ -47,9 +46,15 @@
       </label>
     </div>
   </header>
+  <section class="breadcrumb">
+    <a href="my_bag.html"><i class="fas fa-chevron-left"></i></a>
+    <a href="my_bag.html">MY BAG /</a>
+    <a href="checkout.html" class="current_page">CHECKOUT</a>
+    <p> / PURCHASE CONFIRMATION</p>
+  </section>
+  <h1>CHECKOUT</h1>
       <main class="main_column">
         <section class='form'>
-          <h1>CHECKOUT</h1>
           <form action='purchase-form.php' method="post">
             <fieldset>
               <legend>Shipping Address</legend>
@@ -84,29 +89,29 @@
               <input type="text" id='ssc' class='form__input' required>
             </fieldset>
           </form>
-          <a href="confirm.html" class='cta'>Confirm & Pay</a>
+          <a href="confirmation.html" class='cta'>Confirm & Pay</a>
         </section>
+     
         <section class="order_summary">
-          <div class="details_container">
-            <div class="product_img">
-              <img src="/images/products/specific/jacket_1.jpg" alt="picture of super comfy jacket">
-          </div>
-            <p>NOK 899></p>
-            <p>SIZE: M</p>
-            <p>COLOUR: Black</p>
-            <i class="far fa-trash-alt"></i>
-          </div>
+            <h2>Super comfy jacket </h2>
+            <h3>price</h3>
+              <p id='price'>NOK 899</p>
+              <i class="far fa-trash-alt" id='bin'></i>
+            <h3>size</h3>
+            <p>M</p>
+            <h3>color</h3>
+            <p>Black</p>
+          <h2>order summary</h2>
+          <h3>Sub Total</h3>
+          <p>NOK 899</p>
+          <h3>Shipping</h3>
+          <p>NOK 0</p>
+          <h3>Total Amount</h3>
+          <p>NOK 899</p>
         </section>
-        <section class="costs">
-          <p class=detail></p>>Sub Total</p>
-          <p class=detail>>NOK 899</p>
-          <p class=detail></p>>Shipping</p>
-          <p class=detail></p>>NOK 0</p>
-          <p class=detail></p>>Total Amount</p>
-          <p class=detail></p>>NOK 899</p>
-        </section>
+        <div class="product_img">
+          <img src="/images/products/specific/jacket_1.jpg" alt="picture of super comfy jacket">
       </div>
-        </section>
       </main>
     <footer>
       <div class="copyright">Copyright &copy;</div>

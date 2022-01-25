@@ -1,0 +1,36 @@
+@import url(checkout.css);
+
+/* .main_column > * {
+  border: var(--check_border);
+} */
+.thank_you {
+  max-width: 100%;
+  margin: 0px 0 20px 10%;
+  font-size: 1.2rem;
+}
+
+.order_summary.delivery {
+  grid-column: 1;
+}
+
+.product_img {
+  max-width: 100%;
+  grid-column: 3;
+  grid-row: 2/5;
+  align-self: left;
+}
+
+.order_summary.delivery {
+  grid-template-columns: 1fr 1fr;
+}
+/* .order_summary > * {
+  border: var(--check_border);
+} */
+.support {
+  grid-column: 1/3;
+  /* text-decoration: none; */
+}
+
+.order_summary {
+  grid-template-columns: 2fr 1fr 1fr;
+}
