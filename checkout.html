@@ -46,17 +46,18 @@
       </label>
     </div>
   </header>
+  <main class="main_column">
   <section class="breadcrumb">
     <a href="my_bag.html"><i class="fas fa-chevron-left"></i></a>
     <a href="my_bag.html">MY BAG /</a>
-    <a href="checkout.html" class="current_page">CHECKOUT</a>
+    <a href="checkout.html" id="current_page">CHECKOUT</a>
     <p> / PURCHASE CONFIRMATION</p>
   </section>
   <h1>CHECKOUT</h1>
-      <main class="main_column">
+
         <section class='form'>
           <form action='purchase-form.php' method="post">
-            <fieldset>
+            <fieldset class='shipping_form'>
               <legend>Shipping Address</legend>
               <label for="name">NAME</label>
               <input type="text" id='name' class='form__input' required>
@@ -71,7 +72,7 @@
               <label for="email">EMAIL</label>
               <input type="email" id='email' class='form__input' required>
             </fieldset>
-            <fieldset>
+            <fieldset class='payment_form'>
               <legend>Payment Details</legend>
               <label for="card_type">CARD TYPE</label>
               <select name="card_type" id="card_type" class='form__input' required>
@@ -92,7 +93,10 @@
           <a href="confirmation.html" class='cta'>Confirm & Pay</a>
         </section>
      
-        <section class="order_summary">
+        <section class="order_summary checkout">
+          <div class="product_img">
+            <img src="/images/products/specific/jacket_1.jpg" alt="picture of super comfy jacket">
+        </div>
             <h2>Super comfy jacket </h2>
             <h3>price</h3>
               <p id='price'>NOK 899</p>
@@ -101,6 +105,7 @@
             <p>M</p>
             <h3>color</h3>
             <p>Black</p>
+
           <h2>order summary</h2>
           <h3>Sub Total</h3>
           <p>NOK 899</p>
@@ -108,10 +113,8 @@
           <p>NOK 0</p>
           <h3>Total Amount</h3>
           <p>NOK 899</p>
+
         </section>
-        <div class="product_img">
-          <img src="/images/products/specific/jacket_1.jpg" alt="picture of super comfy jacket">
-      </div>
       </main>
     <footer>
       <div class="copyright">Copyright &copy;</div>

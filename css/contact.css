@@ -1,0 +1,17 @@
+/* .corporate_info {
+  margin: 20px auto;
+} */
+
+#address {
+  margin: 20px auto;
+}
+
+textarea {
+  min-height: 100px;
+  min-width: 80%;
+}
+
+.cta {
+  margin: 0;
+  max-height: none;
+}

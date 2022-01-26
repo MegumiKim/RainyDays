@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Check your items in My Bag">
+  <meta name="description" content="RAINYDAYS' contact details.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="stylesheet" href="./CSS/variables.css">
-  <link rel="stylesheet" href="./CSS/my_bag.css">
+  <link rel="stylesheet" href="./CSS/contact.css">
   <link rel="stylesheet" href="./CSS/media.css">
   <script src="https://kit.fontawesome.com/175ecb4e25.js" crossorigin="anonymous"></script>
-  <title>RAINY DAYS | MY BAG</title>
+  <title>RAINY DAYS | CONTACT</title>
 </head>
 <body>
   <header>
@@ -23,11 +23,10 @@
     <input type="checkbox" id="hamburger-menu">
     <label for="hamburger-menu" id=hamburger-icon><i class="fas fa-bars"></i></label>
     <nav>
-      <a href="products.html">WOMEN</a>
-      <a href="products.html">MEN</a>
-      <a href="products.html">ARRIVALS</a>
+      <a href="index.html">HOME</a>
+      <a href="products.html">PRODUCTS</a>
       <a href="about.html">ABOUT</a>
-      <a href="contact.html">CONTACT</a>
+      <a href="contact.html" id="current_page">CONTACT</a>
     </nav>
     <div class="header-right">
       <div class="search_container">
@@ -48,45 +47,44 @@
     </div>
   </header>
   <main class='main_column'>
-      <section class="breadcrumb">
-      <a href="index.html"><i class="fas fa-chevron-left"></i></a>
-      <a href="index.html">HOME /</a>
-      <a href="my_bag.html">MY BAG</a>
-    </section>
-    <h1>MY BAG</h1>
+  <section class="breadcrumb">
+    <a href="index.html"><i class="fas fa-chevron-left"></i></a>
+    <a href="index.html">HOME /</a>
+    <a href="contact.html" class="current_page">CONTACT</a>
+  </section>
+  <h1>CONTACT</h1>
+  <section class="corporate_info">
+    <h2>RAINYDAYS' AS</h2>
+    <p id='address'>Street 1 <br>1234 Oslo<br>Norway</p>
+    
+    <p>+47 1234 5678</p>
+    <p>customer@rainydays.com</p>
+  </section>
 
-    <section class="order_summary my_bag">
-      <h2>Super comfy jacket </h2>
-      <h3>price</h3>
-        <p id='price'>NOK 899</p>
-        <i class="far fa-trash-alt" id='bin'></i>
-      <h3>size</h3>
-      <p>M</p>
-      <h3>color</h3>
-      <p>Black</p>
-      <h2>order summary</h2>
-      <h3>Sub Total</h3>
-      <p>NOK 899</p>
-      <h3>Shipping</h3>
-      <p>NOK 0</p>
-      <h3>Total Amount</h3>
-      <p>NOK 899</p>
+<form action='message.php' method='post'>
+  <fieldset>
+    <h2>Customer Service</h2>
+    <label for="name">NAME</label>
+    <input type="text" id='name' name='name' class='form__input' required>
+    <label for="email">EMAIL</label>
+    <input type="text" id='email' name='email' class='form__input' required>
+    <input type="checkbox" id='sign-up' name='sign-up' class='checkbox'>
+    <label for="sign-up">Sign-up for latest products updates</label>
+    <section class="message" class='form__input' required>
+      <label for="message">MESSAGE</label>
+      <textarea name="message" id="message" class='form__input'></textarea>
     </section>
-    <div class="container">
-      <div class="product_img">
-        <img src="/images/products/specific/jacket_1.jpg" alt="picture of super comfy jacket">
+    <input type="submit" value='send' name='message' class='cta'>
+  </fieldset>
+</form>
+</main>
+    <footer>
+      <div class="copyright">Copyright &copy;</div>
+      <div class="social-media">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
       </div>
-      <a href="checkout.html" class='cta'>log in</a>
-      <a href="checkout.html" class='cta guest'>GUEST CHECKOUT</a>
-    </div>
-  </main>
-  <footer>
-    <div class="copyright">Copyright &copy;</div>
-    <div class="social-media">
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-twitter"></i>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>

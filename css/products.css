@@ -1,20 +1,20 @@
 .featured_products {
   display: grid;
-  /* grid-template-columns: 1; */
-  gap: 20px;
+  gap: 60px;
 }
 
 .product {
-  /* display: flex;
-  flex-direction: column; */
   max-width: 300px;
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .product_image {
-  max-height: 400px;
-  overflow: hidden;
-  flex: 1.5;
+  max-width: 100%;
+  margin: 0 auto;
+  /* overflow: hidden; */
+  flex: 2;
 }
 
 .product_descript {
@@ -24,7 +24,6 @@
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  /* min-height: 100px; */
   flex: 1;
   justify-content: flex-start;
 }
@@ -54,6 +53,7 @@
   text-align: right;
   color: var(--color_blue);
 }
+
 .price {
   text-align: right;
   margin-right: 20px;

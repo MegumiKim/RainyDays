@@ -12,14 +12,17 @@ h2 {
   /* flex: 1; */
   max-width: 50%;
   margin: auto auto;
-  grid-column: 2;
 }
 
+.container {
+  grid-column: 2;
+  grid-row: 3;
+}
 .order_summary {
-  /* flex: 2; */
   display: grid;
   grid-template-columns: 3fr 2fr 1fr;
-  grid-row: 2/4;
+  grid-column: 1;
+  grid-row: 3;
 }
 
 /* .order_summary > * {
@@ -45,6 +48,7 @@ h2 {
   margin: 10px auto;
   grid-column: 2;
   width: 250px;
+  grid-row: 4;
 }
 
 .cta.guest {
