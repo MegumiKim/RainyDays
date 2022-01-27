@@ -15,14 +15,8 @@
 
 .product_img {
   grid-column: 1/4;
-  margin: 0 auto;
   align-self: center;
   max-width: 50%;
-}
-
-fieldset {
-  margin-top: 20px;
-  padding: 20px;
 }
 
 legend {

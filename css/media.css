@@ -5,6 +5,10 @@
     right: 10%;
   }
 
+  #search_icon:active ~ #search {
+    max-width: none;
+  }
+
   .index_main {
     max-width: 100%;
     padding: 0pt;
@@ -19,17 +23,11 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Products Page */
+  /* products */
 
   .featured_products {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
   }
-
-  /* .order_summary {
-    grid-row: 3;
-  } */
 
   /* about */
   .brand {

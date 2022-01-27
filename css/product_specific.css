@@ -1,20 +1,16 @@
 h1 {
-  margin: 0;
+  text-align: center;
 }
 
 .rating {
   color: rgb(224, 224, 53);
   text-align: right;
+  margin-bottom: 10px;
 }
 .rating p {
   color: grey;
   display: inline-block;
   margin-left: 5px;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
 }
 
 .price {
@@ -23,17 +19,12 @@ li {
   text-align: right;
 }
 
-.product_img {
-  margin: 10% auto;
-  max-width: 100%;
-}
-
 .product_img.one {
   grid-column: 1;
   grid-row: 3;
   max-width: 70%;
   align-self: center;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .product_img.two {
@@ -53,6 +44,7 @@ li {
 .product-details {
   grid-column: 2;
   grid-row: 2/4;
+  padding-top: 10%;
 }
 
 .color_size_container {
@@ -60,14 +52,8 @@ li {
   grid-row: 4;
 }
 
-.specifications {
-  margin-top: 50px;
-  grid-column: 1;
-  grid-row: 3;
-}
-
 .spec_container {
-  margin-top: 5px;
+  margin-top: 10px;
   display: flex;
 }
 
@@ -85,7 +71,7 @@ li {
 } */
 
 .cta {
-  margin: 20px 10px;
+  margin: 30px 0 30px 0;
   grid-column: 2;
   grid-row: 4;
 }

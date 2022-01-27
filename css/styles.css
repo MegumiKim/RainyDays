@@ -21,7 +21,7 @@ main {
 
 .breadcrumb {
   padding: 20px 0;
-  grid-row: 1;
+  /* grid-row: 1; */
   grid-column: 1/3;
 }
 
@@ -63,6 +63,9 @@ img {
   width: 100%;
 }
 
+.product_img {
+  margin: 0 auto;
+}
 /* CTA button */
 .cta {
   text-decoration: none;
@@ -96,7 +99,7 @@ footer {
 }
 
 footer {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .header-right {
@@ -155,7 +158,6 @@ nav a:hover {
   display: none;
 }
 
-#search_icon:active,
 #search:active ~ .popular-searches {
   display: block;
   position: absolute;
@@ -163,11 +165,14 @@ nav a:hover {
   background-color: var(--color_header);
   color: var(--color_white);
   z-index: 99;
-  padding: 0px 10px 30px 10px;
+  padding: 10px;
+  width: 100%;
 }
 
-#search-title {
-  font-weight: bold;
+#search_icon:active ~ #search {
+  display: block;
+  background-color: var(--color_white);
+  border: solid 2px var(--color_header);
 }
 
 .search-ex {

@@ -1,35 +1,24 @@
 .featured_products {
   display: grid;
-  gap: 60px;
+  /* grid-template-columns: 1fr 1fr; */
+  gap: 20px;
 }
 
 .product {
-  max-width: 300px;
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
 }
 
-.product_image {
-  max-width: 100%;
-  margin: 0 auto;
-  /* overflow: hidden; */
-  flex: 2;
-}
-
-.product_descript {
+.product_description {
   position: relative;
   border: grey solid 1px;
-  padding: 10px 20px;
+  padding: 10px 10px;
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  justify-content: flex-start;
 }
 
 .product_name {
-  font-size: 1.1em;
+  /* font-size: 1.1em; */
   font-family: var(--font_h1);
   text-decoration: none;
   color: var(--color_header);
@@ -49,14 +38,9 @@
   color: salmon;
 }
 
-.find_out {
+.seasons {
   text-align: right;
-  color: var(--color_blue);
-}
-
-.price {
-  text-align: right;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .cta {
