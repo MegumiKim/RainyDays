@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Order success! Thank you for your purchase.">
+  <meta name="description" content="BY logging-in, your purchase history will be store in your account.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="stylesheet" href="./CSS/variables.css">
-  <link rel="stylesheet" href="./CSS/confirmation.css">
+  <link rel="stylesheet" href="./CSS/log_in.css">
   <link rel="stylesheet" href="./CSS/media.css">
   <script src="https://kit.fontawesome.com/175ecb4e25.js" crossorigin="anonymous"></script>
-  <title>RAINY DAYS | ORDER CONFIRMATION</title>
+  <title>RAINY DAYS | Log in</title>
 </head>
 <body>
   <header>
@@ -46,55 +46,29 @@
       </label>
     </div>
   </header>
-  <main class='main_column'>
-    <section class="breadcrumb">
-      <a href="products.html"><i class="fas fa-chevron-left"></i></a>
-      <a href="my_bag.html">MY BAG /</a>
-      <a href="checkout.html">CHECKOUT /</a>
-      <a href="checkout.html" id="current_page">PURCHASE CONFIRMATION</a>
-    </section>
-    <h1>Purchase confirmation</h1>
-    <p class='thank_you'>Thank you for your purchase!</p>
-
-        <section class='order_summary delivery'>
-          <h3>Delivery name</h3>
-          <p>Megumi Kimura</p>
-          <h3>delivery address</h3>
-          <p>Bergen Street 1 <br>1010 Oslo</br></p>
-          <h3>PHONE</h3>
-          <p>123 456 7890</p>
-          <h3>delivery date</h3>
-          <p>01.03.2022</p>
-          <p id='support'>Any issue? Please contact <a href='contact.html' >customer support.</a></p>
-
-        </section>
-
-        <section class="order_summary">
-          <h2>Order Summary</h2>
-          <div class="product_img">
-            <img src="/images/products/specific/jacket_1.jpg" alt="picture of super comfy jacket">
-        </div>
-   
-        <h3 id='product_name'>Super Comfy Jacket ( 1 )</h3>
- 
-        <h3>price</h3>
-        <p id='price'>NOK 899</p>
-        <h3>size</h3>
-        <p>M</p>
-        <hr>
-        <h3>color</h3>
-        <p>Black</p>
-        <h3>Sub Total</h3>
-        <p>NOK 899</p>
-        <h3>Shipping</h3>
-        <p>NOK 0</p>
-        <hr>
-        <h3>Total Amount</h3>
-        <p>NOK 899</p>
-        </section>
-
-        <a href="products.html" class='cta'>See more products</a>
-      </main>
+  <main class="main_column">
+  <section class="breadcrumb">
+    <a href="index.html"><i class="fas fa-chevron-left"></i></a>
+    <a href="index.html">HOME /</a>
+    <a href="contact.html" class="current_page">LOG IN</a>
+  </section>
+  <h1>Log in</h1>
+<div class="wrapper_contents">
+  <form action='message.php' method='post'>
+    <fieldset>
+      <label for="email">EMAIL</label>
+      <input type="text" id='email' name='email' class='form__input' required>
+      <label for="passward">PASSWORD</label>
+      <input type="text" id='password' name='password' class='form__input' required>
+      <a href="log_in.html">Forgot password?</a>
+      </section>
+      <input type="submit" value='Log in' name='message' class='cta'>
+    </fieldset>
+  </form>
+  <p>Don't have an account?</p>
+  <a href="log_in.html" class='cta'>Create an account</a>
+</div>
+</main>
     <footer>
       <div class="copyright">Copyright &copy;</div>
       <div class="social-media">

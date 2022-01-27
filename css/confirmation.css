@@ -29,10 +29,10 @@
   grid-column: 1/3;
 }
 
-.order_summary {
+/* .order_summary {
   grid-template-columns: 2fr 1fr 1fr;
   grid-row: 4;
-}
+} */
 
 .cta {
   grid-column: 1/3;

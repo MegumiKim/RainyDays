@@ -1,11 +1,11 @@
 .featured_products {
   display: grid;
-  /* grid-template-columns: 1fr 1fr; */
+
   gap: 20px;
 }
 
 .product {
-  margin-top: 20px;
+  margin: 20px 40px;
 }
 
 .product_description {
