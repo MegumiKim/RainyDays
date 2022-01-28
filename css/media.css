@@ -103,6 +103,7 @@ log-in .create_account {
 
   .featured_grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
   }
 
   /* products page */

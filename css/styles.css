@@ -2,6 +2,7 @@
 
 body {
   font: 16px var(--font_p);
+  font-weight: normal;
   margin: 0 auto;
   color: var(--color_header);
   min-height: 100vh;
@@ -52,7 +53,7 @@ h2 {
 }
 
 h3 {
-  font-family: var(--font_h1);
+  font-family: var(--font_p);
 }
 
 p {
