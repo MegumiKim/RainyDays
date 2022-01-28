@@ -10,7 +10,6 @@
   background-position-y: 10%;
   background-position-x: right;
   display: flex;
-  /* align-items: center; */
   justify-content: center;
   flex-direction: column;
   min-height: 50vh;
@@ -33,7 +32,7 @@ h1 {
 }
 
 .cta-welcome {
-  font-size: 1em;
+  font-size: 1.2em;
   max-width: 300px;
   margin: 50px auto;
   padding: 10px 60px;
@@ -41,7 +40,6 @@ h1 {
   /* background: var(--color_yellow); */
   background: none;
   color: white;
-  font-weight: bold;
 }
 
 /* featured categories */
@@ -71,7 +69,7 @@ h1 {
   position: relative;
   top: 65%;
   text-align: center;
-  font: 1.2em var(--font_h1);
+  font-size: 1.2em;
 }
 
 .categories_button:hover {

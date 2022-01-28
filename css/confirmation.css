@@ -1,8 +1,4 @@
-@import url(checkout.css);
-
-/* .main_column > * {
-  border: var(--check_border);
-} */
+/* @import url(checkout.css); */
 
 .thank_you {
   max-width: 100%;
@@ -24,18 +20,19 @@
 
 .order_summary.delivery {
   grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 #support {
   grid-column: 1/3;
 }
 
-/* .order_summary {
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-row: 4;
-} */
+.order_summary {
+  grid-column: 2;
+}
 
 .cta {
   grid-column: 1/3;
   grid-row: 5;
+  padding: 10px 60px;
 }
