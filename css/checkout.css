@@ -1,6 +1,6 @@
 .log_in {
   grid-column: 1/3;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 20px 0 20px 0;
   border: solid 2px pink;
   padding: 5px;
@@ -32,4 +32,8 @@
 
 .section_form {
   grid-row: 4/6;
+}
+
+label {
+  font-size: 18px;
 }

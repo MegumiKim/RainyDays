@@ -16,7 +16,7 @@ h1 {
 
 .price {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: right;
 }
 
@@ -45,7 +45,10 @@ h1 {
 .spec_container h3 {
   width: 60px;
   flex: 2;
-  font-family: var(--font_h1);
+  font-family: var(--font_p);
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
 h2 {
@@ -58,4 +61,8 @@ h2 {
 
 .form {
   border: none;
+}
+
+label {
+  font-size: 20px;
 }

@@ -58,6 +58,13 @@ log-in .create_account {
 }
 
 @media (min-width: 900px) {
+  p {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
   .logo {
     position: absolute;
     left: 5%;
