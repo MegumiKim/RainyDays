@@ -38,7 +38,10 @@ h1 {
   margin: 50px auto;
   padding: 10px 60px;
   max-height: 30px;
-  background: var(--color_yellow);
+  /* background: var(--color_yellow); */
+  background: none;
+  color: white;
+  font-weight: bold;
 }
 
 /* featured categories */

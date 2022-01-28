@@ -1,5 +1,6 @@
 .order_summary {
   grid-row: 3/6;
+  margin-bottom: 0;
 }
 
 .product_img.my_bag {

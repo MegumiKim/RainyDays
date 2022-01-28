@@ -236,18 +236,23 @@ nav a:hover {
   flex: 1;
 }
 
+#bin {
+  color: var(--color_header);
+  font-size: 18px;
+  margin: 5px;
+}
 /* form */
 
 form {
   border: var(--color_subtle) solid 2px;
-  padding: 0 20px;
+  padding: 0 20px 20px;
 }
 
 .form__input {
   display: block;
   margin: 0 0 10px 0;
   border-style: solid;
-  width: 90%;
+  width: 100%;
   min-height: 23px;
 }
 
