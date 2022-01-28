@@ -3,9 +3,10 @@
 /* .main_column > * {
   border: var(--check_border);
 } */
+
 .thank_you {
   max-width: 100%;
-  margin: 0;
+  margin-bottom: 20px;
   font-size: 1.2rem;
   grid-row: 3;
 }

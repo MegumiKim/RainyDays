@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./CSS/styles.css">
   <link rel="stylesheet" href="./CSS/variables.css">
-  <link rel="stylesheet" href="./CSS/log_in.css">
   <link rel="stylesheet" href="./CSS/media.css">
   <script src="https://kit.fontawesome.com/175ecb4e25.js" crossorigin="anonymous"></script>
   <title>RAINY DAYS | Log in</title>
@@ -38,36 +37,32 @@
           <p class='search-ex'>super comfy jacket</p>
         </div>
       </div>
-      <label for="log-in"><i class="fas fa-user-circle"></i>
-        <a href='log-in.html' id='log-in'></a>
-      </label>
-      <label for="my_bag"><i class="fas fa-shopping-bag"></i>
-        <a href='my_bag.html' id='my_bag'></a>
-      </label>
+      <a href='log-in.html' id='log-in'><i class="fas fa-user-circle"></i></a>
+      <a href='empty_bag.html' id='my-bag'><i class="fas fa-shopping-bag"></i></a>
     </div>
   </header>
   <main class="main_column">
   <section class="breadcrumb">
     <a href="index.html"><i class="fas fa-chevron-left"></i></a>
     <a href="index.html">HOME /</a>
-    <a href="contact.html" class="current_page">LOG IN</a>
+    <a href="log-in.html" class="current_page">LOG IN</a>
   </section>
   <h1>Log in</h1>
-<div class="wrapper_contents">
+
   <form action='message.php' method='post'>
     <fieldset>
       <label for="email">EMAIL</label>
       <input type="text" id='email' name='email' class='form__input' required>
       <label for="passward">PASSWORD</label>
       <input type="text" id='password' name='password' class='form__input' required>
-      <a href="log_in.html">Forgot password?</a>
-      </section>
-      <input type="submit" value='Log in' name='message' class='cta'>
+      <a href="log-in.html">Forgot password?</a>
+      <input type="submit" value='Log in' name='message' class='cta form'>
     </fieldset>
   </form>
-  <p>Don't have an account?</p>
-  <a href="log_in.html" class='cta'>Create an account</a>
-</div>
+  <section class="create_account">
+    <p>Don't have an account?</p>
+    <a href="log-in.html" class='cta sub'>Create an account</a>
+  </section>
 </main>
     <footer>
       <div class="copyright">Copyright &copy;</div>

@@ -1,3 +1,5 @@
+/* global */
+
 body {
   font: 16px var(--font_p);
   margin: 0 auto;
@@ -11,7 +13,6 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 10%;
-  /* min-height: 100vh; */
   align-content: flex-start;
 }
 
@@ -21,7 +22,6 @@ main {
 
 .breadcrumb {
   padding: 20px 0;
-  /* grid-row: 1; */
   grid-column: 1/3;
 }
 
@@ -54,6 +54,7 @@ h2 {
 h3 {
   font-family: var(--font_h1);
 }
+
 p {
   margin: 0;
 }
@@ -61,8 +62,11 @@ p {
 hr {
   grid-column: 1/4;
   width: 100%;
-  border: 1px var(--color_subtle) solid;
+  border: none;
   margin: 20px auto;
+  max-height: 2px;
+  background: var(--color_subtle);
+  border: solid var(--color_subtle) 2px;
 }
 
 /* images */
@@ -73,6 +77,7 @@ img {
 .product_img {
   margin: 0 auto;
 }
+
 /* CTA button */
 .cta {
   text-decoration: none;
@@ -81,31 +86,43 @@ img {
   padding: 10px 30px;
   text-align: center;
   text-transform: uppercase;
-  max-width: 100%;
-  max-height: 28px;
+
+  /* max-height: 28px; */
   font-size: 1rem;
   display: block;
-  margin: 30px auto;
+  margin: 10px auto;
+  background: white;
   /* font-weight: bold; */
 }
 
-.cta.home {
-  background-color: var(--color_yellow);
-}
-
 .cta.sub {
-  border: var(color_blue) 4px solid;
+  border: var(--color_blue) 4px solid;
 }
 
 .cta:hover {
   background: #eebc6c;
 }
 
-.cta.guest:hover {
+.cta.sub:hover {
   background-color: #186a99;
   color: var(--color_white);
 }
 
+.cta.form {
+  width: 100%;
+}
+
+.cta.back {
+  grid-column: 1/3;
+}
+
+.cta-wrapper {
+  grid-column: 2;
+}
+
+.total {
+  font-weight: bold;
+}
 /* header, footer */
 header,
 footer {
@@ -122,13 +139,17 @@ footer {
 }
 
 .header-right {
-  /* border: solid lightgreen 2px; */
   display: flex;
   justify-content: space-between;
   position: absolute;
   align-items: center;
   right: 8%;
   gap: 15px;
+}
+
+#log-in,
+#my-bag {
+  color: var(--color_white);
 }
 
 nav,
@@ -214,9 +235,19 @@ nav a:hover {
   flex: 1;
 }
 
+/* form */
+
+form {
+  border: var(--color_subtle) solid 2px;
+  padding: 0 20px;
+}
+
 .form__input {
   display: block;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
+  border-style: solid;
+  width: 90%;
+  min-height: 23px;
 }
 
 .checkbox {
@@ -225,7 +256,8 @@ nav a:hover {
 
 fieldset {
   padding: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  border: none;
 }
 
 /* order_summary */
@@ -242,14 +274,15 @@ h2 {
 }
 
 .img_container {
-  /* grid-column: 2;
-  grid-row: 3; */
   margin: auto auto 0 auto;
 }
 .order_summary {
   display: grid;
   grid-template-columns: 3fr 2fr 1fr;
   grid-column: 1;
+  border: var(--color_subtle) 2px solid;
+  padding: 20px;
+  margin: 0 0 20px 0;
 }
 
 .order_summary h3 {

@@ -1,12 +1,13 @@
-/* .corporate_info {
-  margin: 20px auto;
-} */
+.corporate_info {
+  border: var(--color_subtle) 2px solid;
+  padding: 30px;
+}
 
 #address {
   margin: 20px auto;
 }
 
-textarea {
+#message {
   min-height: 100px;
   min-width: 80%;
 }

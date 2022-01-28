@@ -1,5 +1,3 @@
-/* @import url(my_bag.css); */
-
 .log_in {
   grid-column: 1/3;
   font-size: 1.2rem;
@@ -16,18 +14,10 @@
 .order_summary {
   grid-column: 2;
   grid-row: 4/5;
-  border: solid 2px var(--color_subtle);
-  padding: 20px;
 }
 
 .product_img {
   grid-column: 1/4;
   align-self: center;
   max-width: 50%;
-}
-
-input {
-  border-style: solid;
-  width: 70%;
-  min-height: 23px;
 }

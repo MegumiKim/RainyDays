@@ -1,6 +1,6 @@
 .about_img {
-  opacity: 80%;
-  margin-bottom: 20px;
+  /* opacity: 80%; */
+  margin: 20px auto;
 }
 
 .brand h2 {
@@ -36,4 +36,8 @@
 
 .about_container.comfort {
   background-image: url(../images/about/c.png);
+}
+
+h2 {
+  margin: 20px auto 0 auto;
 }
