@@ -44,12 +44,12 @@
 }
 
 @media (min-width: 900px) {
-  p {
+  /* p {
     font-size: 18px;
-  }
+  } */
 
   h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .logo {
@@ -92,6 +92,7 @@
   .welcome h1 {
     font-size: 3.2em;
   }
+
   .welcome h2 {
     font-size: 1.8em;
     font-weight: normal;

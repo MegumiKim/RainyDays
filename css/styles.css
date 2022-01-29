@@ -1,7 +1,7 @@
 /* global */
 
 body {
-  font: 16px var(--font_p);
+  font: 18px var(--font_p);
   margin: 0 auto;
   color: var(--color_header);
   min-height: 100vh;
@@ -38,7 +38,7 @@ h3 {
 }
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 1.6em;
   margin: 20px 0;
   grid-column: 1/3;
 }
@@ -47,6 +47,11 @@ h2 {
   text-align: center;
   grid-column: -1/1;
   margin: 0 auto 30px auto;
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1rem;
 }
 
 p {
@@ -228,7 +233,7 @@ nav a:hover {
 
 form {
   border: var(--color_subtle) solid 2px;
-  padding: 20px 20px;
+  /* padding: 20px 20px; */
 }
 
 .form__input {
@@ -269,7 +274,6 @@ fieldset {
 }
 
 .order_summary h3 {
-  font-size: 18px;
   margin: 0;
   grid-column: 1;
 }
