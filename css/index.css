@@ -57,7 +57,7 @@ h1 {
 .featured_grid {
   display: grid;
   grid-template-columns: 1;
-  gap: 10px;
+  gap: 30px;
 }
 
 .categories_button {

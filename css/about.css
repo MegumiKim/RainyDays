@@ -1,4 +1,4 @@
-.about_img {
+.about_text {
   margin: 20px auto;
 }
 
@@ -16,7 +16,7 @@
 
 .about_container h3 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   background-color: white;
   opacity: 80%;
   text-align: center;
@@ -28,8 +28,4 @@
 
 .about_container.stylish {
   background-image: url(../images/about/quality.png);
-}
-
-h2 {
-  margin-top: 20px;
 }

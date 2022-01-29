@@ -29,14 +29,8 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  /* spec page */
-  .cta.specific {
-    margin: 0 0 50px 0;
-  }
-
-  /* checkout */
-
   /* about */
+
   .brand {
     margin-top: 20px;
     display: grid;
@@ -57,6 +51,7 @@
   h3 {
     font-size: 22px;
   }
+
   .logo {
     position: absolute;
     left: 5%;

@@ -13,11 +13,11 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 10%;
+  align-content: flex-start;
 }
 
 .main_column {
-  max-width: 400px;
-  align-content: flex-start;
+  max-width: 500px;
 }
 
 .breadcrumb {
@@ -41,17 +41,12 @@ h1 {
   font-size: 1.5rem;
   margin: 20px 0;
   grid-column: 1/3;
-  grid-row: 2;
 }
 
 h2 {
   text-align: center;
   grid-column: -1/1;
   margin: 0 auto 30px auto;
-}
-
-h3 {
-  font-family: var(--font_p);
 }
 
 p {
@@ -61,7 +56,6 @@ p {
 hr {
   grid-column: 1/4;
   width: 100%;
-  border: none;
   margin: 20px auto;
   max-height: 2px;
   background: var(--color_subtle);
@@ -113,10 +107,6 @@ img {
   grid-column: 1/3;
 }
 
-.total {
-  font-weight: bold;
-}
-
 /* header, footer */
 header,
 footer {
@@ -130,6 +120,7 @@ footer {
 
 footer {
   margin-top: 30px;
+  font-size: 18px;
 }
 
 .header-right {
@@ -141,8 +132,8 @@ footer {
   gap: 15px;
 }
 
-#log-in,
-#my-bag {
+.log-in,
+.my-bag {
   color: var(--color_white);
 }
 
@@ -157,7 +148,6 @@ nav,
   position: absolute;
   top: 42px;
   left: 0px;
-  /* padding: 5px; */
   background-color: var(--color_header);
   z-index: 100;
 }
@@ -286,6 +276,10 @@ fieldset {
 
 .order_summary p {
   grid-column: 2;
+}
+
+.total {
+  font-weight: bold;
 }
 
 /* my bag page */
