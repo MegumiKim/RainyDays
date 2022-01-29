@@ -23,20 +23,21 @@
   border: none;
   background: var(--color_white);
   font-size: 20px;
+  align-self: flex-start;
+  text-align: right;
 }
 
 .heart:active {
   color: salmon;
 }
 
-.Seasons {
+.seasons {
   text-align: right;
   grid-column: 1/3;
 }
 
 .cta {
-  /* margin: 10px;
-  width: 100%; */
+  margin: auto auto;
   padding: 5px 30px;
   grid-column: 1/3;
   font-size: 1em;
