@@ -10,13 +10,6 @@
   grid-column: 1;
 }
 
-.product_img {
-  max-width: 100%;
-  grid-column: 3;
-  grid-row: 2/5;
-  align-self: left;
-}
-
 .order_summary.delivery {
   grid-template-columns: 1fr 1fr;
   gap: 20px;

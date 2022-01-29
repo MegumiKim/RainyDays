@@ -29,6 +29,10 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .product_description {
+    min-height: 174px;
+  }
+
   /* about */
 
   .brand {
