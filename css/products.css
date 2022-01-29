@@ -1,9 +1,6 @@
 .featured_products {
   display: grid;
-}
-
-.product {
-  margin: 20px 40px;
+  gap: 30px;
 }
 
 .product_description {
@@ -19,6 +16,7 @@
   color: var(--color_header);
   font-weight: bold;
   text-transform: uppercase;
+  font-size: 1.1rem;
 }
 
 .heart {
@@ -33,7 +31,6 @@
 
 .seasons {
   text-align: right;
-  margin-right: 10px;
   grid-column: 1;
 }
 

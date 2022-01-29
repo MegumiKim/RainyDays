@@ -2,7 +2,6 @@
 
 body {
   font: 16px var(--font_p);
-  font-weight: normal;
   margin: 0 auto;
   color: var(--color_header);
   min-height: 100vh;
@@ -14,11 +13,11 @@ main {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 10%;
-  align-content: flex-start;
 }
 
 .main_column {
   max-width: 400px;
+  align-content: flex-start;
 }
 
 .breadcrumb {
@@ -26,8 +25,7 @@ main {
   grid-column: 1/3;
 }
 
-.breadcrumb a,
-.breadcrumb p {
+.breadcrumb a {
   text-decoration: none;
   color: grey;
   display: inline-block;
@@ -37,19 +35,19 @@ h1,
 h2,
 h3 {
   text-transform: uppercase;
-  margin: 0pt;
 }
 
 h1 {
   font-size: 1.5rem;
-  margin: 10px 0;
-  max-width: 100%;
+  margin: 20px 0;
   grid-column: 1/3;
   grid-row: 2;
 }
 
 h2 {
-  font-size: 1.3rem;
+  text-align: center;
+  grid-column: -1/1;
+  margin: 0 auto 30px auto;
 }
 
 h3 {
@@ -87,11 +85,11 @@ img {
   padding: 10px 30px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 22px;
   display: block;
   margin: 10px auto;
   background: white;
-  /* font-weight: bold; */
+  font-family: var(--font_h1);
 }
 
 .cta.sub {
@@ -115,13 +113,10 @@ img {
   grid-column: 1/3;
 }
 
-.cta-wrapper {
-  grid-column: 2;
-}
-
 .total {
   font-weight: bold;
 }
+
 /* header, footer */
 header,
 footer {
@@ -243,7 +238,7 @@ nav a:hover {
 
 form {
   border: var(--color_subtle) solid 2px;
-  padding: 0 20px 20px;
+  padding: 20px 20px;
 }
 
 .form__input {
@@ -265,15 +260,10 @@ fieldset {
 }
 
 /* order_summary */
-h2 {
-  text-align: center;
-  grid-column: -1/1;
-  margin: 0 auto 30px auto;
-}
 
 #product_name {
-  font-size: 1.1rem;
-  text-decoration: underline;
+  font-size: 1.3rem;
+  /* text-decoration: underline; */
   grid-column: 1/3;
 }
 
@@ -286,15 +276,30 @@ h2 {
   grid-column: 1;
   border: var(--color_subtle) 2px solid;
   padding: 20px;
-  margin: 0 0 20px 0;
 }
 
 .order_summary h3 {
-  font-size: 1rem;
-  margin: 2.5px;
+  font-size: 18px;
+  margin: 0;
   grid-column: 1;
 }
 
 .order_summary p {
+  grid-column: 2;
+}
+
+/* my bag page */
+
+.order_summary.my_bag {
+  grid-row: 3/5;
+  margin-bottom: 0;
+}
+
+.product_img.my_bag {
+  max-width: 70%;
+  margin: 20px auto;
+}
+
+.cta-wrapper {
   grid-column: 2;
 }

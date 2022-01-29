@@ -1,11 +1,10 @@
 h1 {
-  text-align: center;
+  margin-bottom: 0;
 }
 
 .rating {
   color: rgb(224, 224, 53);
   text-align: right;
-  margin-bottom: 10px;
 }
 
 .rating p {
@@ -22,33 +21,36 @@ h1 {
 
 .product_img.one {
   max-width: 70%;
-  margin: 10px auto;
 }
 
 .product_img.three {
   max-width: 60%;
   margin-top: 30px;
 }
+
 .product_name_container {
   margin: 0 auto;
 }
+
 .product-details {
   grid-column: 2;
   grid-row: 2/4;
   padding-top: 10%;
+  margin-bottom: 20px;
 }
 
 .spec_container {
   display: flex;
+  margin-bottom: 15px;
 }
 
 .spec_container h3 {
   width: 60px;
   flex: 2;
   font-family: var(--font_p);
-  font-weight: normal;
-  font-size: 20px;
-  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
 }
 
 h2 {
@@ -56,7 +58,7 @@ h2 {
 }
 
 .container-text {
-  margin: 20px auto;
+  margin-bottom: 30px;
 }
 
 .form {

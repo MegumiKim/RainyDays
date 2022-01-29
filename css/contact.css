@@ -1,6 +1,6 @@
 .corporate_info {
   border: var(--color_subtle) 2px solid;
-  padding: 30px;
+  padding: 30px 40px;
 }
 
 #address {
@@ -9,14 +9,11 @@
 
 .map {
   margin-top: 20px;
-  max-width: 80%;
 }
 #message {
   min-height: 100px;
-  min-width: 80%;
 }
 
 .cta {
-  margin: 20px auto;
-  max-height: none;
+  margin-top: 20px;
 }
