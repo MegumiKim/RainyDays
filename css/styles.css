@@ -96,7 +96,7 @@ img {
 }
 
 .cta:hover {
-  background: #eebc6c;
+  background: var(--color_yellow);
 }
 
 .cta.sub:hover {
@@ -229,11 +229,12 @@ nav a:hover {
 form {
   border: var(--color_subtle) solid 2px;
   margin-bottom: 20px;
+  padding: 20px;
 }
 
 .form__input {
   display: block;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
   border-style: solid;
   width: 100%;
   min-height: 23px;
@@ -244,7 +245,6 @@ form {
 }
 
 fieldset {
-  padding: 20px;
   margin-bottom: 10px;
   border: none;
 }
@@ -264,9 +264,6 @@ fieldset {
   margin: auto auto;
 }
 
-.img_container {
-  margin: auto auto 0 auto;
-}
 .order_summary {
   display: grid;
   grid-template-columns: 3fr 2fr auto;

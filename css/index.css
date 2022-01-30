@@ -33,21 +33,22 @@ h1 {
 
 .cta-welcome {
   font-size: 1.2em;
-  max-width: 300px;
   margin: 50px auto;
   padding: 10px 60px;
-  max-height: 30px;
   /* background: var(--color_yellow); */
   background: none;
   color: white;
 }
 
+.cta-welcome:hover {
+  color: var(--color_header);
+}
+
 /* featured categories */
 
 .featured_categories {
-  margin: 0 auto;
+  margin: 0 10%;
   max-width: 800px;
-  padding: 0 10%;
 }
 
 .featured_categories h2 {
@@ -56,8 +57,7 @@ h1 {
 
 .featured_grid {
   display: grid;
-  grid-template-columns: 1;
-  gap: 30px;
+  gap: 40px 30px;
 }
 
 .categories_button {
@@ -79,7 +79,6 @@ h1 {
 .category {
   min-height: 200px;
   background-size: 100%;
-  margin-bottom: 20px;
 }
 
 .women {

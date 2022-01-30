@@ -3,7 +3,7 @@
 .thank_you {
   font-size: 1.3rem;
   grid-row: 3;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .order_summary.delivery {
@@ -25,6 +25,6 @@
 
 .cta {
   grid-column: 1/3;
-  grid-row: 5;
   padding: 10px 60px;
+  margin: 30px auto;
 }
