@@ -261,7 +261,7 @@ fieldset {
   font-size: 18px;
   grid-column: 3;
   text-align: right;
-  margin: auto auto;
+  margin-bottom: 10px;
 }
 
 .order_summary {
