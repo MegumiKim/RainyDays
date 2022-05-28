@@ -1,0 +1,46 @@
+export const productArray = [
+  {
+    name: "Super Comfy Jacket",
+    id: "1",
+    price: 899,
+    sale: true,
+    image: "/images/products/model_1.jpg",
+    altText: "a woman in yellow super comfy jacket with mountain background",
+    size: ["S", "M", "L"],
+    seasons: "all seasons",
+    categories: ["women", "new arrivals"],
+    color: ["yellow", "black", "red"],
+    review: 4.0,
+    reviewComments: ["warm", "lovely"],
+    reviewCount: 129,
+    material: ["polyester", "duck down"],
+    activities: ["hiking", "camping"],
+    minTemp: 0,
+    maxTemp: 10,
+    descriptionOne:
+      "The jacket is very comfortable and warm. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    descriptionTwo:
+      "The jacket is very comfortable and warm. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+  {
+    name: "Super Warm Jacket",
+    id: "2",
+    price: 1200,
+    sale: true,
+    image: "/images/products/model_2.jpg",
+    size: ["S", "M", "L"],
+    seasons: "winter",
+    categories: ["men", "winter"],
+    color: ["yellow", "black", "red"],
+    review: 4.0,
+    reviewCount: 129,
+    material: ["polyester", "duck down"],
+    activities: ["hiking", "camping"],
+    minTemp: 0,
+    maxTemp: 10,
+    descriptionOne:
+      "The jacket is very comfortable and warm. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    descriptionTwo:
+      "The jacket is very comfortable and warm. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  },
+];

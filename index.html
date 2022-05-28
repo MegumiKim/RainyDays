@@ -70,9 +70,10 @@
         <a href="log-in.html" class="log-in"
           ><i class="fas fa-user-circle"></i
         ></a>
-        <a href="empty_bag.html" class="my-bag"
+        <i class="fas fa-shopping-bag my-bag"></i>
+        <!-- <a href="empty_bag.html" class="my-bag"
           ><i class="fas fa-shopping-bag"></i
-        ></a>
+        ></a> -->
       </div>
     </header>
     <main class="index_main">
@@ -84,25 +85,28 @@
       <section class="featured_categories">
         <h2>Featured Categories</h2>
         <div class="featured_grid">
-          <div class="category women">
-            <a href="products.html" class="categories_button">WOMEN</a>
-          </div>
-          <div class="category men">
-            <a href="products.html" class="categories_button">MEN</a>
-          </div>
-          <div class="category new_arrivals">
-            <a href="products.html" class="categories_button">NEW ARRIVALS</a>
-          </div>
-          <div class="category hiking">
-            <a href="products.html" class="categories_button">HIKING</a>
-          </div>
-          <div class="category winter">
-            <a href="products.html" class="categories_button">WINTER</a>
-          </div>
-          <div class="category spring">
-            <a href="products.html" class="categories_button">SPRING</a>
-          </div>
+          <a href="products.html" class="category women">
+            <h3 class="category-name">WOMEN</h3>
+          </a>
+          <a href="products.html" class="category men">
+            <h3 class="category-name">MEN</h3>
+          </a>
+          <a href="products.html" class="category new_arrivals">
+            <h3 class="category-name">NEW ARRIVALS</h3>
+          </a>
+          <a href="products.html" class="category hiking">
+            <h3 class="category-name">HIKING</h3>
+          </a>
+          <a href="products.html" class="category winter">
+            <h3 class="category-name">WINTER</h3>
+          </a>
+          <a href="products.html" class="category spring">
+            <h3 class="category-name">SPRING</h3>
+          </a>
         </div>
+      </section>
+      <section class="popular items">
+        <h2>Popular Items</h2>
       </section>
     </main>
     <footer>
@@ -113,5 +117,11 @@
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
+    <div class="cart">
+      <div class="cart-list"></div>
+      <div class="total"></div>
+      <a href="checkout.html" class="cta checkout-button">Checkout</a>
+    </div>
+    <script src="/js/script.js" type="module"></script>
   </body>
 </html>

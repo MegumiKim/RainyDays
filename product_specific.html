@@ -15,7 +15,7 @@
   <script src="https://kit.fontawesome.com/175ecb4e25.js" crossorigin="anonymous"></script>
   <title>RAINY DAYS | SUPER COMFY JACKET</title>
   <!-- Hotjar Tracking Code for https://gifted-hoover-253ce2.netlify.app -->
-<script>
+<!-- <script>
   (function(h,o,t,j,a,r){
       h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
       h._hjSettings={hjid:2964893,hjsv:6};
@@ -24,7 +24,7 @@
       r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
       a.appendChild(r);
   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+</script> -->
 </head>
 <body>
   <header>
@@ -54,14 +54,15 @@
     </div>
   </header>
   <main class=main_column>
-      <section class="breadcrumb">
+      <div class="breadcrumb">
           <a href="index.html"><i class="fas fa-chevron-left"></i></a>
           <a href="index.html">HOME /</a>
           <a href="products.html">PRODUCTS /</a>
-          <a href="product_specific.html">SUPER COMFY JACKET</a>
-        </section>
+          <a href="product_specific.html" id="current_page">SUPER COMFY JACKET</a>
+        </div>
         <div class="product_name_container">
           <h1 class='product_name'>Super comfy jacket</h1>
+          <button class="heart"><i class="far fa-heart"></i></button>
           <div class="rating">
             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><p>(129)</p>
           </div>
@@ -121,7 +122,8 @@
             <p>0 - 10 degree</p>
           </div>
         </div>
-          <a href="my_bag.html" class='cta specific'>ADD TO MY BAG</a>
+        <button class="cta specific add-button"  data-product='1'>Add to my cart</button>
+          <!-- <a href="my_bag.html" class='cta specific'>ADD TO MY BAG</a> -->
 
           <div class="container-text one">
             <p>The jacket is very comfortable and warm. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -139,6 +141,11 @@
             <img src="/images/products/specific/detail_2.png" alt="close up picture of super comfy jacket">
           </div>
       </main>
+      <div class="cart">
+        <div class="cart-list"></div>
+        <div class="total"></div>
+        <a href="checkout.html" class=" cta checkout-button">Checkout</a>
+      </div>
     <footer>
       <div class="copyright">Copyright &copy;</div>
       <div class="social-media">
@@ -147,5 +154,7 @@
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
+    <script src="/js/script.js" type="module"></script>
+    <script src="/js/productSpecific.js" type="module"></script>
   </body>
 </html>

@@ -73,3 +73,18 @@ label {
 .cta.specific {
   margin: 30px 0;
 }
+
+.heart {
+  border: none;
+  background: none;
+  /* background: var(--color_white); */
+  font-size: 20px;
+  grid-row: 1;
+  grid-column: 2;
+  align-self: start;
+  text-align: right;
+}
+
+.heart:hover {
+  color: salmon;
+}
