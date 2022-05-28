@@ -24,6 +24,7 @@ export function makeOrderSummary() {
         <p class="price">NOK ${item.price}</p>
         <p>Color: ${item.color[1]}</p>
         <p>Size: ${item.size[1]}</p>
+        <i class="fa-solid fa-trash"></i>
         </div>
         </div>
       `;

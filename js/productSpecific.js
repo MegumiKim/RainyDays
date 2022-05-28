@@ -17,3 +17,13 @@ addButton.onclick = function (event) {
   localStorage.setItem("cartList", JSON.stringify(cartArray));
   makeOrderSummary();
 };
+
+const heart = document.querySelector(".heart");
+
+heart.onclick = function (event) {
+  if (event.target.style.color === "salmon") {
+    event.target.style.color = "grey";
+  } else {
+    event.target.style.color = "salmon";
+  }
+};

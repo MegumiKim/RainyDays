@@ -52,7 +52,7 @@
       <nav>
         <a href="index.html">HOME</a>
         <a href="products.html">PRODUCTS</a>
-        <a href="about.html" id="current_page">ABOUT</a>
+        <a href="about.html" class="current-page">ABOUT</a>
         <a href="contact.html">CONTACT</a>
       </nav>
       <div class="header-right">
@@ -68,16 +68,14 @@
         <a href="log-in.html" class="log-in"
           ><i class="fas fa-user-circle"></i
         ></a>
-        <a href="empty_bag.html" class="my-bag"
-          ><i class="fas fa-shopping-bag"></i
-        ></a>
+        <i class="fas fa-shopping-bag my-bag"></i>
       </div>
     </header>
     <main>
-      <section class="breadcrumb">
+      <div class="breadcrumb">
         <a href="index.html"><i class="fas fa-chevron-left"></i></a>
         <a href="index.html">HOME /</a>
-        <a href="about.html" class="current_page">ABOUT</a>
+        <a href="about.html" id="current">ABOUT</a>
       </section>
       <h1>about</h1>
       <div class="about_img">
@@ -131,6 +129,10 @@
           sunt explicabo.
         </p>
       </section>
+
+      <section class="link-to-contact-page">
+        Please visit <a href>Contact Page</a> for Customer Service and Corporate Info
+      </section>
     </main>
     <footer>
       <div class="copyright">Copyright &copy;</div>
@@ -139,6 +141,13 @@
         <i class="fab fa-instagram"></i>
         <i class="fab fa-twitter"></i>
       </div>
+      
     </footer>
+    <div class="cart">
+      <div class="cart-list"></div>
+      <div class="total"></div>
+      <a href="checkout.html" class="cta checkout-button">Checkout</a>
+    </div>
+    <script src="/js/script.js" type="module"></script>
   </body>
 </html>

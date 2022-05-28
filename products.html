@@ -23,8 +23,7 @@
       crossorigin="anonymous"
     ></script>
     <title>RAINY DAYS | PRODUCTS</title>
-    <!-- Hotjar Tracking Code for https://gifted-hoover-253ce2.netlify.app -->
-    <!-- <script>
+    <script>
       (function (h, o, t, j, a, r) {
         h.hj =
           h.hj ||
@@ -38,7 +37,7 @@
         r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
-    </script> -->
+    </script>
   </head>
   <body>
     <header>
@@ -51,7 +50,7 @@
       ></label>
       <nav>
         <a href="index.html">HOME</a>
-        <a href="products.html" id="current_page">PRODUCTS</a>
+        <a href="products.html" class="current-page">PRODUCTS</a>
         <a href="about.html">ABOUT</a>
         <a href="contact.html">CONTACT</a>
       </nav>
@@ -68,158 +67,19 @@
         <a href="log-in.html" class="log-in"
           ><i class="fas fa-user-circle"></i
         ></a>
-        <a href="empty_bag.html" class="my-bag"
-          ><i class="fas fa-shopping-bag"></i
-        ></a>
+        <i class="fas fa-shopping-bag my-bag"></i>
       </div>
     </header>
     <main>
       <div class="breadcrumb">
         <a href="index.html"><i class="fas fa-chevron-left"></i></a>
         <a href="index.html">HOME /</a>
-        <a href="products.html">OUR PRODUCTS</a>
+        <a href="products.html" id="current">OUR PRODUCTS</a>
       </div>
       <section class="products">
         <h1>OUR PRODUCTS</h1>
-
         <div class="products-container"></div>
       </section>
-
-      <!-- <section class="featured_products">
-          <a href="product_specific.html" class="product">
-              <a class="product_img">
-                <img
-                  src="images/products/model_1.jpg"
-                  alt="a woman in yellow super comfy jacket with mountain background"
-                />
-              </a>
-            <div class="product_description">
-              <a href="product_specific.html" class="product_name">Super comfy jacket </a>
-              <button class="heart"><i class="far fa-heart"></i></button>
-              <p class="price">NOK 899</p>
-              <p class="seasons">All Seasons</p>
-              <a href="product_specific.html" class='cta'>specifications</a>
-            </div>
-          </a>
-          <div class="product">
-              <div class="product_img">
-                <img
-                  src="images/products/model_4.jpg"
-                  alt="a man in super cool jacket with snow mountain reflected on water surface"
-                />
-              </div>
-            <div class="product_description">
-              <a href="product_specific.html" class="product_name">Super warm jacket </a>
-              <button class="heart"><i class="far fa-heart"></i></button>
-              <p class="price">NOK 1299</p>
-              <p class="seasons">Winter</p>
-              <div class="spec_container color">
-              </div>
-              <a href="product_specific.html" class='cta'>specifications</a>
-            </div>
-          </div>
-          <div class="product">
-              <div class="product_img">
-                <img
-                  src="images/products/model_3.jpg"
-                  alt="a woman with super nice jacket and skates on ice in nature"
-                />
-              </div>
-            <div class="product_description">
-              <a href="product_specific.html" class="product_name">Super nice jacket </a>
-              <button class="heart"><i class="far fa-heart"></i></button>
-              <p class="price">NOK 999</p>
-              <p class="seasons">All Seasons</p>
-              <div class="spec_container color">
-              </div>
-              <a href="product_specific.html"class='cta'>specifications</a>
-            </div>
-          </div>
-          <div class="product">
-              <div class="product_img">
-                <img
-                  src="images/products/model_9.jpg"
-                  alt=""
-                />
-              </div>
-            <div class="product_description">
-              <a href="product_specific.html" class="product_name">Super funcy jacket </a>
-              <button class="heart"><i class="far fa-heart"></i></button>
-              <p class="price">NOK 1399</p>
-              <p class="seasons">All Seasons</p>
-              <div class="spec_container color">
-              </div>
-              <a href="product_specific.html"class='cta'>specifications</a>
-            </div>
-          </div>
-          <div class="product">
-              <div class="product_img">
-                <img
-                  src="images/products/model_5.jpg"
-                  alt="a woman in brown down jacket on a sunny day"
-                />
-              </div>
-            <div class="product_description">
-              <a href="product_specific.html" class="product_name">Super down jacket </a>
-              <button class="heart"><i class="far fa-heart"></i></button>
-              <p class="price">NOK 799</p>
-              <p class="seasons">Spring</p>
-              <div class="spec_container color">
-              </div>
-              <a href="product_specific.html"class='cta'>specifications</a>
-            </div>
-          </div>
-          <div class="product">
-              <div class="product_img">
-                <img
-                  src="images/products/model_6.jpg"
-                  alt="red super fun jacket"
-                />
-              </div>
-            <div class="product_description">
-              <a href="product_specific.html" class="product_name">Super fun jacket </a>
-              <button class="heart"><i class="far fa-heart"></i></button>
-              <p class="price">NOK 999</p>
-              <p class="seasons">All Seasons</p>
-              <div class="spec_container color">
-              </div>
-              <a href="product_specific.html"class='cta'>specifications</a>
-            </div>
-          </div>
-          <div class="product">
-              <div class="product_img">
-                <img
-                  src="images/products/model_8.jpg"
-                  alt="a woman in yellow super comfy jacket with mountain background"
-                />
-              </div>
-            <div class="product_description">
-              <a href="product_specific.html" class="product_name">Super light jacket </a>
-              <button class="heart"><i class="far fa-heart"></i></button>
-              <p class="price">NOK 599</p>
-              <p class="seasons">Spring/Autumn</p>
-              <div class="spec_container color">
-              </div>
-              <a href="product_specific.html"class='cta'>specifications</a>
-            </div>
-          </div>
-          <div class="product">
-              <div class="product_img">
-                <img
-                  src="images/products/model_11.jpg"
-                  alt="a man with super active jacket standing with hands in pocket"
-                />
-              </div>
-            <div class="product_description">
-              <a href="product_specific.html" class="product_name">Super active jacket </a>
-              <button class="heart"><i class="far fa-heart"></i></button>
-              <p class="price">NOK 1599</p>
-              <p class="seasons">All Seasons</p>
-              <div class="spec_container color">
-              </div>
-              <a href="product_specific.html"class='cta'>specifications</a>
-            </div>
-          </div> -->
     </main>
     <footer>
       <div class="copyright">RAINYDAYS &copy;</div>
@@ -229,6 +89,12 @@
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
+    <div class="cart">
+      <div class="cart-list"></div>
+      <div class="total"></div>
+      <a href="checkout.html" class="cta checkout-button">Checkout</a>
+    </div>
+    <script src="/js/script.js" type="module"></script>
     <script src="/js/products.js" type="module"></script>
   </body>
 </html>

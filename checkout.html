@@ -68,23 +68,21 @@
         <a href="log-in.html" class="log-in"
           ><i class="fas fa-user-circle"></i
         ></a>
-        <a href="empty_bag.html" class="my-bag"
-          ><i class="fas fa-shopping-bag"></i
-        ></a>
+        <i class="fas fa-shopping-bag my-bag"></i>
       </div>
     </header>
     <main class="main_column checkout">
-      <section class="breadcrumb">
-        <a href="my_bag.html"><i class="fas fa-chevron-left"></i></a>
-        <a href="my_bag.html">MY BAG /</a>
-        <a href="checkout.html" id="current_page">CHECKOUT</a>
+      <div class="breadcrumb">
+        <a href="product_specific.html"><i class="fas fa-chevron-left"></i></a>
+        <a href="product_specific.html">SUPER COMFY JACKET/</a>
+        <a href="checkout.html" id="current">CHECKOUT</a>
         <a href="confirmation.html"> / PURCHASE CONFIRMATION</a>
-      </section>
+      </div>
       <h1>CHECKOUT</h1>
 
-      <p class="log_in">
+      <!-- <p class="log_in">
         Do you already have an account? Log in <a href="log-in.html">here.</a>
-      </p>
+      </p> -->
       <section class="section_form">
         <form action="purchase_form.php" method="post">
           <fieldset class="shipping_form">
@@ -128,38 +126,22 @@
         <!-- <div class="order-container"> -->
         <div class="cart-list"></div>
         <div class="total"></div>
-
-        <!-- <div class="product_img">
-          <img
-            src="/images/products/specific/jacket_1.jpg"
-            alt="picture of super comfy jacket"
-          />
-        </div>
-        <h3 id="product_name">Super Comfy Jacket (1)</h3>
-        <h3>price</h3>
-        <p id="price">NOK 899</p>
-        <h3>size</h3>
-        <p>M</p>
-        <h3>color</h3>
-        <p>Black</p>
-        <hr />
-        <h3>Sub Total</h3>
-        <p>NOK 899</p>
-        <h3>Shipping</h3>
-        <p>NOK 0</p>
-        <hr />
-        <h3 class="total">Total</h3>
-        <p class="total">NOK 899</p> -->
       </section>
     </main>
+    <div class="cart">
+      <div class="cart-list"></div>
+      <div class="total"></div>
+      <a href="checkout.html" class="cta checkout-button">Checkout</a>
+    </div>
     <footer>
-      <div class="copyright">Copyright &copy;</div>
+      <div class="copyright">RAINYDAYS &copy;</div>
       <div class="social-media">
         <i class="fab fa-facebook"></i>
         <i class="fab fa-instagram"></i>
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
+    <script src="/js/script.js" type="module"></script>
     <script src="/js/checkout.js" type="module"></script>
   </body>
 </html>

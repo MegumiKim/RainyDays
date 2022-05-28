@@ -67,20 +67,20 @@
         <a href="log-in.html" class="log-in"
           ><i class="fas fa-user-circle"></i
         ></a>
-        <a href="empty_bag.html" class="my-bag"
-          ><i class="fas fa-shopping-bag"></i
-        ></a>
+<i class="fas fa-shopping-bag my-bag"></i
+        >
       </div>
     </header>
     <main class="main_column">
-      <section class="breadcrumb">
+      <div class="breadcrumb">
         <a href="index.html"><i class="fas fa-chevron-left"></i></a>
         <a href="index.html">HOME /</a>
         <a href="log-in.html" class="current_page">LOG IN</a>
       </section>
       <h1>Log in</h1>
-      <form action="message.php" method="post">
-        <fieldset>
+      <form id="log-in-form">
+        <div class="user-alert"></div>
+        <a>
           <label for="email">EMAIL</label>
           <input
             type="text"
@@ -89,6 +89,7 @@
             class="form__input"
             required
           />
+          <div class="form-error subject-error"></div>
           <label for="passward">PASSWORD</label>
           <input
             type="text"
@@ -97,8 +98,10 @@
             class="form__input"
             required
           />
+          <div class="form-error subject-error"></div>
           <a href="log-in.html">Forgot password?</a>
-          <input type="submit" value="Log in" name="message" class="cta form" />
+          <!-- <input type="submit" value="Log in" name="message" class="cta form" id="login-button"/> -->
+          <a href="my-page.html" class="cta" id="login-button">Log in</a>
         </fieldset>
       </form>
       <section class="create_account">
@@ -114,5 +117,12 @@
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
+    <div class="cart">
+      <div class="cart-list"></div>
+      <div class="total"></div>
+      <a href="checkout.html" class="cta checkout-button">Checkout</a>
+    </div>
+    <script src="/js/script.js" type="module"></script>
+    <script src="/js/log-in.js" type="module"></script>
   </body>
 </html>

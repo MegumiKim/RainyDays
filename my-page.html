@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Check your items in My Bag!" />
+    <meta
+      name="descriptionproduct_descriptionion"
+      content="Check out RAINYDAY's latest products"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,14 +16,13 @@
     />
     <link rel="stylesheet" href="./CSS/styles.css" />
     <link rel="stylesheet" href="./CSS/variables.css" />
-    <link rel="stylesheet" href="./CSS/empty_bag.css" />
+    <link rel="stylesheet" href="./CSS/products.css" />
     <link rel="stylesheet" href="./CSS/media.css" />
     <script
       src="https://kit.fontawesome.com/175ecb4e25.js"
       crossorigin="anonymous"
     ></script>
-    <title>RAINY DAYS | My BAG</title>
-    <!-- Hotjar Tracking Code for https://gifted-hoover-253ce2.netlify.app -->
+    <title>RAINY DAYS | My PAGE</title>
     <script>
       (function (h, o, t, j, a, r) {
         h.hj =
@@ -48,7 +50,7 @@
       ></label>
       <nav>
         <a href="index.html">HOME</a>
-        <a href="products.html">PRODUCTS</a>
+        <a href="products.html" class="current-page">PRODUCTS</a>
         <a href="about.html">ABOUT</a>
         <a href="contact.html">CONTACT</a>
       </nav>
@@ -65,29 +67,49 @@
         <a href="log-in.html" class="log-in"
           ><i class="fas fa-user-circle"></i
         ></a>
-        <a href="empty_bag.html" class="my-bag"
-          ><i class="fas fa-shopping-bag"></i
-        ></a>
+        <i class="fas fa-shopping-bag my-bag"></i>
       </div>
     </header>
-    <main class="main_column">
-      <section class="breadcrumb">
+    <main>
+      <div class="breadcrumb">
         <a href="index.html"><i class="fas fa-chevron-left"></i></a>
         <a href="index.html">HOME /</a>
-        <a href="contact.html" class="current_page">MY BAG</a>
+        <a href="products.html" id="current">MY PAGE</a>
+      </div>
+      <section class="favorites">
+        <h1>My Page</h1>
+        <h2>Saved Items</h2>
+        <div class="fav-container">
+          <div>
+            <h3 class="product-name">Super Comfy Jacket</h3>
+            <div class="cart-item-wrap">
+              <div
+                style="background-image: url(/images/products/model_1.jpg)"
+                class="cart-image"
+              ></div>
+              <div class="order-details">
+                <p class="price">NOK 899</p>
+                <p>Color: Yellow</p>
+                <p>Size: M</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <h1>My bag</h1>
-      <h2>Oh no! Your bag is empty!</h2>
-
-      <a href="products.html" class="cta back">Back to our products</a>
     </main>
     <footer>
-      <div class="copyright">Copyright &copy;</div>
+      <div class="copyright">RAINYDAYS &copy;</div>
       <div class="social-media">
         <i class="fab fa-facebook"></i>
         <i class="fab fa-instagram"></i>
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
+    <div class="cart">
+      <div class="cart-list"></div>
+      <div class="total"></div>
+      <a href="checkout.html" class="cta checkout-button">Checkout</a>
+    </div>
+    <script src="/js/script.js" type="module"></script>
   </body>
 </html>

@@ -50,7 +50,7 @@
         <a href="index.html">HOME</a>
         <a href="products.html">PRODUCTS</a>
         <a href="about.html">ABOUT</a>
-        <a href="contact.html" id="current_page">CONTACT</a>
+        <a href="contact.html" class="current-page">CONTACT</a>
       </nav>
       <div class="header-right">
         <div class="search_container">
@@ -71,57 +71,70 @@
       </div>
     </header>
     <main class="main_column">
-      <section class="breadcrumb">
+      <div class="breadcrumb">
         <a href="index.html"><i class="fas fa-chevron-left"></i></a>
         <a href="index.html">HOME /</a>
-        <a href="contact.html" class="current_page">CONTACT</a>
-      </section>
+        <a href="contact.html" id="current">CONTACT</a>
+      </div>
       <h1>CONTACT</h1>
+
       <section class="corporate_info">
         <h2>RAINYDAYS' AS</h2>
         <p id="address">Street 1 <br />1234 Oslo<br />Norway</p>
 
         <p>+47 1234 5678</p>
         <p>customer@rainydays.com</p>
-        <div class="map">
+        <a class="map" href="https://goo.gl/maps/B74XLPdEAk8QVQrx7">
           <img
-            src="images/about/snazzy-image.png"
+            src="images/about/oslomap.png"
             alt="map indicating RANYDAY'S office location"
           />
-        </div>
+        </a>
       </section>
 
-      <form action="message.php" method="post">
-        <fieldset>
-          <h2>Customer Service</h2>
-          <label for="name">NAME</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            class="form__input"
-            required
-          />
-          <label for="email">EMAIL</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            class="form__input"
-            required
-          />
-          <input type="checkbox" id="sign-up" name="sign-up" class="checkbox" />
-          <label for="sign-up">Sign-up for products updates</label>
-          <section class="message" class="form__input" required>
-            <label for="message">MESSAGE</label>
-            <textarea
-              name="message"
-              id="message"
-              class="form__input"
-            ></textarea>
-          </section>
-          <input type="submit" value="send" name="message" class="cta form" />
-        </fieldset>
+      <!-- <form id="contact-form" action="message.php" method="post"> -->
+      <form id="contact-form">
+        <h2>Customer Service</h2>
+        <div class="user-alert"></div>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          class="form__input"
+          placeholder=" min 2 letters "
+          required
+        />
+        <div class="form-error name-error"></div>
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          class="form__input"
+          placeholder=" min 10 letters"
+          required
+        />
+        <div class="form-error subject-error"></div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form__input"
+          placeholder=" example@email.com"
+          required
+        />
+        <div class="form-error email-error"></div>
+        <input type="checkbox" id="sign-up" name="sign-up" class="checkbox" />
+        <label for="sign-up">Sign-up for products updates</label>
+        <label for="texts">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          class="form__input"
+          placeholder=" min 5 letters"
+          required
+        ></textarea>
+        <div class="form-error message-error"></div>
+        <input type="submit" value="send" name="message" class="cta form" />
       </form>
     </main>
     <footer>
@@ -132,5 +145,12 @@
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
+    <div class="cart">
+      <div class="cart-list"></div>
+      <div class="total"></div>
+      <a href="checkout.html" class="cta checkout-button">Checkout</a>
+    </div>
+    <script src="/js/script.js" type="module"></script>
+    <script src="/js/contact.js" type="module"></script>
   </body>
 </html>

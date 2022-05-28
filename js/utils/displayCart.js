@@ -4,7 +4,7 @@ const myCart = document.querySelector(".cart");
 const myBag = document.querySelector(".my-bag");
 
 export function displayCart() {
-  myBag.addEventListener("mouseenter", function () {
+  myBag.addEventListener("click", function () {
     myCart.style.display = "flex";
   });
   myBag.addEventListener("mouseleave", function () {
