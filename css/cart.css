@@ -60,10 +60,13 @@
   text-decoration: underline;
 }
 
-#bin {
+.fa-trash {
   color: var(--color_header);
   font-size: 18px;
-  grid-column: 3;
   text-align: right;
   margin-bottom: 10px;
+}
+
+.fa-trash:hover {
+  color: grey;
 }

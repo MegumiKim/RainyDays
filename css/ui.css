@@ -79,3 +79,19 @@
   font-size: 0.8em;
   padding-top: 0%;
 }
+
+#password-hint {
+  max-width: 200px;
+  display: none;
+}
+
+#question {
+  background: none;
+  border: none;
+
+  /* font-size: 1em; */
+}
+
+#question:hover {
+  color: darkred;
+}

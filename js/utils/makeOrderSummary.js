@@ -1,4 +1,4 @@
-// import { createOrderSummary } from "./cart.js";
+import { removeFromCart } from "./removeFromCart.js";
 const cartList = document.querySelector(".cart-list");
 const cart = document.querySelector(".cart");
 const totalContainer = document.querySelector(".total");
@@ -24,7 +24,7 @@ export function makeOrderSummary() {
         <p class="price">NOK ${item.price}</p>
         <p>Color: ${item.color[1]}</p>
         <p>Size: ${item.size[1]}</p>
-        <i class="fa-solid fa-trash"></i>
+        <i class="fa-solid fa-trash" data-id="${item.id}"></i>
         </div>
         </div>
       `;
@@ -33,5 +33,6 @@ export function makeOrderSummary() {
     totalContainer.innerHTML = `
 <div class="total">Total: NOK ${total}</div>
   `;
+    removeFromCart();
   }
 }

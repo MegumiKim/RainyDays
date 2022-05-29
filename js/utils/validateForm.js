@@ -8,7 +8,7 @@ const subjectError = document.querySelector(".subject-error");
 const addressError = document.querySelector(".address-error");
 const emailError = document.querySelector(".email-error");
 const messageError = document.querySelector(".message-error");
-
+const passwd = document.querySelector("#password");
 // const errorMessage = document.querySelectorAll(".form-error");
 
 function validateForm(requiredField) {
@@ -29,8 +29,10 @@ export function validateContactForm() {
 }
 
 export function validateLoginForm() {
-  if (validateEmail(email)) {
+  if (validateEmail(email) && validatePassword(password)) {
     return true;
+  } else {
+    return false;
   }
 }
 
@@ -53,6 +55,18 @@ function validateEmail(email) {
     return true;
   } else {
     emailError.innerHTML = "Please input valid email";
+    return false;
+  }
+}
+
+function validatePassword(password) {
+  const regEx = /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/;
+  const patternMach = regEx.test(password.value);
+  if (patternMach) {
+    console.log("good password");
+    return true;
+  } else {
+    console.log("bad passwd");
     return false;
   }
 }

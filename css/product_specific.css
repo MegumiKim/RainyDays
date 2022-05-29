@@ -5,6 +5,7 @@ h1 {
 .rating {
   color: rgb(224, 224, 53);
   text-align: right;
+  display: block;
 }
 
 .rating p {
@@ -16,11 +17,14 @@ h1 {
 .price {
   font-weight: bold;
   font-size: 1.2rem;
-  text-align: right;
+  text-align: left;
 }
 
 .product_img.one {
-  max-width: 70%;
+  margin-top: 10%;
+  max-width: 100%;
+  grid-column: 1;
+  grid-row: 2/4;
 }
 
 .product_img.three {
@@ -28,17 +32,12 @@ h1 {
   margin-top: 30px;
 }
 
-.product_name_container {
-  margin: 0 auto;
-}
+/* .product_img.two {
+  grid-column: 2;
+} */
 
 .color_size_container {
   margin-top: 30px;
-}
-
-.product-details {
-  grid-column: 2;
-  grid-row: 2/4;
 }
 
 .spec_container {
@@ -58,9 +57,9 @@ h2 {
   margin: 30px auto;
 }
 
-.container-text {
+/* .container-text {
   margin: 30px auto;
-}
+} */
 
 .form {
   border: none;
@@ -72,19 +71,39 @@ label {
 
 .cta.specific {
   margin: 30px 0;
+  flex: 1;
+  max-height: 50px;
+  align-self: center;
 }
 
 .heart {
+  color: grey;
   border: none;
   background: none;
-  /* background: var(--color_white); */
-  font-size: 20px;
-  grid-row: 1;
-  grid-column: 2;
-  align-self: start;
-  text-align: right;
+  font-size: 2em;
+  padding: 0 20px;
 }
 
-/* .heart:hover {
+.heart:hover {
   color: salmon;
-} */
+}
+
+.username {
+  font-weight: bold;
+}
+
+.reviews {
+  padding-left: 0;
+}
+.reviews li {
+  list-style: none;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 2px var(--color_subtle);
+}
+
+.add-to-container {
+  grid-column: 2;
+  display: flex;
+  justify-content: space-between;
+}

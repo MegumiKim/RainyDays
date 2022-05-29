@@ -73,7 +73,7 @@
     </header>
     <main class="main_column">
       <div class="breadcrumb">
-        <a href="index.html"><i class="fas fa-chevron-left"></i></a>
+        <a href="javascript:history.back()"><i class="fas fa-chevron-left"></i></a>
         <a href="index.html">HOME /</a>
         <a href="log-in.html" class="current_page">LOG IN</a>
       </section>
@@ -87,21 +87,25 @@
             id="email"
             name="email"
             class="form__input"
+            placeholder="example@email.com"
             required
           />
-          <div class="form-error subject-error"></div>
-          <label for="passward">PASSWORD</label>
+          <div class="form-error email-error"></div>
+          <label for="passward">PASSWORD <button id="question"><i class="fa-regular fa-circle-question"></i></button>
+          </label>
+<p id="password-hint">Minimum 8 characters containing lower & uppercase letters and number.</p> 
           <input
             type="text"
             id="password"
             name="password"
             class="form__input"
+            placeholder="min 8 characters"
             required
           />
-          <div class="form-error subject-error"></div>
+          <div class="form-error password-error"></div>
           <a href="log-in.html">Forgot password?</a>
           <!-- <input type="submit" value="Log in" name="message" class="cta form" id="login-button"/> -->
-          <a href="my-page.html" class="cta" id="login-button">Log in</a>
+          <button type="submit" class="cta" id="login-button">Log in</button>
         </fieldset>
       </form>
       <section class="create_account">
