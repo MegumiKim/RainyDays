@@ -49,35 +49,20 @@
       <label for="hamburger-menu" id="hamburger-icon"
         ><i class="fas fa-bars"></i
       ></label>
-      <nav>
-        <a href="index.html">HOME</a>
-        <a href="products.html">PRODUCTS</a>
-        <a href="about.html">ABOUT</a>
-        <a href="contact.html">CONTACT</a>
-      </nav>
+
       <div class="header-right">
-        <div class="search_container">
-          <label for="search" id="search_icon" class="fas fa-search"></label>
-          <input type="text" id="search" />
-          <div class="popular-searches">
-            <p id="search-title">Popular searches:</p>
-            <p class="search-ex">New arrivals</p>
-            <p class="search-ex">super comfy jacket</p>
-          </div>
-        </div>
         <a href="log-in.html" class="log-in"
           ><i class="fas fa-user-circle"></i
         ></a>
-        <i class="fas fa-shopping-bag my-bag"></i>
       </div>
     </header>
     <main class="main_column checkout">
-      <div class="breadcrumb">
+      <section class="breadcrumb">
         <a href="product_specific.html"><i class="fas fa-chevron-left"></i></a>
         <a href="product_specific.html">SUPER COMFY JACKET/</a>
         <a href="checkout.html" id="current">CHECKOUT</a>
-        <a href="confirmation.html"> / PURCHASE CONFIRMATION</a>
-      </div>
+        <a> / PURCHASE CONFIRMATION</a>
+      </section>
       <h1>CHECKOUT</h1>
 
       <!-- <p class="log_in">
@@ -88,34 +73,66 @@
           <fieldset class="shipping_form">
             <h2>Shipping Address</h2>
             <label for="name">NAME</label>
-            <input type="text" id="name" class="form__input" />
+            <input
+              type="text"
+              id="name"
+              class="form__input"
+              required
+              required
+            />
             <label for="address">ADDRESS</label>
-            <input type="text" id="address" class="form__input" />
+            <input type="text" id="address" class="form__input" required />
             <label for="city">CITY</label>
-            <input type="text" id="city" class="form__input" />
+            <input type="text" id="city" class="form__input" required />
             <label for="zip">ZIP CODE</label>
-            <input type="text" id="zip" class="form__input" />
+            <input type="text" id="zip" class="form__input" required />
             <label for="tel">PHONE NUMBER</label>
-            <input type="tel" id="tel" class="form__input" />
+            <input type="tel" id="tel" class="form__input" required />
             <label for="email">EMAIL</label>
-            <input type="email" id="email" class="form__input" />
+            <input type="email" id="email" class="form__input" required />
           </fieldset>
           <fieldset class="payment_form">
             <h2>Payment Details</h2>
             <label for="card_type">CARD TYPE</label>
-            <select name="card_type" id="card_type" class="form__input">
+            <select
+              name="card_type"
+              id="card_type"
+              class="form__input"
+              required
+            >
               <option value="visa">VISA</option>
               <option value="master">MASTER</option>
               <option value="amex">AMERICAN EXPRESS</option>
             </select>
             <label for="card_name">CARD HOLDER'S NAME</label>
             <input type="name" id="card_name" class="form__input" />
-            <label for="card_number">CARD NUMBER</label>
-            <input type="text" id="number" class="form__input" />
-            <label for="expiary">EXPIARY MONTH (ex. 12/22)</label>
-            <input type="text" id="card_name" class="form__input" />
+            <label for="card_number">CARD NUMBER (0000-0000-0000)</label>
+            <input
+              name="card-number"
+              type="tel"
+              pattern="\d*"
+              maxlength="19"
+              class="form__input"
+            />
+            <label for="expiary">EXPIARY (MM / YY)</label>
+            <input
+              id="card_expry"
+              class="form__input"
+              name="credit-expiry"
+              type="tel"
+              id="number"
+              class="form__input"
+              pattern="\d*"
+              maxlength="5"
+            />
             <label for="ssc">SECURITY CODE</label>
-            <input type="text" id="ssc" class="form__input" />
+            <input
+              type="tel"
+              id="ssc"
+              class="form__input"
+              pattern="\d*"
+              maxlength="4"
+            />
           </fieldset>
           <!-- in order to mimic the transaction, 'input submit' is temporarily replaced by anchor tag  -->
           <a href="confirmation.html" class="cta">Confirm & Pay</a>
@@ -123,16 +140,31 @@
       </section>
       <section class="order_summary checkout">
         <h2>Order Summary</h2>
-        <!-- <div class="order-container"> -->
-        <div class="cart-list"></div>
-        <div class="total"></div>
+        <h3 id="product_name">Super Comfy Jacket (1)</h3>
+        <div class="wrapper">
+          <div class="product_img">
+            <img
+              src="/images/products/specific/jacket_1.jpg"
+              alt="super comfy jacket in black"
+            />
+          </div>
+          <div class="wrapper column">
+            <div class="wrapper">
+              <h3>price</h3>
+              <p id="price">NOK 899</p>
+            </div>
+            <div class="wrapper">
+              <h3>size</h3>
+              <p>M</p>
+            </div>
+            <div class="wrapper">
+              <h3>color</h3>
+              <p>Black</p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
-    <div class="cart">
-      <div class="cart-list"></div>
-      <div class="total"></div>
-      <a href="checkout.html" class="cta checkout-button">Checkout</a>
-    </div>
     <footer>
       <div class="copyright">RAINYDAYS &copy;</div>
       <div class="social-media">
@@ -142,6 +174,5 @@
       </div>
     </footer>
     <script src="/js/script.js" type="module"></script>
-    <script src="/js/checkout.js" type="module"></script>
   </body>
 </html>

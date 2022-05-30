@@ -136,6 +136,8 @@ nav,
 #search,
 #hamburger-menu {
   display: none;
+  border-radius: 2px;
+  border: none;
 }
 
 #hamburger-menu:checked ~ nav {
@@ -181,4 +183,12 @@ nav a:hover {
   max-width: 100%;
   min-height: 100%;
   flex: 1;
+}
+
+#log-in-email-error {
+  display: none;
+}
+
+.order_summary {
+  border-radius: 5px;
 }

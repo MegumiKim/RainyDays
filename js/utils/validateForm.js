@@ -11,11 +11,11 @@ const messageError = document.querySelector(".message-error");
 const passwd = document.querySelector("#password");
 // const errorMessage = document.querySelectorAll(".form-error");
 
-function validateForm(requiredField) {
-  if (requiredField) {
-    return true;
-  }
-}
+// function validateForm(requiredField) {
+//   if (requiredField) {
+//     return true;
+//   }
+// }
 
 export function validateContactForm() {
   if (
@@ -67,6 +67,18 @@ function validatePassword(password) {
     return true;
   } else {
     console.log("bad passwd");
+    return false;
+  }
+}
+
+function validatePhone(phone) {
+  const regEx = /^\d+$/;
+  const patternMach = regEx.test(phone.value);
+  if (patternMach) {
+    console.log("good number");
+    return true;
+  } else {
+    console.log("bad number");
     return false;
   }
 }

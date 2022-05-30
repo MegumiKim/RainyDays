@@ -1,5 +1,6 @@
 .corporate_info {
   border: var(--color_subtle) 2px solid;
+  border-radius: 5px;
   padding: 30px 40px;
 }
 

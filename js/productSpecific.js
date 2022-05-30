@@ -1,5 +1,6 @@
 import { productArray } from "./productsList.js";
 import { makeOrderSummary } from "./utils/makeOrderSummary.js";
+import { makeProductCatalogue } from "./utils/makeProductCatalogue.js";
 
 const addButton = document.querySelector(".add-button");
 const cart = document.querySelector(".cart");
@@ -27,3 +28,8 @@ heart.onclick = function (event) {
     event.target.style.color = "salmon";
   }
 };
+
+for (let i = 0; i < 3; i++) {
+  const product = productArray[i];
+  makeProductCatalogue(product);
+}

@@ -28,3 +28,13 @@
   padding: 10px 60px;
   margin: 30px auto;
 }
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* .delivery p {
+  text-align: right;
+} */

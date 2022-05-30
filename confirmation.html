@@ -49,8 +49,6 @@
           <p class='search-ex'>super comfy jacket</p>
         </div>
       </div>
-      <a href='log-in.html' class='log-in'><i class="fas fa-user-circle"></i></a>
-      <a href='empty_bag.html' class='my-bag'><i class="fas fa-shopping-bag"></i></a>
     </div>
   </header>
   <main class='main_column'>
@@ -59,52 +57,63 @@
       <a href="product_specific.html">SUPER COMFY JACKET /</a>
       <a href="checkout.html">CHECKOUT /</a>
       <a href="checkout.html" id="current">PURCHASE CONFIRMATION</a>
-    </section>
+    </div>
     <h1>Purchase confirmation</h1>
-    <p class='thank_you'>Thank you for your purchase!</p>
-
+    <p class='thank_you'>Congratulations!! <br>Your new jacket is on the way</br></p>
         <section class='order_summary delivery'>
           <h2>Delivery Summary</h2>
-          <h3>name</h3>
-          <p>Megumi Kimura</p>
-          <h3>delivery address</h3>
-          <p>Bergen Street 1 <br>1010 Oslo</br></p>
-          <h3>PHONE</h3>
-          <p>123 456 7890</p>
-          <h3>delivery date</h3>
-          <p>01.03.2022</p>
-          <p id='support'>Any issue? Please contact <a href='contact.html' >customer service.</a></p>
+          <div class="wrapper">
+            <h3>name</h3>
+            <p>Megumi Kimura</p>
+          </div>
+          <div class="wrapper">
+            <h3>delivery address</h3>
+            <p>Bergen Street 1 <br>1010 Oslo</br></p>
+          </div>
+          <div class="wrapper">
+            <h3>PHONE</h3>
+            <p>123 456 7890</p>
+          </div>
+          <div class="wrapper">
+            <h3>delivery date</h3>
+            <p>01.03.2022</p>
+          </div>
+          <p id='support'>Any issue? <br>Please contact <a href='contact.html' >customer service.</a></br></p>
 
         </section>
 
         <section class="order_summary">
-          <h2>Order Summary</h2>   
+        <h2>Order Summary</h2>   
         <h3 id='product_name'>Super Comfy Jacket (1)</h3>
-        <h3>price</h3>
-        <p id='price'>NOK 899</p>
-        <h3>size</h3>
-        <p>M</p>
-        <h3>color</h3>
-        <p>Black</p>
-        <hr>
-        <h3>Sub Total</h3>
-        <p>NOK 899</p>
-        <h3>Shipping</h3>
-        <p>NOK 0</p>
-        <hr>
-        <h3 class='total'>Total</h3>
-        <p class='total'>NOK 899</p>
+        <div class="wrapper">
+          <h3>price</h3>
+          <p id='price'>NOK 899</p>
+        </div>
+        <div class="wrapper">
+          <h3>size</h3>
+          <p>M</p>
+        </div>
+        <div class="wrapper">
+          <h3>color</h3>
+          <p>Black</p>
+        </div>
+
+        <div class="wrapper">
+          <h3 class='total'>Total</h3>
+          <p class='total'>NOK 899</p>
+        </div>
         </section>
 
         <a href="products.html" class='cta'>See more products</a>
       </main>
     <footer>
-      <div class="copyright">Copyright &copy;</div>
+      <div class="copyright">RAINYDAYS &copy;</div>
       <div class="social-media">
         <i class="fab fa-facebook"></i>
         <i class="fab fa-instagram"></i>
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
+    <script src="/js/checkout.js" type="module"></script>
   </body>
 </html>
