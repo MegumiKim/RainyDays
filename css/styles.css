@@ -176,7 +176,6 @@ nav a:hover {
   position: absolute;
   min-width: 80px;
   right: 10%;
-  /* border: antiquewhite solid 2px; */
 }
 
 .social-media > * {
@@ -189,6 +188,12 @@ nav a:hover {
   display: none;
 }
 
+.favorites,
 .order_summary {
   border-radius: 5px;
+  border: 3px solid var(--color_subtle);
+}
+
+.favorites {
+  padding: 1em;
 }

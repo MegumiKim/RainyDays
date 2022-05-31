@@ -14,10 +14,11 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./CSS/styles.css" />
-    <link rel="stylesheet" href="./CSS/variables.css" />
-    <link rel="stylesheet" href="./CSS/checkout.css" />
-    <link rel="stylesheet" href="./CSS/media.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/variables.css" />
+    <link rel="stylesheet" href="/CSS/checkout.css" />
+    <link rel="stylesheet" href="/CSS/media.css" />
+
     <script
       src="https://kit.fontawesome.com/175ecb4e25.js"
       crossorigin="anonymous"
@@ -42,8 +43,8 @@
   </head>
   <body>
     <header>
-      <a href="index.html" class="logo">
-        <img src="./images/logo.png" class="logo_img" alt="Rainydays_logo" />
+      <a href="/pages/home/index.html" class="logo">
+        <img src="/images/logo.png" class="logo_img" alt="Rainydays_logo" />
       </a>
       <input type="checkbox" id="hamburger-menu" />
       <label for="hamburger-menu" id="hamburger-icon"
@@ -51,16 +52,20 @@
       ></label>
 
       <div class="header-right">
-        <a href="log-in.html" class="log-in"
+        <a href="/pages/log-in/log-in.html" class="log-in"
           ><i class="fas fa-user-circle"></i
         ></a>
       </div>
     </header>
     <main class="main_column checkout">
       <section class="breadcrumb">
-        <a href="product_specific.html"><i class="fas fa-chevron-left"></i></a>
-        <a href="product_specific.html">SUPER COMFY JACKET/</a>
-        <a href="checkout.html" id="current">CHECKOUT</a>
+        <a href="../product-specific/product_specific.html"
+          ><i class="fas fa-chevron-left"></i
+        ></a>
+        <a href="../product-specific/product_specific.html"
+          >SUPER COMFY JACKET/</a
+        >
+        <a href="../checkout/checkout.html" id="current">CHECKOUT</a>
         <a> / PURCHASE CONFIRMATION</a>
       </section>
       <h1>CHECKOUT</h1>
@@ -70,33 +75,22 @@
           <fieldset class="shipping_form">
             <h2>Shipping Address</h2>
             <label for="name">NAME</label>
-            <input
-              type="text"
-              id="name"
-              class="form__input"
-              required
-              required
-            />
+            <input type="text" id="name" class="form__input" />
             <label for="address">ADDRESS</label>
-            <input type="text" id="address" class="form__input" required />
+            <input type="text" id="address" class="form__input" />
             <label for="city">CITY</label>
-            <input type="text" id="city" class="form__input" required />
+            <input type="text" id="city" class="form__input" />
             <label for="zip">ZIP CODE</label>
-            <input type="text" id="zip" class="form__input" required />
+            <input type="text" id="zip" class="form__input" />
             <label for="tel">PHONE NUMBER</label>
-            <input type="tel" id="tel" class="form__input" required />
+            <input type="tel" id="tel" class="form__input" />
             <label for="email">EMAIL</label>
-            <input type="email" id="email" class="form__input" required />
+            <input type="email" id="email" class="form__input" />
           </fieldset>
           <fieldset class="payment_form">
             <h2>Payment Details</h2>
             <label for="card_type">CARD TYPE</label>
-            <select
-              name="card_type"
-              id="card_type"
-              class="form__input"
-              required
-            >
+            <select name="card_type" id="card_type" class="form__input">
               <option value="visa">VISA</option>
               <option value="master">MASTER</option>
               <option value="amex">AMERICAN EXPRESS</option>
@@ -136,7 +130,9 @@
               maxlength="4"
             />
           </fieldset>
-          <a href="confirmation.html" class="cta">Confirm & Pay</a>
+          <button type="submit" class="cta" id="pay-button">
+            Confirm & Pay
+          </button>
         </form>
       </section>
       <section class="order_summary checkout">
@@ -174,6 +170,6 @@
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
-    <script src="/js/script.js" type="module"></script>
+    <script src="./checkout.js"></script>
   </body>
 </html>

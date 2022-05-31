@@ -1,5 +1,5 @@
-import { validateLoginForm } from "./utils/validateForm.js";
-import { displayMessage } from "./utils/displayMessage.js";
+import { validateLoginForm } from "../../components/validateForm.js";
+import { displayMessage } from "../../components/displayMessage.js";
 
 const loginForm = document.querySelector("#log-in-form");
 const email = document.querySelector("#email");
@@ -14,7 +14,7 @@ const loginButton = document.querySelector("#login-button");
 loginForm.onsubmit = function (event) {
   event.preventDefault();
   if (validateLoginForm()) {
-    window.location.href = "my-page.html";
+    window.location.href = "/pages/my-page/my-page.html";
   } else {
     userAlert.innerHTML = displayMessage(
       "error",

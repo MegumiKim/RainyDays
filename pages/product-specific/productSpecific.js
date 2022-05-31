@@ -1,6 +1,6 @@
-import { productArray } from "./productsList.js";
-import { makeOrderSummary } from "./utils/makeOrderSummary.js";
-import { makeProductCatalogue } from "./utils/makeProductCatalogue.js";
+import { productArray } from "../../constants/productsList.js";
+import { makeOrderSummary } from "../../components/makeOrderSummary.js";
+import { makeProductCatalogue } from "../../components/makeProductCatalogue.js";
 
 const addButton = document.querySelector(".add-button");
 const cart = document.querySelector(".cart");

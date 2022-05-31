@@ -1,5 +1,5 @@
-import { validateContactForm } from "./utils/validateForm.js";
-import { displayMessage } from "./utils/displayMessage.js";
+import { validateContactForm } from "../../components/validateForm.js";
+import { displayMessage } from "../../components/displayMessage.js";
 
 const contactForm = document.querySelector("#contact-form");
 const userAlert = document.querySelector(".user-alert");

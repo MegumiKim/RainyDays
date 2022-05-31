@@ -2,7 +2,7 @@ const productsContainer = document.querySelector(".products-container");
 
 export function makeProductCatalogue(product) {
   productsContainer.innerHTML += `
-    <a href="product_specific.html" class="product">
+    <a href="/pages/product-specific/product_specific.html" class="product">
       <img class="product-image" 
     src="${product.image}"
         alt="${product.altText}">

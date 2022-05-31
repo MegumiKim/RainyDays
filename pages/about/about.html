@@ -14,10 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./CSS/styles.css" />
-    <link rel="stylesheet" href="./CSS/variables.css" />
-    <link rel="stylesheet" href="./CSS/about.css" />
-    <link rel="stylesheet" href="./CSS/media.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/variables.css" />
+    <link rel="stylesheet" href="/CSS/about.css" />
+    <link rel="stylesheet" href="/CSS/media.css" />
     <script
       src="https://kit.fontawesome.com/175ecb4e25.js"
       crossorigin="anonymous"
@@ -42,18 +42,18 @@
   </head>
   <body>
     <header>
-      <a href="index.html" class="logo">
-        <img src="./images/logo.png" class="logo_img" alt="Rainydays_logo" />
+      <a href="/pages/home/index.html" class="logo">
+        <img src="/images/logo.png" class="logo_img" alt="Rainydays_logo" />
       </a>
       <input type="checkbox" id="hamburger-menu" />
       <label for="hamburger-menu" id="hamburger-icon"
         ><i class="fas fa-bars"></i
       ></label>
       <nav>
-        <a href="index.html">HOME</a>
-        <a href="products.html">PRODUCTS</a>
-        <a href="about.html" class="current-page">ABOUT</a>
-        <a href="contact.html">CONTACT</a>
+        <a href="/pages/home/index.html">HOME</a>
+        <a href="/pages/products/products.html">PRODUCTS</a>
+        <a href="/pages/about/about.html" class="current-page">ABOUT</a>
+        <a href="/pages/contact/contact.html">CONTACT</a>
       </nav>
       <div class="header-right">
         <div class="search_container">
@@ -65,7 +65,7 @@
             <p class="search-ex">super comfy jacket</p>
           </div>
         </div>
-        <a href="log-in.html" class="log-in"
+        <a href="/pages/log-in/log-in.html" class="log-in"
           ><i class="fas fa-user-circle"></i
         ></a>
         <i class="fas fa-shopping-bag my-bag"></i>
@@ -74,8 +74,8 @@
     <main>
       <div class="breadcrumb">
         <a href="javascript:history.back()"><i class="fas fa-chevron-left"></i></a>
-        <a href="index.html">HOME /</a>
-        <a href="about.html" id="current">ABOUT</a>
+        <a href="/pages/home/index.html">HOME /</a>
+        <a href="/pages/about/about.html" id="current">ABOUT</a>
       </section>
       <h1>about</h1>
       <div class="about_img">
@@ -131,7 +131,7 @@
       </section>
 
       <section class="link-to-contact-page">
-        Please visit <a href="contact.html">Contact Page</a> for Customer Service and Corporate Info
+        Please visit <a href="/pages/contact/contact.html">Contact Page</a> for Customer Service and Corporate Info
       </section>
     </main>
     <footer>
@@ -146,8 +146,8 @@
     <div class="cart">
       <div class="cart-list"></div>
       <div class="total"></div>
-      <a href="checkout.html" class="cta checkout-button">Checkout</a>
+      <a href="../checkout/checkout.html" class="cta checkout-button">Checkout</a>
     </div>
-    <script src="/js/script.js" type="module"></script>
+    <script src="/components/script.js" type="module"></script>
   </body>
 </html>
