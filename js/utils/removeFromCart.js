@@ -1,3 +1,5 @@
+import { makeOrderSummary } from "./makeOrderSummary.js";
+
 export function removeFromCart() {
   const trash = document.querySelector(".fa-trash");
   trash.addEventListener("click", handleClick);
@@ -5,11 +7,10 @@ export function removeFromCart() {
 
 function handleClick(event) {
   const currentCartList = getCarList();
-
   const id = this.dataset.id;
   const newCartList = currentCartList.filter((item) => item.id !== id);
   saveItem(newCartList);
-  console.log(newCartList);
+  makeOrderSummary();
 }
 
 function getCarList() {

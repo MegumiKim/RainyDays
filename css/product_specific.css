@@ -1,3 +1,5 @@
+@import "/css/products.css";
+
 h1 {
   margin-bottom: 0;
 }
@@ -111,15 +113,10 @@ label {
   justify-content: space-between;
 }
 
-.more-products {
-  display: block;
-}
-.products-container {
-  display: flex;
-  margin: auto;
-  gap: 20px;
+.product {
+  flex: 1;
 }
 
-.products-container a {
-  text-decoration: none;
+.product-image {
+  height: auto;
 }

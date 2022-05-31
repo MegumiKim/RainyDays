@@ -8,7 +8,8 @@ const subjectError = document.querySelector(".subject-error");
 const addressError = document.querySelector(".address-error");
 const emailError = document.querySelector(".email-error");
 const messageError = document.querySelector(".message-error");
-const passwd = document.querySelector("#password");
+const password = document.querySelector("#password");
+const passwordError = document.querySelector(".password-error");
 // const errorMessage = document.querySelectorAll(".form-error");
 
 // function validateForm(requiredField) {
@@ -29,7 +30,7 @@ export function validateContactForm() {
 }
 
 export function validateLoginForm() {
-  if (validateEmail(email) && validatePassword(password)) {
+  if (validateEmail(email) && checkInputLength(password, 4, passwordError)) {
     return true;
   } else {
     return false;

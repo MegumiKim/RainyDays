@@ -65,11 +65,8 @@
       </section>
       <h1>CHECKOUT</h1>
 
-      <!-- <p class="log_in">
-        Do you already have an account? Log in <a href="log-in.html">here.</a>
-      </p> -->
       <section class="section_form">
-        <form action="purchase_form.php" method="post">
+        <form>
           <fieldset class="shipping_form">
             <h2>Shipping Address</h2>
             <label for="name">NAME</label>
@@ -125,7 +122,12 @@
               pattern="\d*"
               maxlength="5"
             />
-            <label for="ssc">SECURITY CODE</label>
+            <label for="ssc"
+              >SECURITY CODE
+              <button id="question">
+                <i class="fa-regular fa-circle-question"></i></button
+            ></label>
+            <p id="ssc-hint">3 digits number backside of your card</p>
             <input
               type="tel"
               id="ssc"
@@ -134,7 +136,6 @@
               maxlength="4"
             />
           </fieldset>
-          <!-- in order to mimic the transaction, 'input submit' is temporarily replaced by anchor tag  -->
           <a href="confirmation.html" class="cta">Confirm & Pay</a>
         </form>
       </section>

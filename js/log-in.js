@@ -37,13 +37,3 @@ function isButtonDisabled() {
     console.log("disabled");
   }
 }
-
-const question = document.querySelector("#question");
-const passwordHint = document.querySelector("#password-hint");
-question.addEventListener("click", function () {
-  if (passwordHint.style.display === "block") {
-    passwordHint.style.display = "none";
-  } else {
-    passwordHint.style.display = "block";
-  }
-});

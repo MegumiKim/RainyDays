@@ -17,7 +17,7 @@ export function makeOrderSummary() {
       total += item.price;
 
       cartList.innerHTML += `
-    <h3 class="product-name">${item.name}</h3>
+        <h3 class="product-name">${item.name}</h3>
         <div class="cart-item-wrap">
         <div style="background-image: url(${item.image})" class='cart-image'></div>
         <div class="order-details">
@@ -31,7 +31,7 @@ export function makeOrderSummary() {
     });
 
     totalContainer.innerHTML = `
-<div class="total">Total: NOK ${total}</div>
+    <div class="total">Total: NOK ${total}</div>
   `;
     removeFromCart();
   }
