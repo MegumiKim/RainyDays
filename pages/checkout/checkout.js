@@ -17,15 +17,15 @@ import { displayMessage } from "../../components/displayMessage.js";
 //   }
 // });
 
-// const question = document.querySelector("#question");
-// const sscHint = document.querySelector("#ssc-hint");
-// question.addEventListener("click", function () {
-//   if (sscHint.style.display === "block") {
-//     sscHint.style.display = "none";
-//   } else {
-//     sscHint.style.display = "block";
-//   }
-// });
+const question = document.querySelector("#question");
+const sscHint = document.querySelector("#ccs-hint");
+question.addEventListener("click", function () {
+  if (sscHint.style.display === "block") {
+    sscHint.style.display = "none";
+  } else {
+    sscHint.style.display = "block";
+  }
+});
 
 const checkoutForm = document.querySelector("#checkoutForm");
 const userAlert = document.querySelector(".user-alert");
