@@ -1,7 +1,7 @@
-import { makeOrderSummary } from "./makeOrderSummary.js";
+import { makeOrderSummary } from "../makeOrderSummary.js";
 
 export function removeFromCart() {
-  const trash = document.querySelector(".fa-trash");
+  const trash = document.querySelector("#trash");
   trash.addEventListener("click", handleClick);
 }
 

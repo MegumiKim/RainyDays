@@ -1,3 +1,5 @@
+import { validateCheckoutForm } from "../../components/validateForm.js";
+import { displayMessage } from "../../components/displayMessage.js";
 // import { makeOrderSummary } from "../../components/makeOrderSummary.js";
 // const tel = document.querySelector("#tel");
 
@@ -25,20 +27,17 @@
 //   }
 // });
 
-const checkoutForm = document.querySelector("form");
-
+const checkoutForm = document.querySelector("#checkoutForm");
+const userAlert = document.querySelector(".user-alert");
 checkoutForm.onsubmit = function (event) {
   event.preventDefault();
-  window.location.href = "/pages/order-confirmation/confirmation.html";
-  clearCartList();
-  // if (validateLoginForm()) {
-  //   window.location.href = "/pages/order-confirmation/confirmation.html";
-  // } else {
-  //   userAlert.innerHTML = displayMessage(
-  //     "error",
-  //     "please fill correct email and password"
-  //   );
-  // }
+  if (!validateCheckoutForm()) {
+    userAlert.innerHTML = displayMessage("error", "Please fill all the fields");
+  } else {
+    window.location.href = "/pages/order-confirmation/confirmation.html";
+    checkoutForm.reset();
+    clearCartList();
+  }
 };
 
 function clearCartList() {

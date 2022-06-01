@@ -66,6 +66,7 @@ img {
 
 .product_img {
   margin: 0 auto;
+  /* border-radius: 0.5em; */
 }
 
 /* CTA button */
@@ -130,6 +131,8 @@ footer {
 .my-bag {
   font-size: 1.2em;
   color: var(--color_white);
+  background: none;
+  border: none;
 }
 
 nav,

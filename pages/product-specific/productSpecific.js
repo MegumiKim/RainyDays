@@ -1,16 +1,15 @@
 import { productArray } from "../../constants/productsList.js";
 import { makeOrderSummary } from "../../components/makeOrderSummary.js";
 import { makeProductCatalogue } from "../../components/makeProductCatalogue.js";
+// import { addToCart } from "../../components/cart/addToCart.js";
+
+const cart = document.querySelector(".cart");
+let cartArray = [];
+// let addItem = {};
 
 const addButton = document.querySelector(".add-button");
-const cart = document.querySelector(".cart");
 
-let cartArray = [];
-let cartDict = {};
-
-addButton.onclick = function (event) {
-  cart.style.display = "flex";
-
+addButton.onclick = function addToCart(event) {
   const itemToAdd = productArray.find(
     (item) => item.id === event.target.dataset.product
   );
@@ -23,6 +22,7 @@ addButton.onclick = function (event) {
 
   localStorage.setItem("cartList", JSON.stringify(cartArray));
   makeOrderSummary();
+  cart.style.display = "flex";
 };
 
 const heart = document.querySelector(".heart");
@@ -39,3 +39,20 @@ for (let i = 0; i < 2; i++) {
   const product = productArray[i];
   makeProductCatalogue(product);
 }
+
+// addButton.onclick = function (event) {
+//   const itemToAdd = productArray.find(
+//     (item) => item.id === event.target.dataset.product
+//   );
+//   const productID = itemToAdd.id;
+
+//   let quantity = 1;
+//   let addItem = { productID, quantity };
+
+//   cartArray.push(addItem);
+
+//   if (cartArray.find((item) => item.productID === productID)) {
+//     console.log("it's already in the list");
+//   }
+
+// };

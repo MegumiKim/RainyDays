@@ -10,13 +10,20 @@ const emailError = document.querySelector(".email-error");
 const messageError = document.querySelector(".message-error");
 const password = document.querySelector("#password");
 const passwordError = document.querySelector(".password-error");
-// const errorMessage = document.querySelectorAll(".form-error");
 
-// function validateForm(requiredField) {
-//   if (requiredField) {
-//     return true;
-//   }
-// }
+// CheckoutForm
+const cardNum = document.querySelector("#card-number");
+const cardError = document.querySelector(".card-error");
+const zip = document.querySelector("#zip");
+const zipError = document.querySelector(".zip-error");
+const tel = document.querySelector("#tel");
+const telError = document.querySelector(".tel-error");
+const cardName = document.querySelector("#card-name");
+const cardNameError = document.querySelector(".card-name-error");
+const expiry = document.querySelector("#expiry");
+const expiryError = document.querySelector(".expiry-error");
+const ccs = document.querySelector("#ccs");
+const ccsError = document.querySelector(".ccs-error");
 
 export function validateContactForm() {
   if (
@@ -37,6 +44,26 @@ export function validateLoginForm() {
   }
 }
 
+export function validateCheckoutForm() {
+  if (
+    checkInputLength(userName, 2, nameError) &&
+    checkInputLength(address, 4, addressError) &&
+    validateNum(zip, zipError) &&
+    checkInputLength(zip, 4, zipError) &&
+    validateNum(tel, telError) &&
+    checkInputLength(tel, 4, telError) &&
+    validateEmail(email) &&
+    checkInputLength(cardName, 2, cardNameError) &&
+    validateNum(cardNum, cardError) &&
+    checkInputLength(cardNum, 4, cardError) &&
+    validateNum(expiry, expiryError) &&
+    checkInputLength(expiry, 4, expiryError) &&
+    checkInputLength(ccs, 3, ccsError) &&
+    validateNum(ccs, ccsError)
+  ) {
+    return true;
+  }
+}
 function checkInputLength(inputField, len, errorField) {
   // console.log(inputField.value);
   if (inputField.value.trim().length >= len) {
@@ -60,26 +87,37 @@ function validateEmail(email) {
   }
 }
 
-function validatePassword(password) {
-  const regEx = /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/;
-  const patternMach = regEx.test(password.value);
-  if (patternMach) {
-    console.log("good password");
-    return true;
-  } else {
-    console.log("bad passwd");
-    return false;
-  }
-}
-
-function validatePhone(phone) {
+function validateNum(num, errorField) {
   const regEx = /^\d+$/;
-  const patternMach = regEx.test(phone.value);
+  const patternMach = regEx.test(num.value);
   if (patternMach) {
-    console.log("good number");
+    errorField.innerHTML = "";
     return true;
   } else {
-    console.log("bad number");
+    errorField.innerHTML = "Please input numbers";
     return false;
   }
 }
+// function validatePassword(password) {
+//   const regEx = /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/;
+//   const patternMach = regEx.test(password.value);
+//   if (patternMach) {
+//     console.log("good password");
+//     return true;
+//   } else {
+//     console.log("bad passwd");
+//     return false;
+//   }
+// }
+
+// function validatePhone(phone) {
+//   const regEx = /^\d+$/;
+//   const patternMach = regEx.test(phone.value);
+//   if (patternMach) {
+//     console.log("good number");
+//     return true;
+//   } else {
+//     console.log("bad number");
+//     return false;
+//   }
+// }

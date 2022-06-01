@@ -1,10 +1,14 @@
 import { validateLoginForm } from "../../components/validateForm.js";
 import { displayMessage } from "../../components/displayMessage.js";
+import { displayCart } from "../../components/cart/displayCart.js";
+
+displayCart();
 
 const loginForm = document.querySelector("#log-in-form");
 const email = document.querySelector("#email");
 // const emailError = document.querySelector(".email-error");
 const password = document.querySelector("#password");
+const passwordError = document.querySelector(".password-error");
 const userAlert = document.querySelector(".user-alert");
 const loginButton = document.querySelector("#login-button");
 
@@ -32,6 +36,7 @@ function isButtonDisabled() {
     loginButton.style.backgroundColor = "var(--color_yellow)";
     console.log("false");
   } else {
+    passwordError.style.display = "none";
     loginButton.disabled = true;
     loginButton.style.backgroundColor = "var(--color_subtle)";
     console.log("disabled");

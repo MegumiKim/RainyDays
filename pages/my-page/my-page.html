@@ -14,8 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/CSS/styles.css" />
     <link rel="stylesheet" href="/CSS/variables.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
     <link rel="stylesheet" href="/CSS/confirmation.css" />
     <link rel="stylesheet" href="/CSS/media.css" />
     <script
@@ -67,7 +67,7 @@
           </div>
         </div>
         <a href="/pages/log-in/log-in.html" class="log-in"
-          ><i class="fas fa-user-circle"></i
+          ><i class="far fa-heart"></i
         ></a>
         <i class="fas fa-shopping-bag my-bag"></i>
       </div>
@@ -82,31 +82,12 @@
       </div>
       <h1>My Page</h1>
       <section class="favorites">
-        <h2>Saved Items</h2>
-        <div class="fav-container">
-          <div>
-            <h3 class="product-name">Super Comfy Jacket</h3>
-            <div class="cart-item-wrap">
-              <div
-                style="background-image: url(/images/products/model_1.jpg)"
-                class="cart-image"
-              ></div>
-              <div class="order-details">
-                <p class="price">NOK 899</p>
-                <p>Color: Yellow</p>
-                <p>Size: M</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="order_summary">
-        <h2>Order Summary</h2>
+        <h2>My Favorites</h2>
         <h3 id="product_name">Super Comfy Jacket (1)</h3>
         <div class="wrapper">
           <div class="product_img">
             <img
-              src="/images/products/specific/jacket_1.jpg"
+              src="/images/products/model_1.jpg"
               alt="super comfy jacket in black"
             />
           </div>
@@ -123,11 +104,10 @@
               <h3>color</h3>
               <p>Black</p>
             </div>
+            <i class="fa-solid fa-trash" data-id="1" id="removeFav"></i>
+            <button class="cta add-button" data-product="1">Add to Cart</button>
           </div>
         </div>
-        <a href="../checkout/checkout.html" class="cta checkout-button"
-          >Checkout</a
-        >
       </section>
     </main>
     <footer>
@@ -146,5 +126,6 @@
       >
     </div>
     <script src="/components/script.js" type="module"></script>
+    <script src="myPage.js" type="module"></script>
   </body>
 </html>

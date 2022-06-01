@@ -1,11 +1,15 @@
-import { makeOrderSummary } from "./makeOrderSummary.js";
+import { makeOrderSummary } from "../makeOrderSummary.js";
 
 const myCart = document.querySelector(".cart");
 const myBag = document.querySelector(".my-bag");
 
 export function displayCart() {
   myBag.addEventListener("click", function () {
-    myCart.style.display = "flex";
+    if (myCart.style.display === "flex") {
+      myCart.style.display = "none";
+    } else {
+      myCart.style.display = "flex";
+    }
   });
   myBag.addEventListener("mouseleave", function () {
     setTimeout(function () {

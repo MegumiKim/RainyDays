@@ -14,8 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/CSS/styles.css" />
     <link rel="stylesheet" href="/CSS/variables.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
     <link rel="stylesheet" href="/CSS/checkout.css" />
     <link rel="stylesheet" href="/CSS/media.css" />
 
@@ -53,7 +53,7 @@
 
       <div class="header-right">
         <a href="/pages/log-in/log-in.html" class="log-in"
-          ><i class="fas fa-user-circle"></i
+          ><i class="far fa-heart"></i
         ></a>
       </div>
     </header>
@@ -71,21 +71,25 @@
       <h1>CHECKOUT</h1>
 
       <section class="section_form">
-        <form>
+        <form id="checkoutForm">
+          <div class="user-alert"></div>
           <fieldset class="shipping_form">
             <h2>Shipping Address</h2>
-            <label for="name">NAME</label>
+            <label for="name">NAME (min 2 letters)</label>
             <input type="text" id="name" class="form__input" />
-            <label for="address">ADDRESS</label>
+            <div class="form-error name-error"></div>
+            <label for="address">ADDRESS (min 4 letters)</label>
             <input type="text" id="address" class="form__input" />
-            <label for="city">CITY</label>
-            <input type="text" id="city" class="form__input" />
-            <label for="zip">ZIP CODE</label>
+            <div class="form-error address-error"></div>
+            <label for="zip">ZIP CODE (min 4 digits)</label>
             <input type="text" id="zip" class="form__input" />
-            <label for="tel">PHONE NUMBER</label>
+            <div class="form-error zip-error"></div>
+            <label for="tel">PHONE NUMBER (min 4 digits)</label>
             <input type="tel" id="tel" class="form__input" />
-            <label for="email">EMAIL</label>
+            <div class="form-error tel-error"></div>
+            <label for="email">EMAIL (example@email.com)</label>
             <input type="email" id="email" class="form__input" />
+            <div class="form-error email-error"></div>
           </fieldset>
           <fieldset class="payment_form">
             <h2>Payment Details</h2>
@@ -95,40 +99,44 @@
               <option value="master">MASTER</option>
               <option value="amex">AMERICAN EXPRESS</option>
             </select>
-            <label for="card_name">CARD HOLDER'S NAME</label>
-            <input type="name" id="card_name" class="form__input" />
-            <label for="card_number">CARD NUMBER (0000-0000-0000)</label>
+            <label for="card_name">CARD HOLDER'S NAME (min 2 letters)</label>
+            <input type="name" id="card-name" class="form__input" />
+            <div class="form-error card-name-error"></div>
+            <label for="card_number">CARD NUMBER (min 4 digits)</label>
             <input
               name="card-number"
               type="tel"
               pattern="\d*"
               maxlength="19"
               class="form__input"
+              id="card-number"
             />
-            <label for="expiary">EXPIARY (MM / YY)</label>
+            <div class="form-error card-error"></div>
+            <label for="expiry">EXPIRY (4 digits)</label>
             <input
-              id="card_expry"
+              id="expiry"
               class="form__input"
               name="credit-expiry"
               type="tel"
-              id="number"
-              class="form__input"
-              pattern="\d*"
-              maxlength="5"
-            />
-            <label for="ssc"
-              >SECURITY CODE
-              <button id="question">
-                <i class="fa-regular fa-circle-question"></i></button
-            ></label>
-            <p id="ssc-hint">3 digits number backside of your card</p>
-            <input
-              type="tel"
-              id="ssc"
               class="form__input"
               pattern="\d*"
               maxlength="4"
             />
+            <div class="form-error expiry-error"></div>
+            <label for="ccs"
+              >SECURITY CODE (3 digits)
+              <button id="question">
+                <i class="fa-regular fa-circle-question"></i></button
+            ></label>
+            <p id="ccs-hint">3 digits number backside of your card</p>
+            <input
+              type="tel"
+              id="ccs"
+              class="form__input"
+              pattern="\d*"
+              maxlength="3"
+            />
+            <div class="form-error ccs-error"></div>
           </fieldset>
           <button type="submit" class="cta" id="pay-button">
             Confirm & Pay
@@ -141,7 +149,7 @@
         <div class="wrapper">
           <div class="product_img">
             <img
-              src="/images/products/specific/jacket_1.jpg"
+              src="/images/products/model_1.jpg"
               alt="super comfy jacket in black"
             />
           </div>
@@ -170,6 +178,6 @@
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
-    <script src="./checkout.js"></script>
+    <script src="./checkout.js" type="module"></script>
   </body>
 </html>
