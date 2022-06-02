@@ -42,6 +42,7 @@
   text-decoration: none;
   margin: 10px auto;
   font-size: 1em;
+  display: none;
 }
 
 .total {
