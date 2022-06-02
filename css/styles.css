@@ -170,7 +170,8 @@ nav a:hover {
   color: var(--color_yellow);
 }
 
-.logo {
+.logo,
+.logo_img {
   max-width: 120px;
   margin-top: 3px;
 }

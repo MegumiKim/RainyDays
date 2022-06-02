@@ -9,7 +9,6 @@ let cartArray = [];
 const addButton = document.querySelector(".add-button");
 
 addButton.onclick = function addToCart(event) {
-  cart.style.display = "flex";
   const itemToAdd = productArray.find(
     (item) => item.id === event.target.dataset.product
   );
@@ -22,6 +21,7 @@ addButton.onclick = function addToCart(event) {
 
   localStorage.setItem("cartList", JSON.stringify(cartArray));
   makeOrderSummary();
+  cart.style.display = "flex";
 };
 
 const heart = document.querySelector(".heart");
