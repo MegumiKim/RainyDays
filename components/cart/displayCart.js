@@ -1,4 +1,5 @@
 import { makeOrderSummary } from "../makeOrderSummary.js";
+
 const myCart = document.querySelector(".cart");
 const myBag = document.querySelector(".my-bag");
 

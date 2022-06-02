@@ -12,6 +12,7 @@ export function makeOrderSummary() {
 
     cartItems.forEach((item) => {
       total += item.price;
+
       cartList.innerHTML += `
         <h3 class="product-name">${item.name}</h3>
         <div class="qty"></div>
