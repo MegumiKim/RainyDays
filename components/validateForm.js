@@ -22,8 +22,8 @@ const cardName = document.querySelector("#card-name");
 const cardNameError = document.querySelector(".card-name-error");
 const expiry = document.querySelector("#expiry");
 const expiryError = document.querySelector(".expiry-error");
-const ccs = document.querySelector("#ccs");
-const ccsError = document.querySelector(".ccs-error");
+const csc = document.querySelector("#csc");
+const cscError = document.querySelector(".csc-error");
 
 export function validateContactForm() {
   if (
@@ -58,8 +58,8 @@ export function validateCheckoutForm() {
     checkInputLength(cardNum, 4, cardError) &&
     validateNum(expiry, expiryError) &&
     checkInputLength(expiry, 4, expiryError) &&
-    checkInputLength(ccs, 3, ccsError) &&
-    validateNum(ccs, ccsError)
+    checkInputLength(csc, 3, cscError) &&
+    validateNum(csc, cscError)
   ) {
     return true;
   }

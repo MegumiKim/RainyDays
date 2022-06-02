@@ -18,7 +18,7 @@ import { displayMessage } from "../../components/displayMessage.js";
 // });
 
 const question = document.querySelector("#question");
-const sscHint = document.querySelector("#ccs-hint");
+const sscHint = document.querySelector("#csc-hint");
 question.addEventListener("click", function () {
   if (sscHint.style.display === "block") {
     sscHint.style.display = "none";

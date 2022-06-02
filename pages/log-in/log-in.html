@@ -14,7 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/CSS/variables.css" /><link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/variables.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
     <link rel="stylesheet" href="/CSS/media.css" />
     <script
       src="https://kit.fontawesome.com/175ecb4e25.js"
@@ -63,46 +64,44 @@
             <p class="search-ex">super comfy jacket</p>
           </div>
         </div>
-        <a href="/pages/log-in/log-in.html" class="log-in"
-        ><i class="far fa-heart"></i></a>
-<i class="fas fa-shopping-bag my-bag"></i
-        >
+        <a href="/pages/log-in/log-in.html" class="log-in" alt="My Favorites"
+          ><i class="far fa-heart"></i
+        ></a>
+        <i class="fas fa-shopping-bag my-bag"></i>
       </div>
     </header>
     <main class="main_column">
       <div class="breadcrumb">
-        <a href="javascript:history.back()"><i class="fas fa-chevron-left"></i></a>
+        <a href="javascript:history.back()"
+          ><i class="fas fa-chevron-left"></i
+        ></a>
         <a href="../../index.html">HOME /</a>
         <a href="/pages/log-in/log-in.html" class="current_page">LOG IN</a>
       </div>
       <h1>Log in</h1>
       <form id="log-in-form">
         <div class="user-alert"></div>
-        <a>
-          <label for="email">EMAIL (example@email.com)</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            class="form__input"
-            required
-          />
-          <div class="form-error email-error" id="log-in-email-error"></div>
-          <label for="passward">PASSWORD (min 4 characters) </button>
-          </label>
-
-          <input
-            type="text"
-            id="password"
-            name="password"
-            class="form__input"
-            required
-          />
-          <div class="form-error password-error"></div>
-          <a href="/pages/log-in/log-in.html">Forgot password?</a>
-          <!-- <input type="submit" value="Log in" name="message" class="cta form" id="login-button"/> -->
-          <button type="submit" class="cta" id="login-button">Log in</button>
-        </fieldset>
+        <label for="email">EMAIL (example@email.com)</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          class="form__input"
+          required
+        />
+        <div class="form-error email-error" id="log-in-email-error"></div>
+        <label for="password">PASSWORD (min 4 characters) </label>
+        <input
+          type="text"
+          id="password"
+          name="password"
+          class="form__input"
+          required
+        />
+        <div class="form-error password-error"></div>
+        <a href="/pages/log-in/log-in.html">Forgot password?</a>
+        <!-- <input type="submit" value="Log in" name="message" class="cta form" id="login-button"/> -->
+        <button type="submit" class="cta" id="login-button">Log in</button>
       </form>
       <section class="create_account">
         <p>Don't have an account?</p>
@@ -120,7 +119,9 @@
     <div class="cart">
       <div class="cart-list"></div>
       <div class="total"></div>
-      <a href="../checkout/checkout.html" class="cta checkout-button">Checkout</a>
+      <a href="../checkout/checkout.html" class="cta checkout-button"
+        >Checkout</a
+      >
     </div>
     <script src="/pages/log-in/log-in.js" type="module"></script>
   </body>

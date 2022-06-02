@@ -52,7 +52,7 @@
       ></label>
 
       <div class="header-right">
-        <a href="/pages/log-in/log-in.html" class="log-in"
+        <a href="/pages/log-in/log-in.html" class="log-in" alt="My Favorites" alt="My Favorites"
           ><i class="far fa-heart"></i
         ></a>
       </div>
@@ -60,7 +60,7 @@
     <main class="main_column checkout">
       <section class="breadcrumb">
         <a href="../product-specific/product_specific.html"
-          ><i class="fas fa-chevron-left"></i
+          alt="go-back"><i class="fas fa-chevron-left"></i
         ></a>
         <a href="../product-specific/product_specific.html"
           >SUPER COMFY JACKET/</a
@@ -75,14 +75,14 @@
           <div class="user-alert"></div>
           <fieldset class="shipping_form">
             <h2>Shipping Address</h2>
-            <label for="name">NAME (min 2 letters)</label>
+            <label for="name">NAME</label>
             <input type="text" id="name" class="form__input" />
             <div class="form-error name-error"></div>
             <label for="address">ADDRESS (min 4 letters)</label>
             <input type="text" id="address" class="form__input" />
             <div class="form-error address-error"></div>
-            <label for="zip">ZIP CODE (min 4 digits)</label>
-            <input type="text" id="zip" class="form__input" />
+            <label for="zip">ZIP CODE (4 digits)</label>
+            <input type="text" id="zip" maxlength="4" class="form__input" />
             <div class="form-error zip-error"></div>
             <label for="tel">PHONE NUMBER (min 4 digits)</label>
             <input type="tel" id="tel" class="form__input" />
@@ -99,10 +99,10 @@
               <option value="master">MASTER</option>
               <option value="amex">AMERICAN EXPRESS</option>
             </select>
-            <label for="card_name">CARD HOLDER'S NAME (min 2 letters)</label>
+            <label for="card-name">CARD HOLDER'S NAME</label>
             <input type="name" id="card-name" class="form__input" />
             <div class="form-error card-name-error"></div>
-            <label for="card_number">CARD NUMBER (min 4 digits)</label>
+            <label for="card-number">CARD NUMBER (min 4 digits)</label>
             <input
               name="card-number"
               type="tel"
@@ -123,20 +123,19 @@
               maxlength="4"
             />
             <div class="form-error expiry-error"></div>
-            <label for="ccs"
+            <label for="csc"
               >SECURITY CODE (3 digits)
-              <button id="question">
-                <i class="fa-regular fa-circle-question"></i></button
-            ></label>
-            <p id="ccs-hint">3 digits number backside of your card</p>
+
+                <i class="fa-regular fa-circle-question" id="question"></i>
+            <p id="csc-hint">3 digits numbers printed on your card</p>
             <input
               type="tel"
-              id="ccs"
+              id="csc"
               class="form__input"
               pattern="\d*"
               maxlength="3"
             />
-            <div class="form-error ccs-error"></div>
+            <div class="form-error csc-error"></div>
           </fieldset>
           <button type="submit" class="cta" id="pay-button">
             Confirm & Pay
