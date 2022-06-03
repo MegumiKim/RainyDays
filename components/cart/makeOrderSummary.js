@@ -1,4 +1,4 @@
-import { removeFromCart } from "./cart/removeFromCart.js";
+import { removeFromCart } from "./removeFromCart.js";
 const cartList = document.querySelector(".cart-list");
 const cart = document.querySelector(".cart");
 const totalContainer = document.querySelector(".total");

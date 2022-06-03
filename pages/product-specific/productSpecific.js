@@ -1,11 +1,11 @@
 import { productArray } from "../../constants/productsList.js";
-import { makeOrderSummary } from "../../components/makeOrderSummary.js";
+import { makeOrderSummary } from "../../components/cart/makeOrderSummary.js";
 import { makeProductCatalogue } from "../../components/makeProductCatalogue.js";
+// import { displayCart } from "../../components/cart/displayCart.js";
 // import { removeFromCart } from "../../components/cart/removeFromCart.js";
 
 const cart = document.querySelector(".cart");
 let cartArray = [];
-// let addItem = {};
 
 const addButton = document.querySelector(".add-button");
 
@@ -20,6 +20,7 @@ addButton.onclick = function addToCart(event) {
   // }
 
   localStorage.setItem("cartList", JSON.stringify(cartArray));
+  // displayCart();
   makeOrderSummary();
   // removeFromCart();
   cart.style.display = "flex";
