@@ -6,6 +6,7 @@ export function removeFromCart() {
 }
 
 function handleClick(event) {
+  console.log("hello");
   const currentCartList = getCarList();
   const id = this.dataset.id;
   const newCartList = currentCartList.filter((item) => item.id !== id);

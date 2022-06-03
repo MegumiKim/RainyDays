@@ -1,6 +1,5 @@
 const userName = document.querySelector("#name");
 const subject = document.querySelector("#subject");
-const email = document.querySelector("#email");
 const address = document.querySelector("#address");
 const message = document.querySelector("#message");
 const nameError = document.querySelector(".name-error");
@@ -8,6 +7,7 @@ const subjectError = document.querySelector(".subject-error");
 const addressError = document.querySelector(".address-error");
 const emailError = document.querySelector(".email-error");
 const messageError = document.querySelector(".message-error");
+const email = document.querySelector("#email");
 const password = document.querySelector("#password");
 const passwordError = document.querySelector(".password-error");
 

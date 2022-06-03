@@ -10,10 +10,10 @@
   grid-column: 1;
 }
 
-/* .order_summary.delivery {
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-} */
+.order_summary.delivery .wrapper {
+  justify-content: space-between;
+  margin: 10px 0;
+}
 
 #support {
   grid-column: 1/3;

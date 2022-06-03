@@ -1,6 +1,6 @@
 .wrapper {
   display: flex;
-  /* align-items: left; */
+  /* justify-content: space-between; */
 }
 
 .wrapper.column {
@@ -11,6 +11,9 @@
   margin: 0 20px 5px 0;
 }
 
+.wrapper p {
+  text-align: right;
+}
 .product_img {
   max-width: 30%;
 }
