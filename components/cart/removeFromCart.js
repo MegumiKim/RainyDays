@@ -1,4 +1,7 @@
-import { makeOrderSummary } from "../makeOrderSummary.js";
+// import { makeOrderSummary } from "../makeOrderSummary.js";
+const cartList = document.querySelector(".cart-list");
+const totalContainer = document.querySelector(".total");
+const checkoutButton = document.querySelector(".checkout-button");
 
 export function removeFromCart() {
   const trash = document.querySelector("#trash");
@@ -6,12 +9,15 @@ export function removeFromCart() {
 }
 
 function handleClick(event) {
-  console.log("hello");
   const currentCartList = getCarList();
   const id = this.dataset.id;
   const newCartList = currentCartList.filter((item) => item.id !== id);
   saveItem(newCartList);
-  makeOrderSummary();
+
+  cartList.innerHTML = `<i class="fa-solid fa-trash" id="trash"></i><p>Discarded</p>`;
+  totalContainer.innerHTML = "";
+  checkoutButton.style.display = "none";
+  // makeOrderSummary();
 }
 
 function getCarList() {

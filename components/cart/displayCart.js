@@ -1,5 +1,5 @@
 import { makeOrderSummary } from "../makeOrderSummary.js";
-import { removeFromCart } from "./removeFromCart.js";
+// import { removeFromCart } from "./removeFromCart.js";
 
 const myCart = document.querySelector(".cart");
 const myBag = document.querySelector(".my-bag");

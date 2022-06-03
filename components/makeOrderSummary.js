@@ -20,7 +20,7 @@ export function makeOrderSummary() {
     <div class="num-of-items">${cartItems.length} item(s)</div>
     <div class="total">Total: NOK ${total}</div>
     `;
-    removeFromCart();
+    // removeFromCart();
   } else {
     checkoutButton.style.display = "none";
     cart.innerHTML = "No item added";
@@ -41,4 +41,5 @@ function createHtml(item) {
   </div>
   </div>
 `;
+  removeFromCart();
 }
