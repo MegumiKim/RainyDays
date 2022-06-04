@@ -5,7 +5,9 @@ const checkoutButton = document.querySelector(".checkout-button");
 
 export function removeFromCart() {
   const trash = document.querySelector("#trash");
-  trash.addEventListener("click", handleClick);
+  if (trash) {
+    trash.addEventListener("click", handleClick);
+  }
 }
 
 function handleClick(event) {

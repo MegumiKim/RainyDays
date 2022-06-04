@@ -8,11 +8,11 @@ myBag.onclick = function () {
 };
 
 export function displayCart() {
-  if (myCart.style.display === "none") {
+  if (myCart.style.display === "flex") {
+    myCart.style.display = "none";
+  } else {
     myCart.style.display = "flex";
     makeOrderSummary();
-  } else {
-    myCart.style.display = "none";
   }
 }
 myBag.addEventListener("mouseleave", function () {

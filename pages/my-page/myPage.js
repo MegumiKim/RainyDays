@@ -1,5 +1,5 @@
 import { removeFromCart } from "../../components/cart/removeFromCart.js";
-import { makeOrderSummary } from "../../components/makeOrderSummary.js";
+import { makeOrderSummary } from "../../components/cart/makeOrderSummary.js";
 import { productArray } from "../../constants/productsList.js";
 
 // import { addToCart } from "../../components/cart/addToCart.js";
@@ -31,5 +31,3 @@ trash.addEventListener("click", function (event) {
   favSection.style.display = "none";
   console.log(event);
 });
-
-console.log(trash);

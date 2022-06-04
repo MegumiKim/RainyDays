@@ -22,6 +22,7 @@ export function makeOrderSummary() {
     `;
     // removeFromCart();
   } else {
+    console.log(cartItems);
     checkoutButton.style.display = "none";
     cart.innerHTML = "No item added";
   }

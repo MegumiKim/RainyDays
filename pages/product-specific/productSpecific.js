@@ -5,7 +5,7 @@ import { makeProductCatalogue } from "../../components/makeProductCatalogue.js";
 // import { removeFromCart } from "../../components/cart/removeFromCart.js";
 
 const cart = document.querySelector(".cart");
-let cartArray = [];
+let cartArrays = JSON.parse(localStorage.getItem("cartList"));
 
 const addButton = document.querySelector(".add-button");
 
@@ -13,14 +13,13 @@ addButton.onclick = function addToCart(event) {
   const itemToAdd = productArray.find(
     (item) => item.id === event.target.dataset.product
   );
-  cartArray.push(itemToAdd);
+  cartArrays.push(itemToAdd);
 
   // if (cartArray.find((item) => item.id === itemToAdd.id)) {
   //   console.log("it's already in the list");
   // }
 
-  localStorage.setItem("cartList", JSON.stringify(cartArray));
-  // displayCart();
+  localStorage.setItem("cartList", JSON.stringify(cartArrays));
   makeOrderSummary();
   // removeFromCart();
   cart.style.display = "flex";
