@@ -1,6 +1,6 @@
 import { validateCheckoutForm } from "../../components/validateForm.js";
 import { displayMessage } from "../../components/displayMessage.js";
-// import { makeOrderSummary } from "../../components/makeOrderSummary.js";
+import { makeOrderSummary } from "../../components/cart/makeOrderSummary.js";
 // const tel = document.querySelector("#tel");
 
 // makeOrderSummary();
@@ -43,3 +43,5 @@ checkoutForm.onsubmit = function (event) {
 function clearCartList() {
   localStorage.setItem("cartList", "");
 }
+
+makeOrderSummary();

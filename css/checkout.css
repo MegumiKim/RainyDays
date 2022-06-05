@@ -27,3 +27,7 @@
 .section_form {
   grid-row: 4/6;
 }
+
+#trash {
+  display: none;
+}

@@ -7,7 +7,6 @@ const checkoutButton = document.querySelector(".checkout-button");
 export function makeOrderSummary() {
   const cartItems = JSON.parse(localStorage.getItem("cartList"));
   if (cartItems.length !== 0) {
-    console.log(cartItems.length);
     cartList.innerHTML = "";
     let total = 0;
 
