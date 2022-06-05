@@ -16,6 +16,8 @@ function handleClick(event) {
   const newCartList = currentCartList.filter((item) => item.id !== id);
   saveItem(newCartList);
 
+  location.reload();
+
   cartList.innerHTML = `<p>Discarded</p>`;
   totalContainer.innerHTML = "";
   checkoutButton.style.display = "none";

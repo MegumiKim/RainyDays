@@ -5,7 +5,10 @@ import { makeProductCatalogue } from "../../components/makeProductCatalogue.js";
 // import { removeFromCart } from "../../components/cart/removeFromCart.js";
 
 const cart = document.querySelector(".cart");
-let cartArrays = JSON.parse(localStorage.getItem("cartList"));
+const cartItems = JSON.parse(localStorage.getItem("cartList"));
+const cartArrays = [...cartItems];
+
+// let cartArrays = JSON.parse(localStorage.getItem("cartList"));
 
 const addButton = document.querySelector(".add-button");
 
@@ -14,7 +17,7 @@ addButton.onclick = function addToCart(event) {
     (item) => item.id === event.target.dataset.product
   );
   cartArrays.push(itemToAdd);
-
+  console.log(cartArrays);
   // if (cartArray.find((item) => item.id === itemToAdd.id)) {
   //   console.log("it's already in the list");
   // }
