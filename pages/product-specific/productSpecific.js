@@ -11,7 +11,7 @@ const cart = document.querySelector(".cart");
 const addButton = document.querySelector(".add-button");
 
 addButton.onclick = function addToCart(event) {
-  const cartItems = JSON.parse(localStorage.getItem("cartList"));
+  const cartItems = JSON.parse(localStorage.getItem("cartList")) || [];
   const cartArrays = [...cartItems];
 
   const itemToAdd = productArray.find(

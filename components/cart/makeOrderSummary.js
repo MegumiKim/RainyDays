@@ -5,7 +5,7 @@ const totalContainer = document.querySelector(".total");
 const checkoutButton = document.querySelector(".checkout-button");
 
 export function makeOrderSummary() {
-  const cartItems = JSON.parse(localStorage.getItem("cartList"));
+  const cartItems = JSON.parse(localStorage.getItem("cartList")) || [];
   if (cartItems.length !== 0) {
     cartList.innerHTML = "";
     let total = 0;
@@ -23,7 +23,7 @@ export function makeOrderSummary() {
   } else {
     console.log(cartItems);
     checkoutButton.style.display = "none";
-    cart.innerHTML = "No item added";
+    cartList.innerHTML = "No item added";
   }
 }
 
