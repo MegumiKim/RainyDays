@@ -10,16 +10,24 @@ export function makeOrderSummary() {
     cartList.innerHTML = "";
     let total = 0;
 
+    let cart = [];
+    var count = 0;
     cartItems.forEach((item) => {
       total += item.price;
+
+      var element = {};
+      if (item) {
+        count += 1;
+        element[item.id] = count;
+        cart.push(element);
+      }
       createHtml(item);
     });
-
+    console.log(cart);
     totalContainer.innerHTML = `
     <div class="num-of-items">${cartItems.length} item(s)</div>
     <div class="total">Total: NOK ${total}</div>
     `;
-    // removeFromCart();
   } else {
     console.log(cartItems);
     checkoutButton.style.display = "none";
