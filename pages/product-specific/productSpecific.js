@@ -1,8 +1,29 @@
 import { productArray } from "../../constants/productsList.js";
 import { makeOrderSummary } from "../../components/cart/makeOrderSummary.js";
 import { makeProductCatalogue } from "../../components/makeProductCatalogue.js";
+import { createProductHtml } from "./displayProductSpecific.js";
 // import { displayCart } from "../../components/cart/displayCart.js";
 // import { removeFromCart } from "../../components/cart/removeFromCart.js";
+
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id");
+const title = document.querySelector("title");
+const url = `http://localhost/Rainydays/wp-json/wc/store/products/${id}`;
+
+async function fetchProduct() {
+  try {
+    const response = await fetch(url);
+    const details = await response.json();
+
+    console.log(details);
+
+    createProductHtml(details);
+  } catch (error) {
+    console.log(error);
+  }
+}
+fetchProduct();
 
 const cart = document.querySelector(".cart");
 
