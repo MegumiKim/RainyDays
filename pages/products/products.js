@@ -7,14 +7,20 @@ const searchButton = document.querySelector("#search_icon");
 searchButton.onclick = function () {
   searchItems();
 };
+document.addEventListener("keypress", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    searchItems();
+  }
+});
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
-const category = params.get("category");
+const categoryID = params.get("category");
 const title = document.querySelector("title");
-const categoryUrl = url + `?product-category=${category}`;
+const categoryUrl = url + `?category=${categoryID}`;
 
-if (category) {
+if (categoryID) {
   console.log(categoryUrl);
   getItems(categoryUrl);
 } else {

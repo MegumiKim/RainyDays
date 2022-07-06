@@ -16,9 +16,23 @@ async function fetchProduct() {
     const response = await fetch(url);
     const details = await response.json();
 
-    console.log(details);
-
     createProductHtml(details);
+
+    const addButton = document.querySelector(".add-button");
+    addButton.onclick = function addToCart(event) {
+      const cartItems = JSON.parse(localStorage.getItem("cartList")) || [];
+      const cartArrays = [...cartItems];
+
+      const itemToAdd = productArray.find(
+        (item) => item.id === event.target.dataset.product
+      );
+      console.log(id);
+      cartArrays.push(itemToAdd);
+
+      localStorage.setItem("cartList", JSON.stringify(cartArrays));
+      makeOrderSummary();
+      cart.style.display = "flex";
+    };
   } catch (error) {
     console.log(error);
   }
@@ -26,29 +40,6 @@ async function fetchProduct() {
 fetchProduct();
 
 const cart = document.querySelector(".cart");
-
-// let cartArrays = JSON.parse(localStorage.getItem("cartList"));
-
-const addButton = document.querySelector(".add-button");
-
-addButton.onclick = function addToCart(event) {
-  const cartItems = JSON.parse(localStorage.getItem("cartList")) || [];
-  const cartArrays = [...cartItems];
-
-  const itemToAdd = productArray.find(
-    (item) => item.id === event.target.dataset.product
-  );
-  cartArrays.push(itemToAdd);
-
-  // if (cartArray.find((item) => item.id === itemToAdd.id)) {
-  //   console.log("it's already in the list");
-  // }
-
-  localStorage.setItem("cartList", JSON.stringify(cartArrays));
-  makeOrderSummary();
-  // removeFromCart();
-  cart.style.display = "flex";
-};
 
 const heart = document.querySelector(".heart");
 
