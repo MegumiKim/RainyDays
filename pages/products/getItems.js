@@ -1,4 +1,4 @@
-import { makeProductCatalogue } from "../../components/makeProductCatalogue.js";
+import { renderProduct } from "../../components/makeProductCatalogue.js";
 
 const productsContainer = document.querySelector(".products-container");
 
@@ -7,10 +7,10 @@ export async function getItems(url) {
     const response = await fetch(url);
     const products = await response.json();
 
-    if (products.length === 0) {
+    if (!products.length) {
       productsContainer.innerHTML = `<p>No Item Found</p>`;
     } else {
-      products.forEach((product) => makeProductCatalogue(product));
+      products.forEach((product) => renderProduct(product, productsContainer));
     }
   } catch (e) {
     console.log(e);

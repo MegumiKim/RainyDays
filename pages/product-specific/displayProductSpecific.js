@@ -1,4 +1,4 @@
-const productContainer = document.querySelector(".product-container");
+const productContainer = document.querySelector(".products-container");
 
 export function createProductHtml(details) {
   productContainer.innerHTML = `

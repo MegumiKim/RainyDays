@@ -32,6 +32,16 @@ async function fetchProduct() {
       localStorage.setItem("cartList", JSON.stringify(cartArrays));
       makeOrderSummary();
       cart.style.display = "flex";
+
+      const heart = document.querySelector(".heart");
+
+      heart.onclick = function (event) {
+        if (event.target.style.color === "salmon") {
+          event.target.style.color = "grey";
+        } else {
+          event.target.style.color = "salmon";
+        }
+      };
     };
   } catch (error) {
     console.log(error);
@@ -40,17 +50,6 @@ async function fetchProduct() {
 fetchProduct();
 
 const cart = document.querySelector(".cart");
-
-const heart = document.querySelector(".heart");
-
-heart.onclick = function (event) {
-  if (event.target.style.color === "salmon") {
-    event.target.style.color = "grey";
-  } else {
-    event.target.style.color = "salmon";
-  }
-};
-
 for (let i = 1; i < 3; i++) {
   const product = productArray[i];
   makeProductCatalogue(product);

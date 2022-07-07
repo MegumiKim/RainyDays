@@ -21,7 +21,6 @@ const title = document.querySelector("title");
 const categoryUrl = url + `?category=${categoryID}`;
 
 if (categoryID) {
-  console.log(categoryUrl);
   getItems(categoryUrl);
 } else {
   getItems(url);
