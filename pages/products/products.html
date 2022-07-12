@@ -8,6 +8,10 @@
       content="Check out RAINYDAY's latest products"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+    src="https://kit.fontawesome.com/175ecb4e25.js"
+    crossorigin="anonymous"
+  ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -80,8 +84,17 @@
       </div>
       <section class="products">
         <h1>OUR PRODUCTS</h1>
-        <div class="products-container"></div>
+        <div class="products-container">
+          <i class="fa-solid fa-spinner"></i>
+        </div>
       </section>
+      <div class="cart">
+        <div class="cart-list"></div>
+        <div class="total"></div>
+        <a href="../checkout/checkout.html" class="cta checkout-button"
+          >Checkout</a
+        >
+      </div>
     </main>
     <footer>
       <div class="copyright">RAINYDAYS &copy;</div>
@@ -91,13 +104,6 @@
         <i class="fab fa-twitter"></i>
       </div>
     </footer>
-    <div class="cart">
-      <div class="cart-list"></div>
-      <div class="total"></div>
-      <a href="../checkout/checkout.html" class="cta checkout-button"
-        >Checkout</a
-      >
-    </div>
     <script src="/components/cart/displayCart.js" type="module"></script>
     <script src="products.js" type="module"></script>
   </body>

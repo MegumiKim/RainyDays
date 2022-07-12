@@ -1,11 +1,6 @@
 import { productArray } from "../../constants/productsList.js";
 const container = document.querySelector(".test-container");
 
-// productArray.forEach(renderProduct);
-
-// const newArray = productArray.map(renderProduct);
-// console.log(newArray);
-
 function renderProduct(product) {
   const productHTML = createHtmlObject(product);
   container.append(productHTML);

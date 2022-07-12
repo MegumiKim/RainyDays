@@ -1,11 +1,13 @@
-const productContainer = document.querySelector(".products-container");
+import { onClick } from "../../components/listner/onClick.js";
 
-export function createProductHtml(details) {
-  productContainer.innerHTML = `
+// export function makeProductHtml(details);
+
+export function createProductHtml(details, parent) {
+  parent.innerHTML = `
   <div class="product_img one">
   <img
-    src="${details.images[0].src}"
-    alt="${details.images[0].alt}"
+  src="${details.images[0].src}"
+  alt="${details.images[0].alt}"
   />
 </div>
 <div class="product-main-descriptions">
@@ -105,4 +107,87 @@ ${details.description}
   <div class="products-container"></div>
 </section>
   `;
+}
+
+export function renderSpecificProduct(product, parent) {
+  const productHtml = createProductSpecificHtmlObject(product);
+  parent.append(productHtml);
+}
+
+function createProductSpecificHtmlObject(product) {
+  const img = createProductImg(product);
+  const productDescription = createProductDescription(product);
+  const addToCartButton = createAddToCartButton();
+  const addToFavButton = createAddToFavButton();
+  const productText = createProductText(product);
+  const childItems = [
+    img,
+    productDescription,
+    addToCartButton,
+    addToFavButton,
+    productText,
+  ];
+
+  const element = document.createElement("div");
+  element.append(...childItems);
+  return element;
+}
+
+function createProductDescription(product) {
+  const price = createProductPrice(product);
+  const name = createProductName(product);
+
+  const element = document.createElement("div");
+  element.classList.add("product-main-descriptions");
+  element.append(name, price);
+
+  return element;
+}
+
+function createProductPrice(product) {
+  const element = document.createElement("p");
+  element.classList.add("price");
+  element.innerHTML = `Price: Kr ${product.prices.price}`;
+  return element;
+}
+function createProductName(product) {
+  const element = document.createElement("h1");
+  element.classList.add("name");
+  element.innerHTML = product.name;
+  return element;
+}
+
+function createProductImg(product) {
+  const element = document.createElement("div");
+  element.classList.add("product_img");
+
+  const childElement = document.createElement("img");
+  childElement.alt = product.images[0].alt;
+  childElement.src = product.images[0].src;
+  element.append(childElement);
+  return element;
+}
+
+function createAddToCartButton() {
+  const element = document.createElement("button");
+  element.classList.add("cta");
+  element.innerHTML = "Add To Cart";
+  element.addEventListener("click", onClick);
+  return element;
+}
+
+function createAddToFavButton() {
+  const element = document.createElement("button");
+  element.classList.add("heart");
+  element.innerHTML = '<i class="far fa-heart">';
+  // element.addEventListener("click", onClick);
+  return element;
+}
+
+function createProductText(product) {
+  const element = document.createElement("p");
+  element.classList.add("product-text");
+  element.innerHTML = product.short_description;
+  console.log(product);
+  return element;
 }
