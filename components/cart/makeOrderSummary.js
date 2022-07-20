@@ -23,7 +23,7 @@ export function makeOrderSummary() {
       }
       createHtml(item);
     });
-    console.log(cart);
+
     totalContainer.innerHTML = `
     <div class="num-of-items">${cartItems.length} item(s)</div>
     <div class="total">Total: NOK ${total}</div>
@@ -43,8 +43,6 @@ function createHtml(item) {
   <div style="background-image: url(${item.image})" class='cart-image'></div>
   <div class="order-details">
   <p class="price">NOK ${item.price}</p>
-  <p>Color: ${item.color[0]}</p>
-  <p>Size: ${item.size[0]}</p>
   <i class="fa-solid fa-trash" data-id="${item.id}" id="trash"></i>
   </div>
   </div>
