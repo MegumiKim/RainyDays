@@ -12,7 +12,6 @@ export async function getItems(url) {
       productsContainer.innerHTML = `<p>No Item Found</p>`;
     } else {
       products.forEach((product) => renderProduct(product, productsContainer));
-      console.log(products);
       return products;
     }
   } catch (e) {

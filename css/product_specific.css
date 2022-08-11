@@ -89,10 +89,14 @@ label {
   padding: 0 20px;
 }
 
+.checked,
 .heart:hover {
   color: salmon;
 }
 
+.unchecked {
+  color: grey;
+}
 .username {
   font-weight: bold;
 }
@@ -119,4 +123,22 @@ label {
 
 .product-image {
   height: auto;
+}
+
+.size {
+  display: flex;
+  justify-content: end;
+}
+
+.size_p {
+  background-color: white;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 50%;
+  padding: 3%;
+  border: none;
+}
+.size_p:hover {
+  background-color: var(--color_subtle);
 }

@@ -1,35 +1,10 @@
-import { productArray } from "../../constants/productsList.js";
-import {
-  loadFromStorage,
-  saveToStorage,
-} from "../../constants/storage/local.js";
+import { addToLocalStorage } from "../../constants/storage/localStorage.js";
 import { makeOrderSummary } from "./makeOrderSummary.js";
 
+const cart = document.querySelector(".cart");
+
 export function addToCart(event) {
-  try {
-    const cartItems = JSON.parse(localStorage.getItem("cartList")) || [];
-    const cartArrays = [...cartItems];
-
-    const itemToAdd = productArray.find(
-      (item) => item.id === event.target.data
-    );
-    cartArrays.push(event.target.data);
-    console.log(cartArrays);
-    localStorage.setItem("cartList", JSON.stringify(cartArrays));
-    makeOrderSummary();
-    // cart.style.display = "flex";
-  } catch (e) {
-    console.log(e);
-  }
+  cart.style.display = "flex";
+  addToLocalStorage(event, "cartList");
+  makeOrderSummary();
 }
-
-// export function cart(product) {
-//   try {
-//     saveToStorage("cartItems", product.name);
-
-//     const cartItems = loadFromStorage("cartItems");
-//     console.log(cartItems);
-//   } catch (e) {
-//     console.log(e);
-//   }
-// }

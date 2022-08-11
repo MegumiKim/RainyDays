@@ -1,6 +1,8 @@
-import { renderSpecificProduct } from "./renderProduct.js";
+// import { renderSpecificProduct } from "./renderProduct.js";
+
 import { displayMessage } from "../../components/displayMessage.js";
 import { makeOrderSummary } from "../../components/cart/makeOrderSummary.js";
+import { createProductSpecificHtmlObject } from "./renderProduct.js";
 // import { productArray } from "../../constants/productsList.js";
 // import { makeProductCatalogue } from "../../components/makeProductCatalogue.js";
 // import {
@@ -31,6 +33,13 @@ async function fetchProduct() {
   }
 }
 fetchProduct();
+
+function renderSpecificProduct(product, parent) {
+  const productHtml = createProductSpecificHtmlObject(product);
+  const title = document.querySelector("title");
+  title.innerHTML = "RAINYDAYS | " + product.name;
+  parent.append(productHtml);
+}
 
 // const cart = document.querySelector(".cart");
 // for (let i = 1; i < 3; i++) {

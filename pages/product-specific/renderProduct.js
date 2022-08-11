@@ -1,29 +1,41 @@
 // import { onClick } from "../../components/listner/onClick.js";
 import { addToCart } from "../../components/cart/addToCart.js";
-// import { addToFav } from "../../components/favoriteFunction/addToFav.js";
-// import { cart } from "../../components/cart/addToCart.js";
+import { removeFromCart } from "../../components/cart/removeFromCart.js";
+import { addToFav } from "../../components/favoriteFunction/addToFav.js";
 
-export function renderSpecificProduct(product, parent) {
-  const productHtml = createProductSpecificHtmlObject(product);
-  const title = document.querySelector("title");
-  title.innerHTML = "RAINYDAYS | " + product.name;
-  parent.append(productHtml);
-}
-
-function createProductSpecificHtmlObject(product) {
-  const img = createProductImg(product);
-  const productDescription = createProductDescription(product);
+export function createProductSpecificHtmlObject(product) {
+  const img = createProductImg(product.images[0], "product-image");
+  const productDescription = createProductDescription(
+    product,
+    product.prices.price,
+    "h1"
+  );
   const AddToCartButtonContainer = createAddToCartButtonContainer(product);
   const productText = createProductText(product);
   const variations = createVariations(product);
   const childItems = [
     img,
     productDescription,
+    variations,
     AddToCartButtonContainer,
     productText,
-    variations,
   ];
 
+  const element = document.createElement("div");
+  element.append(...childItems);
+  return element;
+}
+
+export function createProductSummary(product) {
+  const img = createProductImg(product, "product-image-cart");
+  const productDescription = createProductDescription(
+    product,
+    product.price,
+    "h3"
+  );
+  // const AddToCartButtonContainer = createAddToCartButtonContainer(product);
+  // const trash = createTrash(product);
+  const childItems = [img, productDescription];
   const element = document.createElement("div");
   element.append(...childItems);
   return element;
@@ -51,13 +63,9 @@ function createElement(tagname, classes, innerHTML, children, src, altText) {
   return element;
 }
 
-function createProductDescription(product) {
-  const price = createElement(
-    "p",
-    "price",
-    `Price: Kr ${product.prices.price}`
-  );
-  const name = createElement("h1", "name", product.name);
+function createProductDescription(product, productPrice, headingTag) {
+  const price = createElement("p", "price", `Price: NOK ${productPrice}`);
+  const name = createElement(headingTag, "name", product.name);
   const element = createElement("div", "product-main-descriptions", undefined, [
     name,
     price,
@@ -66,14 +74,14 @@ function createProductDescription(product) {
   return element;
 }
 
-function createProductImg(product) {
+function createProductImg(product, imgClass) {
   const childElement = createElement(
     "img",
+    imgClass,
     undefined,
     undefined,
-    undefined,
-    product.images[0].src,
-    product.images[0].alt
+    product.src,
+    product.alt
   );
   const element = createElement("div", "product_img", undefined, [
     childElement,
@@ -96,7 +104,10 @@ function createAddToCartButtonContainer(product) {
 
 function createAddToCartButton(product) {
   const element = createElement("button", "cta", "Add to Cart");
-  element.data = product.id;
+  element.id = product.id;
+  element.name = product.name;
+  element.src = product.images[0].src;
+  element.price = parseInt(product.prices.price);
 
   element.addEventListener("click", addToCart);
   // element.addEventListener("click", saveToStorage("cartItems", product.name));
@@ -104,8 +115,15 @@ function createAddToCartButton(product) {
 }
 
 function createAddToFavButton(product) {
-  const element = createElement("button", "heart", '<i class="far fa-heart">');
-  // element.addEventListener("click", addToFav);
+  const element = createElement(
+    "button",
+    "heart",
+    '<i class="far fa-heart unchecked">'
+  );
+  element.id = product.id;
+  element.name = product.name;
+  element.src = product.images[0].src;
+  element.addEventListener("click", addToFav);
   return element;
 }
 
@@ -121,10 +139,27 @@ function createVariations(product) {
     const attributes = variation.attributes;
     attributes.forEach((attribute) => {
       const childElement = createElement("button", "size_p", attribute.value);
+      childElement.addEventListener("click", function () {
+        console.log(attribute.value);
+      });
+
       element.append(childElement);
+
       // const element = createElement("div", "size", undefined, [childElement]);
     });
   });
 
   return element;
+}
+
+function createTrash(product) {
+  const element = createElement(
+    "button",
+    "bin",
+    '<i class="far fa-heart unchecked">'
+  );
+  // const element = createElement("i", "fa-trash");
+  // element.id = trash;
+  // removeFromCart();
+  // return element;
 }
