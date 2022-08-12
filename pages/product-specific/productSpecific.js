@@ -38,6 +38,9 @@ function renderSpecificProduct(product, parent) {
   const productHtml = createProductSpecificHtmlObject(product);
   const title = document.querySelector("title");
   title.innerHTML = "RAINYDAYS | " + product.name;
+  const breadCrumb = document.querySelector(".current");
+  breadCrumb.innerHTML = product.name.toUpperCase();
+  breadCrumb.id = "current";
   parent.append(productHtml);
 }
 

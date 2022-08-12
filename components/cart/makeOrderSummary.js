@@ -20,6 +20,7 @@ export function makeOrderSummary() {
     });
 
     createTotalHtml(cartItems, total);
+    // checkoutButton.style.display = flex;
   } else {
     checkoutButton.style.display = "none";
     cartList.innerHTML = "No item added";
@@ -37,17 +38,3 @@ function renderProductSummary(product, parent) {
   const productHtml = createProductSummary(product);
   parent.append(productHtml);
 }
-
-// function createHtml(item) {
-//   cartList.innerHTML += `
-//   <h3 class="product-name">${item.name}</h3>
-//   <div class="qty"></div>
-//   <div class="cart-item-wrap">
-// <img class="product-image-cart" src="${item.src}"/>
-//   <div class="order-details">
-//   <p class="price">NOK ${item.price}</p>
-//   <i class="fa-solid fa-trash" data-id="${item.id}" id="trash"></i>
-//   </div>
-//   </div>
-// `;
-// }

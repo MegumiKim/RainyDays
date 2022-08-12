@@ -5,7 +5,9 @@ export function addToLocalStorage(event, key) {
   const price = event.currentTarget.price;
 
   const currentItems = loadFromStorage(key);
-  const product = { id, name, src, price };
+  let numberOfEachItem = 0;
+  const product = { id, name, src, price, numberOfEachItem };
+
   currentItems.push(product);
   saveLocalStorage(key, currentItems);
 }
@@ -15,9 +17,19 @@ function saveLocalStorage(key, items) {
 }
 
 export function loadFromStorage(key) {
-  return JSON.parse(localStorage.getItem(key)) || [];
+  console.log(key);
+
+  const storedItems = JSON.parse(localStorage.getItem(key)) || [];
+
+  if (!storedItems.length) {
+    console.log("nothing here");
+  }
+
+  return JSON.parse(localStorage.getItem(key));
 }
 
-export function removeFromStorage(key) {
-  localStorage.removeItem(key);
+export function removeFromStorage(key, id) {
+  const currentItems = loadFromStorage(key);
+  const newItems = currentItems.filter((item) => item.id !== id);
+  saveLocalStorage(key, newItems);
 }
