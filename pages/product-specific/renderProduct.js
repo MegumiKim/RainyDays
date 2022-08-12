@@ -1,4 +1,5 @@
 import {
+  createElement,
   createProductImg,
   createProductDescription,
   createAddToCartButtonContainer,
@@ -14,18 +15,19 @@ export function createProductSpecificHtmlObject(product) {
     product.prices.price,
     "h1"
   );
+
   const AddToCartButtonContainer = createAddToCartButtonContainer(product);
   const productText = createProductText(product);
   const variations = createVariations(product);
-  const childItems = [
-    img,
+  const rightContainer = createElement("div", "right-column", undefined, [
     productDescription,
     variations,
     AddToCartButtonContainer,
     productText,
-  ];
+  ]);
+  const childItems = [img, rightContainer];
 
-  const element = document.createElement("div");
+  const element = document.createElement("div", "main_column", undefined);
   element.append(...childItems);
   return element;
 }

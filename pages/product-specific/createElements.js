@@ -3,7 +3,14 @@ import { addToCart } from "../../components/cart/addToCart.js";
 import { removeFromCart } from "../../components/cart/removeFromCart.js";
 import { addToFav } from "../../components/favoriteFunction/addToFav.js";
 
-function createElement(tagname, classes, innerHTML, children, src, altText) {
+export function createElement(
+  tagname,
+  classes,
+  innerHTML,
+  children,
+  src,
+  altText
+) {
   const element = document.createElement(tagname);
   element.classList.add(classes);
 
