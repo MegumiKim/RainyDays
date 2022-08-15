@@ -2,7 +2,11 @@ import { validateLoginForm } from "../../components/validateForm.js";
 import { displayMessage } from "../../components/displayMessage.js";
 import { displayCart } from "../../components/cart/displayCart.js";
 
-displayCart();
+const myBag = document.querySelector(".my-bag");
+
+myBag.onclick = function () {
+  displayCart();
+};
 
 const loginForm = document.querySelector("#log-in-form");
 const email = document.querySelector("#email");

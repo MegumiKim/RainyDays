@@ -17,15 +17,13 @@ function saveLocalStorage(key, items) {
 }
 
 export function loadFromStorage(key) {
-  console.log(key);
+  const existingItems = localStorage.getItem(key);
 
-  const storedItems = JSON.parse(localStorage.getItem(key)) || [];
-
-  if (!storedItems.length) {
-    console.log("nothing here");
+  if (existingItems === null) {
+    return [];
+  } else {
+    return JSON.parse(existingItems);
   }
-
-  return JSON.parse(localStorage.getItem(key));
 }
 
 export function removeFromStorage(key, id) {

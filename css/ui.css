@@ -112,3 +112,20 @@
     transform: rotate(360deg);
   }
 }
+
+.heart {
+  color: grey;
+  border: none;
+  background: none;
+  font-size: 2em;
+  padding: 0 20px;
+}
+
+.checked,
+.heart:hover {
+  color: salmon;
+}
+
+.unchecked {
+  color: grey;
+}

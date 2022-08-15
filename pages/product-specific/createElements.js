@@ -97,6 +97,21 @@ export function createAddToFavButton(product) {
   element.id = product.id;
   element.name = product.name;
   element.src = product.images[0].src;
+  element.price = parseInt(product.prices.price);
+  element.addEventListener("click", addToFav);
+  return element;
+}
+
+export function createRemoveFromFavButton(product) {
+  const element = createElement(
+    "button",
+    "heart",
+    '<i class="far fa-heart checked">'
+  );
+  element.id = product.id;
+  element.name = product.name;
+  element.src = product.src;
+  element.price = parseInt(product.price);
   element.addEventListener("click", addToFav);
   return element;
 }

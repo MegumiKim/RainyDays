@@ -18,5 +18,5 @@ export function displayCart() {
 myBag.addEventListener("mouseleave", function () {
   setTimeout(function () {
     myCart.style.display = "none";
-  }, 4000);
+  }, 5000);
 });

@@ -1,8 +1,9 @@
 @import "/css/ui.css";
 @import "/css/cart.css";
 @import "/css/form.css";
-/* global */
+@import "/css/products.css";
 
+/* global */
 body {
   font: 18px var(--font_p);
   margin: 0 auto;
@@ -198,6 +199,11 @@ nav a:hover {
   border: 3px solid var(--color_subtle);
 }
 
-.favorites {
+/* .favorites {
   padding: 1em;
+} */
+
+.fav-container {
+  display: flex;
+  flex-direction: column;
 }

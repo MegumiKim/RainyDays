@@ -3,9 +3,12 @@ import {
   createProductImg,
   createProductDescription,
   createAddToCartButtonContainer,
+  createAddToFavButton,
   createProductText,
   createVariations,
   createTotalContainer,
+  createTrash,
+  createRemoveFromFavButton,
 } from "./createElements.js";
 
 export function createProductSpecificHtmlObject(product) {
@@ -42,5 +45,20 @@ export function createProductSummary(product) {
   const childItems = [img, productDescription];
   const element = document.createElement("div");
   element.append(...childItems);
+  return element;
+}
+
+export function createFavoriteItem(product) {
+  const img = createProductImg(product, "product-image-cart");
+  const name = createElement("h3", "product-name", product.name);
+  const price = createElement("p", "price", `Price: NOK ${product.price}`);
+  const heart = createRemoveFromFavButton(product);
+  const element = createElement("div", "favorite", undefined, [
+    img,
+    name,
+    heart,
+    price,
+  ]);
+
   return element;
 }

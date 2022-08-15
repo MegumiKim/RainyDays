@@ -123,4 +123,9 @@
     gap: 0 50px;
     max-width: 800px;
   }
+  /* my page */
+
+  .fav-container {
+    flex-direction: row;
+  }
 }

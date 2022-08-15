@@ -2,7 +2,7 @@
 
 import { displayMessage } from "../../components/displayMessage.js";
 import { makeOrderSummary } from "../../components/cart/makeOrderSummary.js";
-import { createProductSpecificHtmlObject } from "./renderProduct.js";
+import { createProductSpecificHtmlObject } from "./createHtmlObjects.js";
 // import { productArray } from "../../constants/productsList.js";
 // import { makeProductCatalogue } from "../../components/makeProductCatalogue.js";
 // import {

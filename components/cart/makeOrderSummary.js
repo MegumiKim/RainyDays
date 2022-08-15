@@ -1,5 +1,5 @@
 import { loadFromStorage } from "../../constants/storage/localStorage.js";
-import { createProductSummary } from "../../pages/product-specific/renderProduct.js";
+import { createProductSummary } from "../../pages/product-specific/createHtmlObjects.js";
 import { createTotalHtml } from "../../pages/product-specific/createElements.js";
 
 const cartList = document.querySelector(".cart-list");
@@ -26,13 +26,6 @@ export function makeOrderSummary() {
     cartList.innerHTML = "No item added";
   }
 }
-
-// function createTotalHtml(item, total) {
-//   totalContainer.innerHTML = `
-//   <div class="num-of-items">${item.length} item(s)</div>
-//   <div class="total">Total: NOK ${new Intl.NumberFormat().format(total)}</div>
-//   `;
-// }
 
 function renderProductSummary(product, parent) {
   const productHtml = createProductSummary(product);

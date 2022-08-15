@@ -1,5 +1,5 @@
 import { loadFromStorage } from "../../constants/storage/localStorage.js";
-import { createProductSummary } from "../product-specific/renderProduct.js";
+import { createProductSummary } from "../product-specific/createHtmlObjects.js";
 import { createTotalHtml } from "../product-specific/createElements.js";
 const container = document.querySelector(".order-summary-container");
 
