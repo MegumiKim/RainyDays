@@ -33,15 +33,10 @@ export function createElement(
 }
 
 export function createProductDescription(product, productPrice, headingTag) {
-  const trash = createTrash(product);
   const price = createElement("p", "price", `Price: NOK ${productPrice}`);
   const name = createElement(headingTag, "name", product.name);
-  const trashContainer = createElement("div", "trashContainer", undefined, [
-    name,
-    trash,
-  ]);
   const element = createElement("div", "product-main-descriptions", undefined, [
-    trashContainer,
+    name,
     price,
   ]);
 
@@ -94,7 +89,7 @@ export function createAddToFavButton(product) {
     "heart",
     '<i class="far fa-heart unchecked">'
   );
-  element.id = product.id;
+  element.dataset.id = product.id;
   element.name = product.name;
   element.src = product.images[0].src;
   element.price = parseInt(product.prices.price);
@@ -108,7 +103,7 @@ export function createRemoveFromFavButton(product) {
     "heart",
     '<i class="far fa-heart checked">'
   );
-  element.id = product.id;
+  element.dataset.id = product.id;
   element.name = product.name;
   element.src = product.src;
   element.price = parseInt(product.price);
@@ -147,7 +142,7 @@ export function createTrash(product) {
     '<i class="fa-solid fa-trash"></i>'
   );
   element.dataset.id = product.id;
-  element.addEventListener("click", removeFromCart);
+  element.addEventListener("click", removeFromCart(event));
 
   return element;
 }

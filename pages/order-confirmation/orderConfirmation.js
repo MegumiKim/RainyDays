@@ -1,6 +1,7 @@
 import { loadFromStorage } from "../../constants/storage/localStorage.js";
 import { createProductSummary } from "../product-specific/createHtmlObjects.js";
 import { createTotalHtml } from "../product-specific/createElements.js";
+import { makeOrderSummary } from "../../components/cart/makeOrderSummary.js";
 const container = document.querySelector(".order-summary-container");
 
 function createOrderConfirmation() {
@@ -25,3 +26,5 @@ function createOrderConfirmation() {
 }
 
 createOrderConfirmation();
+
+// makeOrderSummary();

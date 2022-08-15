@@ -1,5 +1,5 @@
 export function addToLocalStorage(event, key) {
-  const id = event.currentTarget.id;
+  const id = parseInt(event.currentTarget.id);
   const name = event.currentTarget.name;
   const src = event.currentTarget.src;
   const price = event.currentTarget.price;
@@ -19,7 +19,7 @@ function saveLocalStorage(key, items) {
 export function loadFromStorage(key) {
   const existingItems = localStorage.getItem(key);
 
-  if (existingItems === null) {
+  if (!existingItems) {
     return [];
   } else {
     return JSON.parse(existingItems);
@@ -29,5 +29,6 @@ export function loadFromStorage(key) {
 export function removeFromStorage(key, id) {
   const currentItems = loadFromStorage(key);
   const newItems = currentItems.filter((item) => item.id !== id);
+  console.log(newItems);
   saveLocalStorage(key, newItems);
 }

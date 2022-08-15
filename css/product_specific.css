@@ -126,3 +126,7 @@ label {
 .size_p:hover {
   background-color: var(--color_subtle);
 }
+
+/* .specific-item {
+  display: flex;
+} */

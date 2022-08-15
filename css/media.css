@@ -128,4 +128,8 @@
   .fav-container {
     flex-direction: row;
   }
+  .specific-product-container {
+    display: flex;
+    flex-direction: row;
+  }
 }

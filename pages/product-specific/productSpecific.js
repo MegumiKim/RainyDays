@@ -17,7 +17,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const url = `http://localhost/Rainydays/wp-json/wc/store/products/${id}`;
-const parent = document.querySelector(".products-container");
+const parent = document.querySelector(".specific-product-container");
 async function fetchProduct() {
   try {
     const response = await fetch(url);

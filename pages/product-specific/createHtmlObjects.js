@@ -28,10 +28,13 @@ export function createProductSpecificHtmlObject(product) {
     AddToCartButtonContainer,
     productText,
   ]);
-  const childItems = [img, rightContainer];
 
-  const element = document.createElement("div", "main_column", undefined);
-  element.append(...childItems);
+  const element = createElement("div", "specific-item", undefined, [
+    img,
+    rightContainer,
+  ]);
+  // const element = document.createElement("div", "specific-item", undefined);
+  // element.append(...childItems);
   return element;
 }
 
@@ -42,9 +45,22 @@ export function createProductSummary(product) {
     product.price,
     "h3"
   );
+  // const trash = createTrash(product);
   const childItems = [img, productDescription];
-  const element = document.createElement("div");
-  element.append(...childItems);
+  const element = createElement("div", "product", undefined, childItems);
+  return element;
+}
+
+export function createCartItem(product) {
+  const img = createProductImg(product, "product-image-cart");
+  const productDescription = createProductDescription(
+    product,
+    product.price,
+    "h3"
+  );
+  const trash = createTrash(product);
+  const childItems = [img, productDescription, trash];
+  const element = createElement("div", "cart-item", undefined, childItems);
   return element;
 }
 
@@ -53,7 +69,7 @@ export function createFavoriteItem(product) {
   const name = createElement("h3", "product-name", product.name);
   const price = createElement("p", "price", `Price: NOK ${product.price}`);
   const heart = createRemoveFromFavButton(product);
-  const element = createElement("div", "favorite", undefined, [
+  const element = createElement("div", "product", undefined, [
     img,
     name,
     heart,

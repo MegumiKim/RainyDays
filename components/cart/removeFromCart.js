@@ -6,7 +6,7 @@ const totalContainer = document.querySelector(".total");
 const checkoutButton = document.querySelector(".checkout-button");
 
 export function removeFromCart(event) {
-  const id = this.dataset.id;
+  const id = parseInt(event.target.dataset.id);
 
   removeFromStorage("cartList", id);
 
