@@ -2,10 +2,10 @@ import { addToLocalStorage } from "../../constants/storage/localStorage.js";
 import { makeOrderSummary } from "./makeOrderSummary.js";
 
 const cart = document.querySelector(".cart");
-// const cartList = document.querySelector(".cart-list");
+const key = "cart-items";
 
 export function addToCart(event) {
   cart.style.display = "flex";
-  addToLocalStorage(event, "cartList");
+  addToLocalStorage(event, key);
   makeOrderSummary();
 }

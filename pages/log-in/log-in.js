@@ -16,9 +16,6 @@ const passwordError = document.querySelector(".password-error");
 const userAlert = document.querySelector(".user-alert");
 const loginButton = document.querySelector("#login-button");
 
-// loginButton.disabled = true;
-// console.log(loginButton.disabled);
-
 loginForm.onsubmit = function (event) {
   event.preventDefault();
   if (validateLoginForm()) {

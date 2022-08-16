@@ -1,15 +1,15 @@
+import { createElement } from "./createElement.js";
 import {
-  createElement,
   createProductImg,
   createProductDescription,
   createAddToCartButtonContainer,
   createAddToFavButton,
   createProductText,
   createVariations,
-  // createTotalContainer,
   createTrash,
   createRemoveFromFavButton,
-} from "./createElements.js";
+  createNumberOfEachItem,
+} from "./makeHtmlComponents.js";
 
 export function createProductSpecificHtmlObject(product) {
   const img = createProductImg(product.images[0], "product-image");
@@ -38,6 +38,23 @@ export function createProductSpecificHtmlObject(product) {
   return element;
 }
 
+export function createProductCatalogue(product) {
+  const linkUrl = `/pages/product-specific/product_specific.html?id=${product.id}`;
+  const img = createProductImg(product.images[0], "product-image");
+  const productDescription = createProductDescription(
+    product,
+    product.prices.price,
+    "h3"
+  );
+
+  const element = createElement("a", "product", undefined, [
+    img,
+    productDescription,
+  ]);
+  element.href = linkUrl;
+  return element;
+}
+
 export function createProductSummary(product) {
   const img = createProductImg(product, "product-image-cart");
   const productDescription = createProductDescription(
@@ -53,13 +70,14 @@ export function createProductSummary(product) {
 
 export function createCartItem(product) {
   const img = createProductImg(product, "product-image-cart");
+  const numberOfEachItem = createNumberOfEachItem(product);
   const productDescription = createProductDescription(
     product,
     product.price,
     "h3"
   );
-  const trash = createTrash(product);
-  const childItems = [img, productDescription, trash];
+  // const trash = createTrash(product);
+  const childItems = [img, productDescription, numberOfEachItem];
   const element = createElement("div", "cart-item", undefined, childItems);
   return element;
 }

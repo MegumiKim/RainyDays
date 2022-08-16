@@ -1,30 +1,9 @@
-import { loadFromStorage } from "../../constants/storage/localStorage.js";
-import { createProductSummary } from "../product-specific/createHtmlObjects.js";
-import { createTotalHtml } from "../product-specific/createElements.js";
 import { makeOrderSummary } from "../../components/cart/makeOrderSummary.js";
-const container = document.querySelector(".order-summary-container");
 
-function createOrderConfirmation() {
-  const cartItems = loadFromStorage("cartList");
+const seeMoreProductsButton = document.querySelector(".cta");
 
-  if (cartItems.length !== 0) {
-    container.innerHTML = "";
-    let total = 0;
+makeOrderSummary();
 
-    cartItems.forEach((item) => {
-      renderOrderSummary(item, container);
-      total += item.price;
-    });
-
-    createTotalHtml(cartItems, total, container);
-  }
-
-  function renderOrderSummary(product, parent) {
-    const productHtml = createProductSummary(product);
-    parent.append(productHtml);
-  }
-}
-
-createOrderConfirmation();
-
-// makeOrderSummary();
+seeMoreProductsButton.addEventListener("click", function () {
+  localStorage.setItem("cart-items", []);
+});

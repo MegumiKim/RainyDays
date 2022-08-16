@@ -2,17 +2,21 @@ import { loadFromStorage } from "../../constants/storage/localStorage.js";
 import {
   createProductSummary,
   createCartItem,
-} from "../../pages/product-specific/createHtmlObjects.js";
-import { createTotalHtml } from "../../pages/product-specific/createElements.js";
+} from "../createHtmlElements/createHtmlObjects.js";
+import {
+  createTotalHtml,
+  createTrash,
+} from "../createHtmlElements/makeHtmlComponents.js";
 
 const cartList = document.querySelector(".cart-list");
 const cart = document.querySelector(".cart");
-
 const checkoutButton = document.querySelector(".checkout-button");
 
 export function makeOrderSummary() {
-  const cartItems = loadFromStorage("cartList");
+  const key = "cart-items";
+  const cartItems = loadFromStorage(key);
   const totalContainer = document.querySelector(".total");
+  console.log(cartItems);
   if (cartItems.length !== 0) {
     cartList.innerHTML = "";
     totalContainer.innerHTML = "";
@@ -21,6 +25,8 @@ export function makeOrderSummary() {
 
     cartItems.forEach((item) => {
       renderProductSummary(item, cartList);
+      // const trash = createTrash(item);
+      // cartList.innerHTML += trash;
       totalSum += item.price * item.numberOfEachItem;
       totalItems += item.numberOfEachItem;
     });
@@ -28,12 +34,14 @@ export function makeOrderSummary() {
     createTotalHtml(totalSum, totalItems, totalContainer);
     // checkoutButton.style.display = flex;
   } else {
-    checkoutButton.style.display = "none";
-    cartList.innerHTML = "No item added";
+    if (checkoutButton) {
+      checkoutButton.style.display = "none";
+      cartList.innerHTML = "No item added";
+    }
   }
 }
 
-function renderProductSummary(product, parent) {
-  const productHtml = createProductSummary(product);
-  parent.append(productHtml);
+function renderProductSummary(product) {
+  const productHtml = createCartItem(product);
+  cartList.append(productHtml);
 }

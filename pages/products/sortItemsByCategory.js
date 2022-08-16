@@ -5,7 +5,6 @@ export function sortItemsByCategory() {
   const queryString = document.location.search;
   const params = new URLSearchParams(queryString);
   const categoryID = params.get("category");
-  const title = document.querySelector("title");
   const categoryUrl = url + `?category=${categoryID}`;
 
   if (categoryID) {

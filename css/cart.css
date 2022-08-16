@@ -35,6 +35,9 @@
   flex-wrap: wrap; */
 }
 
+.product-description {
+  border: none;
+}
 .cart-item-wrap {
   display: flex;
 }
@@ -61,9 +64,9 @@
   font-size: 1em;
 }
 
-.product-name {
+/* .product-name {
   text-decoration: underline;
-}
+} */
 
 .trash {
   color: var(--color_header);
@@ -79,12 +82,12 @@
 
 .product-image-cart {
   border-radius: 5%;
-  max-width: 50%;
+  max-width: 80%;
   margin: auto;
 }
 
-.trashContainer {
+/* .trashContainer {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0;
-}
+} */

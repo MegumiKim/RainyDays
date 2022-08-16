@@ -8,10 +8,6 @@ export function addToLocalStorage(event, key) {
 
   const currentItems = loadFromStorage(key);
 
-  // const productExists = currentItems.find(function (item) {
-  //   return item.id === id;
-  // });
-
   const productExists = currentItems.find((item) => item.id === id);
 
   if (productExists) {

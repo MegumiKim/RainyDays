@@ -1,4 +1,6 @@
-import { renderProduct } from "../../components/makeProductCatalogue.js";
+// import { renderProduct } from "../../components/makeProductCatalogue.js";
+
+import { createProductCatalogue } from "../../components/createHtmlElements/createHtmlObjects.js";
 
 const productsContainer = document.querySelector(".products-container");
 
@@ -17,4 +19,9 @@ export async function getItems(url) {
   } catch (e) {
     console.log(e);
   }
+}
+
+function renderProduct(product, parent) {
+  const productHTML = createProductCatalogue(product);
+  parent.append(productHTML);
 }

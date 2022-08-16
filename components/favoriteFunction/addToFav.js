@@ -21,6 +21,5 @@ export function addToFav(event) {
   } else {
     removeFromStorage(key, itemID);
     location.reload();
-    // displayFav();
   }
 }

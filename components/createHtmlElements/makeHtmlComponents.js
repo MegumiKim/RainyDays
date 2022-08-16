@@ -1,45 +1,42 @@
-// import { onClick } from "../../components/listner/onClick.js";
-import { addToCart } from "../../components/cart/addToCart.js";
-import { removeFromCart } from "../../components/cart/removeFromCart.js";
-import { addToFav } from "../../components/favoriteFunction/addToFav.js";
+import { addToCart } from "../cart/addToCart.js";
+import { removeFromCart } from "../cart/removeFromCart.js";
+import { addToFav } from "../favoriteFunction/addToFav.js";
+import { createElement } from "./createElement.js";
+// export function createElement(
+//   tagname,
+//   classes,
+//   innerHTML,
+//   children,
+//   src,
+//   altText
+// ) {
+//   const element = document.createElement(tagname);
+//   element.classList.add(classes);
 
-export function createElement(
-  tagname,
-  classes,
-  innerHTML,
-  children,
-  src,
-  altText
-) {
-  const element = document.createElement(tagname);
-  element.classList.add(classes);
+//   if (innerHTML) {
+//     element.innerHTML = innerHTML;
+//   }
 
-  if (innerHTML) {
-    element.innerHTML = innerHTML;
-  }
+//   if (Array.isArray(children) && children.length) {
+//     element.append(...children);
+//   }
 
-  if (Array.isArray(children) && children.length) {
-    element.append(...children);
-  }
+//   if (src) {
+//     element.src = src;
+//   }
 
-  if (src) {
-    element.src = src;
-  }
-
-  if (altText) {
-    element.altText = altText;
-  }
-  return element;
-}
+//   if (altText) {
+//     element.altText = altText;
+//   }
+//   return element;
+// }
 
 export function createProductDescription(product, productPrice, headingTag) {
   const price = createElement("p", "price", `Price: NOK ${productPrice}`);
   const name = createElement(headingTag, "name", product.name);
-  const numberOfEachItem = createNumberOfEachItem(product);
-  const element = createElement("div", "product-main-descriptions", undefined, [
+  const element = createElement("div", "product-description", undefined, [
     name,
     price,
-    numberOfEachItem,
   ]);
 
   return element;
