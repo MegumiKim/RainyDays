@@ -35,9 +35,11 @@ export function createElement(
 export function createProductDescription(product, productPrice, headingTag) {
   const price = createElement("p", "price", `Price: NOK ${productPrice}`);
   const name = createElement(headingTag, "name", product.name);
+  const numberOfEachItem = createNumberOfEachItem(product);
   const element = createElement("div", "product-main-descriptions", undefined, [
     name,
     price,
+    numberOfEachItem,
   ]);
 
   return element;
@@ -89,7 +91,7 @@ export function createAddToFavButton(product) {
     "heart",
     '<i class="far fa-heart unchecked">'
   );
-  element.dataset.id = product.id;
+  element.id = product.id;
   element.name = product.name;
   element.src = product.images[0].src;
   element.price = parseInt(product.prices.price);
@@ -103,7 +105,7 @@ export function createRemoveFromFavButton(product) {
     "heart",
     '<i class="far fa-heart checked">'
   );
-  element.dataset.id = product.id;
+  element.id = product.id;
   element.name = product.name;
   element.src = product.src;
   element.price = parseInt(product.price);
@@ -147,14 +149,23 @@ export function createTrash(product) {
   return element;
 }
 
-export function createTotalContainer() {
-  const total = createElement("div", "total");
-  return total;
-}
+// export function createTotalContainer() {
+//   const total = createElement("div", "total");
+//   return total;
+// }
 
-export function createTotalHtml(item, total, parent) {
+export function createTotalHtml(total, totalItems, parent) {
   parent.innerHTML += `
-  <div class="num-of-items">${item.length} item(s)</div>
+  <div class="num-of-items">${totalItems} item(s)</div>
   <div class="total">Total: NOK ${new Intl.NumberFormat().format(total)}</div>
   `;
+}
+
+export function createNumberOfEachItem(product) {
+  const element = createElement(
+    "p",
+    "number-of-item",
+    `${product.numberOfEachItem} item(s)`
+  );
+  return element;
 }

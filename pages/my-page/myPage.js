@@ -12,3 +12,5 @@ if (favorites.length) {
 } else {
   container.innerHTML = displayMessage("error", "No item added");
 }
+
+// displayFav();

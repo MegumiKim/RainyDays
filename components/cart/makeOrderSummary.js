@@ -16,14 +16,16 @@ export function makeOrderSummary() {
   if (cartItems.length !== 0) {
     cartList.innerHTML = "";
     totalContainer.innerHTML = "";
-    let total = 0;
+    let totalSum = 0;
+    let totalItems = 0;
 
     cartItems.forEach((item) => {
       renderProductSummary(item, cartList);
-      total += item.price;
+      totalSum += item.price * item.numberOfEachItem;
+      totalItems += item.numberOfEachItem;
     });
 
-    createTotalHtml(cartItems, total, totalContainer);
+    createTotalHtml(totalSum, totalItems, totalContainer);
     // checkoutButton.style.display = flex;
   } else {
     checkoutButton.style.display = "none";

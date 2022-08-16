@@ -6,7 +6,7 @@ import {
   createAddToFavButton,
   createProductText,
   createVariations,
-  createTotalContainer,
+  // createTotalContainer,
   createTrash,
   createRemoveFromFavButton,
 } from "./createElements.js";
@@ -65,16 +65,16 @@ export function createCartItem(product) {
 }
 
 export function createFavoriteItem(product) {
-  const img = createProductImg(product, "product-image-cart");
+  const img = createProductImg(product, "product-img");
   const name = createElement("h3", "product-name", product.name);
   const price = createElement("p", "price", `Price: NOK ${product.price}`);
   const heart = createRemoveFromFavButton(product);
-  const element = createElement("div", "product", undefined, [
-    img,
+  const children = createElement("div", "summary", undefined, [
     name,
     heart,
     price,
   ]);
+  const element = createElement("div", "favorite", undefined, [img, children]);
 
   return element;
 }

@@ -1,3 +1,5 @@
+let numberOfEachItem = 1;
+
 export function addToLocalStorage(event, key) {
   const id = parseInt(event.currentTarget.id);
   const name = event.currentTarget.name;
@@ -5,10 +7,20 @@ export function addToLocalStorage(event, key) {
   const price = event.currentTarget.price;
 
   const currentItems = loadFromStorage(key);
-  let numberOfEachItem = 0;
-  const product = { id, name, src, price, numberOfEachItem };
 
-  currentItems.push(product);
+  // const productExists = currentItems.find(function (item) {
+  //   return item.id === id;
+  // });
+
+  const productExists = currentItems.find((item) => item.id === id);
+
+  if (productExists) {
+    productExists.numberOfEachItem += 1;
+  } else {
+    const product = { id, name, src, price, numberOfEachItem };
+    currentItems.push(product);
+  }
+
   saveLocalStorage(key, currentItems);
 }
 

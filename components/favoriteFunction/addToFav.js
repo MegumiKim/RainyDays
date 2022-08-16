@@ -9,7 +9,7 @@ export function addToFav(event) {
   event.target.classList.toggle("unchecked");
 
   const key = "favorites";
-  const itemID = this.id;
+  const itemID = parseInt(this.id);
   const currentFavorites = loadFromStorage(key);
 
   const productExists = currentFavorites.find(function (fav) {
@@ -20,5 +20,7 @@ export function addToFav(event) {
     addToLocalStorage(event, key);
   } else {
     removeFromStorage(key, itemID);
+    location.reload();
+    // displayFav();
   }
 }

@@ -199,9 +199,17 @@ nav a:hover {
   border: 3px solid var(--color_subtle);
 }
 
-/* .favorites {
+.favorite {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  max-width: 400px;
+  margin: 20px;
+  align-items: center;
   padding: 1em;
-} */
+  border: solid var(--color_subtle) 3px;
+  border-radius: 10% 0%;
+}
 
 .fav-container {
   display: flex;
