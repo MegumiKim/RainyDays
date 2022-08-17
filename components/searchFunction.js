@@ -19,7 +19,7 @@ export function searchFunction() {
 
 export function searchItems() {
   const productsContainer = document.querySelector(".products-container");
-  const url = "http://localhost/Rainydays/wp-json/wc/store/products/";
+  const url = "http://megumikim.great-site.net/wp-json/wc/store/products/";
 
   let searchInput = document.querySelector("#search").value;
   searchInput = searchInput.toLowerCase().trim();

@@ -1,7 +1,7 @@
 import { getItems } from "./getItems.js";
 
 export function sortItemsByCategory() {
-  const url = "http://localhost/Rainydays/wp-json/wc/store/products/";
+  const url = "http://megumikim.great-site.net/wp-json/wc/store/products/";
   const queryString = document.location.search;
   const params = new URLSearchParams(queryString);
   const categoryID = params.get("category");
