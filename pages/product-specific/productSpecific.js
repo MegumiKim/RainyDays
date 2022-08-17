@@ -1,3 +1,4 @@
+import { displayCart } from "../../components/cart/displayCart.js";
 import { displayMessage } from "../../components/displayMessage.js";
 import { createProductSpecificHtmlObject } from "../../components/createHtmlElements/createHtmlObjects.js";
 // import { makeOrderSummary } from "../../components/cart/makeOrderSummary.js";

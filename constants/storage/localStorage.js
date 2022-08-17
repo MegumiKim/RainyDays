@@ -37,6 +37,5 @@ export function loadFromStorage(key) {
 export function removeFromStorage(key, id) {
   const currentItems = loadFromStorage(key);
   const newItems = currentItems.filter((item) => item.id !== id);
-  console.log(newItems);
   saveLocalStorage(key, newItems);
 }

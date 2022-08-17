@@ -13,17 +13,15 @@ import {
 
 export function createProductSpecificHtmlObject(product) {
   const img = createProductImg(product.images[0], "product-image");
-  const productDescription = createProductDescription(
-    product,
-    product.prices.price,
-    "h1"
-  );
+  const productName = createElement("h1", "productName", product.name);
+  const price = createElement("p", "price", `NOK ${product.prices.price}`);
 
   const AddToCartButtonContainer = createAddToCartButtonContainer(product);
   const productText = createProductText(product);
   const variations = createVariations(product);
   const rightContainer = createElement("div", "right-column", undefined, [
-    productDescription,
+    productName,
+    price,
     variations,
     AddToCartButtonContainer,
     productText,
@@ -33,8 +31,7 @@ export function createProductSpecificHtmlObject(product) {
     img,
     rightContainer,
   ]);
-  // const element = document.createElement("div", "specific-item", undefined);
-  // element.append(...childItems);
+
   return element;
 }
 
@@ -62,7 +59,6 @@ export function createProductSummary(product) {
     product.price,
     "h3"
   );
-  // const trash = createTrash(product);
   const childItems = [img, productDescription];
   const element = createElement("div", "product", undefined, childItems);
   return element;
@@ -70,14 +66,18 @@ export function createProductSummary(product) {
 
 export function createCartItem(product) {
   const img = createProductImg(product, "product-image-cart");
-  const numberOfEachItem = createNumberOfEachItem(product);
-  const productDescription = createProductDescription(
-    product,
-    product.price,
-    "h3"
+  const productName = createElement("h3", "product-name", product.name);
+  const price = createElement("p", "price", `NOK ${product.price}`);
+  const trash = createTrash(product);
+  const numberOfItem = createNumberOfEachItem(product);
+  const productDescription = createElement(
+    "div",
+    "product-description",
+    undefined,
+    [productName, price, trash, numberOfItem]
   );
-  // const trash = createTrash(product);
-  const childItems = [img, productDescription, numberOfEachItem];
+
+  const childItems = [img, productDescription];
   const element = createElement("div", "cart-item", undefined, childItems);
   return element;
 }

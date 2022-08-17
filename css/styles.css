@@ -67,6 +67,7 @@ img {
 
 .product_img {
   margin: 0 auto;
+  flex: 1;
   /* border-radius: 0.5em; */
 }
 

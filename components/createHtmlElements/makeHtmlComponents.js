@@ -2,41 +2,15 @@ import { addToCart } from "../cart/addToCart.js";
 import { removeFromCart } from "../cart/removeFromCart.js";
 import { addToFav } from "../favoriteFunction/addToFav.js";
 import { createElement } from "./createElement.js";
-// export function createElement(
-//   tagname,
-//   classes,
-//   innerHTML,
-//   children,
-//   src,
-//   altText
-// ) {
-//   const element = document.createElement(tagname);
-//   element.classList.add(classes);
-
-//   if (innerHTML) {
-//     element.innerHTML = innerHTML;
-//   }
-
-//   if (Array.isArray(children) && children.length) {
-//     element.append(...children);
-//   }
-
-//   if (src) {
-//     element.src = src;
-//   }
-
-//   if (altText) {
-//     element.altText = altText;
-//   }
-//   return element;
-// }
 
 export function createProductDescription(product, productPrice, headingTag) {
   const price = createElement("p", "price", `Price: NOK ${productPrice}`);
   const name = createElement(headingTag, "name", product.name);
+  const numberOfItem = createNumberOfEachItem(product);
   const element = createElement("div", "product-description", undefined, [
     name,
     price,
+    numberOfItem,
   ]);
 
   return element;
@@ -140,8 +114,9 @@ export function createTrash(product) {
     "trash",
     '<i class="fa-solid fa-trash"></i>'
   );
-  element.dataset.id = product.id;
-  element.addEventListener("click", removeFromCart(event));
+  element.dataset.id = parseInt(product.id);
+  // element.addEventListener("click", removeFromCart(event));
+  console.log(element.dataset.id);
 
   return element;
 }
