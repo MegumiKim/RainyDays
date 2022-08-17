@@ -1,4 +1,5 @@
 import { addToLocalStorage } from "../../constants/storage/localStorage.js";
+import { createVariations } from "../createHtmlElements/makeHtmlComponents.js";
 import { makeOrderSummary } from "./makeOrderSummary.js";
 
 const cart = document.querySelector(".cart");

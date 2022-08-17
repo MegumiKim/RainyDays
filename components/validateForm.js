@@ -98,26 +98,3 @@ function validateNum(num, errorField) {
     return false;
   }
 }
-// function validatePassword(password) {
-//   const regEx = /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/;
-//   const patternMach = regEx.test(password.value);
-//   if (patternMach) {
-//     console.log("good password");
-//     return true;
-//   } else {
-//     console.log("bad passwd");
-//     return false;
-//   }
-// }
-
-// function validatePhone(phone) {
-//   const regEx = /^\d+$/;
-//   const patternMach = regEx.test(phone.value);
-//   if (patternMach) {
-//     console.log("good number");
-//     return true;
-//   } else {
-//     console.log("bad number");
-//     return false;
-//   }
-// }

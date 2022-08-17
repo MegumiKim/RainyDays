@@ -1,6 +1,6 @@
 import { displayMessage } from "../../components/displayMessage.js";
 import { loadFromStorage } from "../../constants/storage/localStorage.js";
-import { createFavoriteItem } from "../product-specific/createHtmlObjects.js";
+import { createFavoriteItem } from "../../components/createHtmlElements/createHtmlObjects.js";
 
 const favorites = loadFromStorage("favorites");
 const container = document.querySelector(".fav-container");

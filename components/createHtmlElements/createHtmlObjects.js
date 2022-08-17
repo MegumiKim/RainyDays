@@ -9,6 +9,7 @@ import {
   createTrash,
   createRemoveFromFavButton,
   createNumberOfEachItem,
+  // createSizes,
 } from "./makeHtmlComponents.js";
 
 export function createProductSpecificHtmlObject(product) {

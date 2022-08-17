@@ -52,7 +52,6 @@ function createAddToCartButton(product) {
   element.price = parseInt(product.prices.price);
 
   element.addEventListener("click", addToCart);
-  // element.addEventListener("click", saveToStorage("cartItems", product.name));
   return element;
 }
 
@@ -89,19 +88,23 @@ export function createProductText(product) {
 }
 
 export function createVariations(product) {
-  const element = createElement("div", "size");
+  const element = createElement("form", "size", undefined);
 
   const variations = product.variations;
   variations.forEach((variation) => {
-    const attributes = variation.attributes;
-    attributes.forEach((attribute) => {
-      const childElement = createElement("button", "size_p", attribute.value);
-      const chosenSize = attribute.value;
-      childElement.addEventListener("click", function () {
-        console.log(chosenSize);
-      });
+    const id = variation.id;
+    const size = variation.attributes[0].value;
+    const radioButton = createElement("input", "size_p", undefined);
+    radioButton.id = id;
+    radioButton.name = "size";
+    radioButton.type = "radio";
 
-      element.append(childElement);
+    const label = createElement("label", "size_label", size);
+    label.for = radioButton.id;
+    element.append(radioButton, label);
+
+    radioButton.addEventListener("change", function () {
+      console.log(size);
     });
   });
 
