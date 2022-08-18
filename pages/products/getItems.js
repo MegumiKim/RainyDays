@@ -1,6 +1,5 @@
-// import { renderProduct } from "../../components/makeProductCatalogue.js";
-
 import { createProductCatalogue } from "../../components/createHtmlElements/createHtmlObjects.js";
+import { displayMessage } from "../../components/displayMessage.js";
 
 const productsContainer = document.querySelector(".products-container");
 
@@ -18,6 +17,10 @@ export async function getItems(url) {
     }
   } catch (e) {
     console.log(e);
+    productsContainer.innerHTML = displayMessage(
+      "error",
+      "Failed to fetch data"
+    );
   }
 }
 
