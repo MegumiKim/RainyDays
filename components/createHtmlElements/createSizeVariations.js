@@ -16,6 +16,7 @@ export function createVariations(product) {
 
     radioButton.addEventListener("change", function () {
       console.log(size);
+      return size;
     });
   });
 

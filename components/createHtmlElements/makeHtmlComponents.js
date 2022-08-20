@@ -6,13 +6,11 @@ import { createElement } from "./createElement.js";
 export function createProductDescription(product, productPrice, headingTag) {
   const price = createElement("p", "price", `Price: NOK ${productPrice}`);
   const name = createElement(headingTag, "name", product.name);
-  const numberOfItem = createNumberOfEachItem(product);
   const element = createElement("div", "product-description", undefined, [
     name,
     price,
-    numberOfItem,
   ]);
-
+  element.classList.add("catalogue");
   return element;
 }
 
@@ -117,17 +115,12 @@ export function createTrash(product) {
     "trash",
     '<i class="fa-solid fa-trash"></i>'
   );
-  element.dataset.id = parseInt(product.id);
-  // element.addEventListener("click", removeFromCart(event));
-  console.log(element.dataset.id);
+
+  element.id = product.id;
+  element.onclick = removeFromCart;
 
   return element;
 }
-
-// export function createTotalContainer() {
-//   const total = createElement("div", "total");
-//   return total;
-// }
 
 export function createTotalHtml(total, totalItems, parent) {
   parent.innerHTML += `
@@ -144,3 +137,18 @@ export function createNumberOfEachItem(product) {
   );
   return element;
 }
+
+// export function createSelectProductForm(product) {
+//   const variations = createVariations(product);
+//   const AddToCartButtonContainer = createAddToCartButtonContainer(product);
+//   const element = createElement("form", "select-product-form", undefined, [
+//     variations,
+//     AddToCartButtonContainer,
+//   ]);
+
+//   // element.onsubmit = function () {
+//   //   console.log(element);
+//   // };
+
+//   return element;
+// }

@@ -11,7 +11,7 @@
   margin-top: 10px;
 }
 
-.product-description:hover {
+.product-description.catalogue:hover {
   background-color: var(--color_subtle);
 }
 

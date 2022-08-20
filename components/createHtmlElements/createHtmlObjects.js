@@ -1,3 +1,4 @@
+import { addToCart } from "../cart/addToCart.js";
 import { createElement } from "./createElement.js";
 import {
   createProductImg,
@@ -9,6 +10,7 @@ import {
   createTrash,
   createRemoveFromFavButton,
   createNumberOfEachItem,
+  // createSelectProductForm,
   // createSizes,
 } from "./makeHtmlComponents.js";
 
@@ -17,20 +19,22 @@ export function createProductSpecificHtmlObject(product) {
   const productName = createElement("h1", "productName", product.name);
   const price = createElement("p", "price", `NOK ${product.prices.price}`);
 
+  const variations = createVariations(product);
   const AddToCartButtonContainer = createAddToCartButtonContainer(product);
   const productText = createProductText(product);
-  const variations = createVariations(product);
   const rightContainer = createElement("div", "right-column", undefined, [
     productName,
     price,
     variations,
     AddToCartButtonContainer,
-    productText,
   ]);
 
+  // const form = createSelectProductForm(product);
   const element = createElement("div", "specific-item", undefined, [
     img,
     rightContainer,
+    // form,
+    productText,
   ]);
 
   return element;
@@ -50,6 +54,7 @@ export function createProductCatalogue(product) {
     productDescription,
   ]);
   element.href = linkUrl;
+  console.log(linkUrl);
   return element;
 }
 
