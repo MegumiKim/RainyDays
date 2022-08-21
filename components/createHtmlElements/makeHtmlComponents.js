@@ -1,3 +1,6 @@
+import { addToLocalStorage } from "../../constants/storage/localStorage.js";
+import { getItems } from "../../pages/products/getItems.js";
+import { sortItemsByCategory } from "../../pages/products/sortItemsByCategory.js";
 import { addToCart } from "../cart/addToCart.js";
 import { removeFromCart } from "../cart/removeFromCart.js";
 import { addToFav } from "../favoriteFunction/addToFav.js";
@@ -48,7 +51,7 @@ function createAddToCartButton(product) {
   element.name = product.name;
   element.src = product.images[0].src;
   element.price = parseInt(product.prices.price);
-
+  element.type = "submit";
   element.addEventListener("click", addToCart);
   return element;
 }
@@ -92,6 +95,7 @@ export function createVariations(product) {
   variations.forEach((variation) => {
     const id = variation.id;
     const size = variation.attributes[0].value;
+
     const radioButton = createElement("input", "size_p", undefined);
     radioButton.id = id;
     radioButton.name = "size";
@@ -102,7 +106,7 @@ export function createVariations(product) {
     element.append(radioButton, label);
 
     radioButton.addEventListener("change", function () {
-      console.log(size);
+      console.log(id);
     });
   });
 
@@ -138,17 +142,30 @@ export function createNumberOfEachItem(product) {
   return element;
 }
 
-// export function createSelectProductForm(product) {
-//   const variations = createVariations(product);
-//   const AddToCartButtonContainer = createAddToCartButtonContainer(product);
-//   const element = createElement("form", "select-product-form", undefined, [
-//     variations,
-//     AddToCartButtonContainer,
-//   ]);
+export function createSelectProductForm(product) {
+  const variations = createVariations(product);
+  const AddToCartButtonContainer = createAddToCartButtonContainer(product);
+  const element = createElement("form", "select-product-form", undefined, [
+    variations,
+    AddToCartButtonContainer,
+  ]);
 
-//   // element.onsubmit = function () {
-//   //   console.log(element);
-//   // };
+  element.onsubmit = function () {
+    window.location.href = "/pages/order-confirmation/confirmation.html";
+  };
 
-//   return element;
-// }
+  return element;
+}
+
+export async function createRelatedProducts(categoryID) {
+  const title = createElement("h2", "related-title", "Related Products");
+  const element = createElement("div", "related-products", undefined, [title]);
+
+  const url = "http://localhost/rainydays/wp-json/wc/store/products/";
+  const categoryUrl = url + `?category=${categoryID}`;
+  const productsContainer = document.querySelector(".products-container");
+  const relatedItems = await getItems(categoryUrl, productsContainer);
+
+  console.log(relatedItems);
+  return element;
+}

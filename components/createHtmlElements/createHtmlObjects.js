@@ -10,8 +10,8 @@ import {
   createTrash,
   createRemoveFromFavButton,
   createNumberOfEachItem,
-  // createSelectProductForm,
-  // createSizes,
+  createSelectProductForm,
+  createRelatedProducts,
 } from "./makeHtmlComponents.js";
 
 export function createProductSpecificHtmlObject(product) {
@@ -29,12 +29,16 @@ export function createProductSpecificHtmlObject(product) {
     AddToCartButtonContainer,
   ]);
 
+  const categoryID = product.categories[0].id;
+  // const relatedProducts = createRelatedProducts(categoryID);
+
   // const form = createSelectProductForm(product);
   const element = createElement("div", "specific-item", undefined, [
     img,
     rightContainer,
     // form,
     productText,
+    // relatedProducts,
   ]);
 
   return element;
@@ -54,7 +58,7 @@ export function createProductCatalogue(product) {
     productDescription,
   ]);
   element.href = linkUrl;
-  console.log(linkUrl);
+
   return element;
 }
 

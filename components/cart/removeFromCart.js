@@ -5,9 +5,7 @@ const totalContainer = document.querySelector(".total");
 const checkoutButton = document.querySelector(".checkout-button");
 
 export function removeFromCart(event) {
-  // event.stopImmediatePropagation();
   const id = parseInt(this.id);
-  console.log(id);
   removeFromStorage("cart-items", id);
 
   cartList.innerHTML = `<p>Discarded</p>`;

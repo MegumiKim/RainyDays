@@ -7,7 +7,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 // const url = `http://megumikim.great-site.net/wp-json/wc/store/products/${id}`;
-const url = `http://localhost/rainydays/wp-json/wc/store/products/${id}`;
+const url = `https://mei-olivia.infinityfreeapp.com/wp-json/wc/store/products/${id}`;
 const parent = document.querySelector(".specific-product-container");
 
 async function fetchProduct() {
