@@ -10,7 +10,7 @@ import {
   createTrash,
   createRemoveFromFavButton,
   createNumberOfEachItem,
-  createSelectProductForm,
+  // createSelectProductForm,
   // createRelatedProducts,
 } from "./makeHtmlComponents.js";
 

@@ -89,7 +89,7 @@ export function createProductText(product) {
 }
 
 export function createVariations(product) {
-  const element = createElement("form", "size", undefined);
+  const element = createElement("div", "size", undefined);
 
   const variations = product.variations;
   variations.forEach((variation) => {
@@ -102,6 +102,7 @@ export function createVariations(product) {
     radioButton.type = "radio";
 
     const label = createElement("label", "size_label", size);
+
     label.for = radioButton.id;
     element.append(radioButton, label);
 
@@ -109,7 +110,7 @@ export function createVariations(product) {
       console.log(id);
     });
   });
-
+  console.log(product);
   return element;
 }
 
@@ -142,20 +143,20 @@ export function createNumberOfEachItem(product) {
   return element;
 }
 
-export function createSelectProductForm(product) {
-  const variations = createVariations(product);
-  const AddToCartButtonContainer = createAddToCartButtonContainer(product);
-  const element = createElement("form", "select-product-form", undefined, [
-    variations,
-    AddToCartButtonContainer,
-  ]);
+// export function createSelectProductForm(product) {
+//   const variations = createVariations(product);
+//   const AddToCartButtonContainer = createAddToCartButtonContainer(product);
+//   const element = createElement("form", "select-product-form", undefined, [
+//     variations,
+//     AddToCartButtonContainer,
+//   ]);
 
-  element.onsubmit = function () {
-    window.location.href = "/pages/order-confirmation/confirmation.html";
-  };
+//   element.onsubmit = function () {
+//     window.location.href = "/pages/order-confirmation/confirmation.html";
+//   };
 
-  return element;
-}
+//   return element;
+// }
 
 // export async function createRelatedProducts(categoryID) {
 //   const title = createElement("h2", "related-title", "Related Products");
