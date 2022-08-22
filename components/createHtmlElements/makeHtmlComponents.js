@@ -157,15 +157,15 @@ export function createSelectProductForm(product) {
   return element;
 }
 
-export async function createRelatedProducts(categoryID) {
-  const title = createElement("h2", "related-title", "Related Products");
-  const element = createElement("div", "related-products", undefined, [title]);
+// export async function createRelatedProducts(categoryID) {
+//   const title = createElement("h2", "related-title", "Related Products");
+//   const element = createElement("div", "related-products", undefined, [title]);
 
-  const url = "http://localhost/rainydays/wp-json/wc/store/products/";
-  const categoryUrl = url + `?category=${categoryID}`;
-  const productsContainer = document.querySelector(".products-container");
-  const relatedItems = await getItems(categoryUrl, productsContainer);
+//   const url = "http://localhost/rainydays/wp-json/wc/store/products/";
+//   const categoryUrl = url + `?category=${categoryID}`;
+//   const productsContainer = document.querySelector(".products-container");
+//   const relatedItems = await getItems(categoryUrl, productsContainer);
 
-  console.log(relatedItems);
-  return element;
-}
+//   console.log(relatedItems);
+//   return element;
+// }

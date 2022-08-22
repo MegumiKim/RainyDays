@@ -11,7 +11,7 @@ import {
   createRemoveFromFavButton,
   createNumberOfEachItem,
   createSelectProductForm,
-  createRelatedProducts,
+  // createRelatedProducts,
 } from "./makeHtmlComponents.js";
 
 export function createProductSpecificHtmlObject(product) {
