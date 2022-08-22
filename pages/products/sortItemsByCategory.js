@@ -3,8 +3,8 @@ import { getItems } from "./getItems.js";
 export function sortItemsByCategory() {
   const proxy = "https://noroffcors.herokuapp.com/";
   const url =
-    // "https://mei-olivia.infinityfreeapp.com/wp-json/wc/store/products/";
-    "https://megumikim.great-site.net//wp-json/wc/store/products/";
+    "https://mei-olivia.infinityfreeapp.com/wp-json/wc/store/products/";
+  // "https://megumikim.great-site.net//wp-json/wc/store/products/";
 
   // "http://localhost/rainydays/wp-json/wc/store/products/";
 
