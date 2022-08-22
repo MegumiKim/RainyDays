@@ -116,8 +116,8 @@ footer {
 }
 
 footer {
-  margin-top: 30px;
   font-size: 18px;
+  justify-content: flex-start;
 }
 
 .header-right {
@@ -177,6 +177,11 @@ nav a:hover {
   max-width: 120px;
   margin-top: 3px;
 }
+
+.copyright {
+  margin-left: 10%;
+}
+
 .social-media {
   display: flex;
   position: absolute;

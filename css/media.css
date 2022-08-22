@@ -45,6 +45,12 @@
     min-height: 174px;
   }
 
+  .cart {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    width: 300px;
+  }
   /* about */
 
   .brand {
