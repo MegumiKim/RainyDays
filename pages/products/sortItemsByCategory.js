@@ -11,7 +11,7 @@ export function sortItemsByCategory() {
   const queryString = document.location.search;
   const params = new URLSearchParams(queryString);
   const categoryID = params.get("category");
-  const categoryUrl = url + `?category=${categoryID}`;
+  const categoryUrl = proxy + url + `?category=${categoryID}`;
   const productsContainer = document.querySelector(".products-container");
 
   if (categoryID) {
