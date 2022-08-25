@@ -110,7 +110,7 @@ export function createVariations(product) {
       console.log(id);
     });
   });
-  console.log(product);
+
   return element;
 }
 

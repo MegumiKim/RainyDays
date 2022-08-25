@@ -1,21 +1,5 @@
 .wrapper {
   display: flex;
-  /* justify-content: space-between; */
-}
-
-.wrapper.column {
-  flex-direction: column;
-}
-
-.wrapper h3 {
-  margin: 0 20px 5px 0;
-}
-
-.wrapper p {
-  text-align: right;
-}
-.product_img {
-  max-width: 30%;
 }
 
 .order_summary.checkout {
@@ -28,6 +12,6 @@
   grid-row: 4/6;
 }
 
-#trash {
+#checkoutButton {
   display: none;
 }

@@ -19,12 +19,12 @@ export function searchFunction() {
 
 export function searchItems() {
   const productsContainer = document.querySelector(".products-container");
-  const url = "http://megumikim.great-site.net/wp-json/wc/store/products/";
+  const url = "https://kimuramegumi.site/test/wp-json/wc/store/products/";
 
   let searchInput = document.querySelector("#search").value;
   searchInput = searchInput.toLowerCase().trim();
   const newUrl = url + `?search=${searchInput}`;
 
   productsContainer.innerHTML = "";
-  getItems(newUrl);
+  getItems(newUrl, productsContainer);
 }

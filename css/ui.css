@@ -47,8 +47,12 @@
 
 .user-message {
   margin-left: 20px;
-  max-width: 500px;
+  max-width: 300px;
   margin: auto;
+  position: fixed;
+  top: 200px;
+  right: 100px;
+  z-index: 1;
 }
 
 /* search field*/
@@ -132,4 +136,14 @@
 
 .summary {
   text-align: right;
+}
+
+.close-button {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 1.5em;
+  border: 0px;
+  background-color: white;
+  color: var(--color_header);
 }

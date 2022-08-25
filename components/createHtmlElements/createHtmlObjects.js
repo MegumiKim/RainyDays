@@ -4,7 +4,7 @@ import {
   createProductImg,
   createProductDescription,
   createAddToCartButtonContainer,
-  createAddToFavButton,
+  // createAddToFavButton,
   createProductText,
   createVariations,
   createTrash,
@@ -29,10 +29,7 @@ export function createProductSpecificHtmlObject(product) {
     AddToCartButtonContainer,
   ]);
 
-  const categoryID = product.categories[0].id;
-  // const relatedProducts = createRelatedProducts(categoryID);
-
-  // const form = createSelectProductForm(product);
+  // const categoryID = product.categories[0].id;
   const element = createElement("div", "specific-item", undefined, [
     img,
     rightContainer,
@@ -77,14 +74,14 @@ export function createProductSummary(product) {
 export function createCartItem(product) {
   const img = createProductImg(product, "product-image-cart");
   const productName = createElement("h3", "product-name", product.name);
-  const price = createElement("p", "price", `NOK ${product.price}`);
+  const price = createElement("p", "price", `NOK ${product.price} / item`);
   const trash = createTrash(product);
   const numberOfItem = createNumberOfEachItem(product);
   const productDescription = createElement(
     "div",
     "product-description",
     undefined,
-    [productName, price, trash, numberOfItem]
+    [productName, price, numberOfItem, trash]
   );
 
   const childItems = [img, productDescription];

@@ -123,10 +123,6 @@ label {
   padding: 3%;
   border: none;
 }
-.size_p:hover {
+.size_label:hover {
   background-color: var(--color_subtle);
 }
-
-/* .specific-item {
-  display: flex;
-} */

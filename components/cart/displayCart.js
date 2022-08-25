@@ -1,22 +1,24 @@
-import { makeOrderSummary } from "./makeOrderSummary.js";
+import { createCart } from "./createCart.js";
 
 const myCart = document.querySelector(".cart");
 const myBag = document.querySelector(".my-bag");
 
 myBag.onclick = function () {
-  displayCart();
+  displayCart(myCart);
 };
 
-export function displayCart() {
-  if (myCart.style.display === "flex") {
-    myCart.style.display = "none";
+export function displayCart(parent) {
+  if (parent.style.display === "flex") {
+    hideCart(parent);
   } else {
-    myCart.style.display = "flex";
-    makeOrderSummary();
+    parent.style.display = "flex";
+    createCart(parent);
   }
 }
 myBag.addEventListener("mouseleave", function () {
-  setTimeout(function () {
-    myCart.style.display = "none";
-  }, 5000);
+  setTimeout(hideCart, 5000);
 });
+
+export function hideCart() {
+  myCart.style.display = "none";
+}

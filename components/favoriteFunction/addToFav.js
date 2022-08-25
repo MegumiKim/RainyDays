@@ -3,6 +3,9 @@ import {
   loadFromStorage,
   removeFromStorage,
 } from "../../constants/storage/localStorage.js";
+import { displayMessage, disappearMessage } from "../displayMessage.js";
+
+const userMessage = document.querySelector(".user-message");
 
 export function addToFav(event) {
   event.target.classList.toggle("checked");
@@ -18,8 +21,19 @@ export function addToFav(event) {
 
   if (!productExists) {
     addToLocalStorage(event, key);
+    // let userAlert = displayMessage("success", "Added to My Favorite");
+    // userMessage.innerHTML = "";
+    userMessage.innerHTML = displayMessage("success", "Added to My Favorite");
+    setTimeout(disappearMessage, 3000);
   } else {
     removeFromStorage(key, itemID);
-    location.reload();
+    // location.reload();
+    // userAlert = displayMessage("success", "Removed From My Favorite");
+    // userMessage.innerHTML = "";
+    userMessage.innerHTML = displayMessage(
+      "success",
+      "Removed From My Favorite"
+    );
+    setTimeout(disappearMessage, 3000);
   }
 }

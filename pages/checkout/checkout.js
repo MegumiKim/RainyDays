@@ -1,9 +1,11 @@
 import { validateCheckoutForm } from "../../components/validateForm.js";
 import { displayMessage } from "../../components/displayMessage.js";
-import { makeOrderSummary } from "../../components/cart/makeOrderSummary.js";
+import { displayCart } from "../../components/cart/displayCart.js";
 
 const question = document.querySelector("#question");
 const sscHint = document.querySelector("#csc-hint");
+const orderSummary = document.querySelector(".order_summary");
+
 question.addEventListener("click", function () {
   if (sscHint.style.display === "block") {
     sscHint.style.display = "none";
@@ -24,4 +26,4 @@ checkoutForm.onsubmit = function (event) {
   }
 };
 
-makeOrderSummary();
+displayCart(orderSummary);

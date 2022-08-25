@@ -1,14 +1,12 @@
 import { removeFromStorage } from "../../constants/storage/localStorage.js";
 
-const cartList = document.querySelector(".cart-list");
-const totalContainer = document.querySelector(".total");
-const checkoutButton = document.querySelector(".checkout-button");
+const cart = document.querySelector(".cart");
 
 export function removeFromCart(event) {
   const id = parseInt(this.id);
-  removeFromStorage("cart-items", id);
+  const name = this.name;
 
-  cartList.innerHTML = `<p>Discarded</p>`;
-  totalContainer.innerHTML = "";
-  checkoutButton.style.display = "none";
+  console.log(this);
+  cart.innerHTML = `<p>Discarded ${name}</p>`;
+  removeFromStorage("cart-items", id);
 }
