@@ -38,9 +38,16 @@ h1 {
 .cta-welcome:hover {
   color: var(--color_header);
 }
-.products-container {
-  padding: 20px;
+
+.search_results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 800px;
+  padding: 40px 0px;
+  margin: auto;
 }
+
 /* featured categories */
 
 .featured_categories {

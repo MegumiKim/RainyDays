@@ -5,9 +5,9 @@
     right: 10%;
   }
 
-  #search_icon:active ~ #search {
+  /* #search_icon:active ~ #search {
     max-width: none;
-  }
+  } */
 
   .index_main {
     max-width: 100%;
@@ -92,9 +92,10 @@
   }
 
   #search_icon {
-    position: absolute;
+    display: none;
+    /* position: absolute;
     right: 5%;
-    color: var(--color_header);
+    color: var(--color_header); */
   }
 
   .search_container {
