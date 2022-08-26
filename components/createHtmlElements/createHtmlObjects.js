@@ -15,7 +15,7 @@ import {
 } from "./makeHtmlComponents.js";
 
 export function createProductSpecificHtmlObject(product) {
-  const img = createProductImg(product.images[0], "product-image");
+  const img = createProductImg(product.images[0], "product-specific-image");
   const productName = createElement("h1", "productName", product.name);
   const price = createElement("p", "price", `NOK ${product.prices.price}`);
 
@@ -27,6 +27,7 @@ export function createProductSpecificHtmlObject(product) {
     price,
     variations,
     AddToCartButtonContainer,
+    productText,
   ]);
 
   // const categoryID = product.categories[0].id;
@@ -34,7 +35,7 @@ export function createProductSpecificHtmlObject(product) {
     img,
     rightContainer,
     // form,
-    productText,
+
     // relatedProducts,
   ]);
 
@@ -74,7 +75,7 @@ export function createProductSummary(product) {
 export function createCartItem(product) {
   const img = createProductImg(product, "product-image-cart");
   const productName = createElement("h3", "product-name", product.name);
-  const price = createElement("p", "price", `NOK ${product.price} / item`);
+  const price = createElement("p", "price", `NOK ${product.price} /item`);
   const trash = createTrash(product);
   const numberOfItem = createNumberOfEachItem(product);
   const productDescription = createElement(

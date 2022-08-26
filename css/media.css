@@ -125,17 +125,29 @@
   .main_column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* grid-template-rows: auto auto auto auto auto; */
-    gap: 0 50px;
+    /* 
+    display: flex; */
+    gap: 50px 50px;
     max-width: 800px;
   }
+
+  /* product specific */
+  .specific-item {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+  }
+  .product-specific-image {
+    min-width: 400px;
+  }
+
   /* my page */
 
   .fav-container {
     flex-direction: row;
   }
-  .specific-product-container {
+  /* .specific-product-container {
     display: flex;
     flex-direction: row;
-  }
+  } */
 }

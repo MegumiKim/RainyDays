@@ -41,6 +41,7 @@
 }
 .cart-item {
   display: flex;
+  /* flex-direction: column; */
   align-items: center;
 }
 .checkout-button {
@@ -89,6 +90,6 @@
 
 .product-image-cart {
   border-radius: 5%;
-  max-width: 80%;
+  /* max-width: 50%; */
   margin: auto;
 }

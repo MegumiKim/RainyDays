@@ -7,7 +7,8 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 const url = `https://kimuramegumi.site/test/wp-json/wc/store/products/${id}`;
 
-const parent = document.querySelector(".specific-product-container");
+const parent = document.querySelector(".specif-product-container");
+// const parent = document.querySelector(".specific-product-container");
 
 async function fetchProduct() {
   try {
