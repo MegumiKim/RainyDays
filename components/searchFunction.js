@@ -17,7 +17,7 @@ export function searchFunction() {
 }
 
 export function searchItems() {
-  const productsContainer = document.querySelector(".search_results");
+  const productsContainer = document.querySelector(".products-container");
   const url = "https://kimuramegumi.site/test/wp-json/wc/store/products/";
 
   let searchInput = document.querySelector("#search").value;

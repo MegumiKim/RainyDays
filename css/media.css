@@ -134,6 +134,7 @@
 
   /* product specific */
   .specific-item {
+    max-width: 800px;
     display: flex;
     flex-direction: row;
     gap: 50px;

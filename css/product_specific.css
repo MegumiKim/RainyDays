@@ -48,6 +48,10 @@ h1 {
   margin: auto;
   border-radius: 0 5%;
 }
+
+.specific-item {
+  max-width: 400px;
+}
 /* .rating {
   color: rgb(224, 224, 53);
   text-align: right;
