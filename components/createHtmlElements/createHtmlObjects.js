@@ -4,7 +4,6 @@ import {
   createProductImg,
   createProductDescription,
   createAddToCartButtonContainer,
-  // createAddToFavButton,
   createProductText,
   createVariations,
   createTrash,
@@ -75,7 +74,7 @@ export function createProductSummary(product) {
 export function createCartItem(product) {
   const img = createProductImg(product, "product-image-cart");
   const productName = createElement("h3", "product-name", product.name);
-  const price = createElement("p", "price", `NOK ${product.price} /item`);
+  const price = createElement("p", "priceInCart", `NOK ${product.price} `);
   const trash = createTrash(product);
   const numberOfItem = createNumberOfEachItem(product);
   const productDescription = createElement(

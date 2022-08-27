@@ -34,9 +34,9 @@ h1 {
 }
 
 .price {
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 1.2rem;
-  text-align: left;
+  /* text-align: left; */
 }
 
 .product-text {

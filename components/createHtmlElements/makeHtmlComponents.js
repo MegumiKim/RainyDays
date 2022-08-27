@@ -138,7 +138,7 @@ export function createNumberOfEachItem(product) {
   const element = createElement(
     "p",
     "number-of-item",
-    `${product.numberOfEachItem} item(s)`
+    `x ${product.numberOfEachItem} item(s)`
   );
   return element;
 }

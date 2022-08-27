@@ -31,7 +31,7 @@ export function createCart(parent) {
       totalSum += item.price * item.numberOfEachItem;
       totalItems += item.numberOfEachItem;
     });
-    total.innerHTML += `  <div class="num-of-items">Total: ${totalItems} item(s)</div>
+    total.innerHTML += `<div class="num-of-items">Total: ${totalItems} item(s)</div>
     <div class="sum">NOK ${new Intl.NumberFormat().format(totalSum)}</div>
     `;
 
