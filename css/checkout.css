@@ -19,3 +19,8 @@
 .close-button {
   display: none;
 }
+
+.my-bag,
+.numberOfItemsInTheCart {
+  display: none;
+}
