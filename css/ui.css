@@ -113,10 +113,11 @@
 
 .close-button {
   position: absolute;
-  left: 10px;
-  top: 10px;
+  left: 20px;
+  top: 15px;
   font-size: 1.5em;
   border: 0px;
   background-color: white;
   color: var(--color_header);
+  /* margin: 5px 20px; */
 }

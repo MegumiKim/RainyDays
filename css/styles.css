@@ -133,10 +133,29 @@ footer {
 
 .log-in,
 .my-bag {
-  font-size: 1em;
+  font-size: 1.3em;
   color: var(--color_white);
   background: none;
   border: none;
+}
+
+.bag-wrapper {
+  position: relative;
+}
+
+.my-bag,
+.numberOfItemsInTheCart {
+  position: absolute;
+  top: -12px;
+}
+
+.numberOfItemsInTheCart {
+  color: var(--color_header);
+  background-color: var(--color_yellow);
+  padding: 0px 8px;
+  border-radius: 50%;
+  top: -8px;
+  left: 13px;
 }
 
 nav,
@@ -225,4 +244,9 @@ nav a:hover {
   flex-direction: column;
   margin: auto;
   max-width: 800px;
+}
+
+.under-breadcrumb {
+  max-width: 400px;
+  margin: auto;
 }
