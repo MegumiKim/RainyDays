@@ -150,11 +150,12 @@ footer {
 }
 
 .numberOfItemsInTheCart {
+  font-size: small;
   color: var(--color_header);
   background-color: var(--color_yellow);
-  padding: 0px 8px;
+  padding: 0px 5px;
   border-radius: 50%;
-  top: -8px;
+  top: -12px;
   left: 13px;
 }
 
