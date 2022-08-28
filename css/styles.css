@@ -138,6 +138,9 @@ footer {
   border: none;
 }
 
+.fav-container {
+  display: none;
+}
 nav,
 #search,
 #hamburger-menu {

@@ -25,7 +25,7 @@ export function createCart(parent) {
 
   if (cartItems.length !== 0) {
     cartItems.forEach((item) => {
-      const productHtml = createCartItem(item);
+      const productHtml = createCartItem(item, parent);
       cartItemsContainer.append(productHtml);
 
       totalSum += item.price * item.numberOfEachItem;

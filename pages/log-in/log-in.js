@@ -2,9 +2,9 @@ import { validateLoginForm } from "../../components/validateForm.js";
 import { displayMessage } from "../../components/displayMessage.js";
 import { displayCart } from "../../components/cart/displayCart.js";
 
-const myBag = document.querySelector(".my-bag");
+const cart = document.querySelector(".cart");
 
-myBag.onclick = function () {
+cart.onclick = function () {
   displayCart();
 };
 

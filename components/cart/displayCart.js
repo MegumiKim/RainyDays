@@ -1,9 +1,9 @@
 import { createCart } from "./createCart.js";
 
 const myCart = document.querySelector(".cart");
-const myBag = document.querySelector(".my-bag");
+const cartIcon = document.querySelector(".my-bag");
 
-myBag.onclick = function () {
+cartIcon.onclick = function () {
   displayCart(myCart);
 };
 
@@ -15,7 +15,7 @@ export function displayCart(parent) {
     createCart(parent);
   }
 }
-myBag.addEventListener("mouseleave", function () {
+cartIcon.addEventListener("mouseleave", function () {
   setTimeout(hideCart, 5000);
 });
 

@@ -1,7 +1,6 @@
 import { addToLocalStorage } from "../../constants/storage/localStorage.js";
 import { displayMessage, disappearMessage } from "../displayMessage.js";
 import { createCart } from "./createCart.js";
-import { displayCart } from "./displayCart.js";
 
 const cart = document.querySelector(".cart");
 const key = "cart-items";

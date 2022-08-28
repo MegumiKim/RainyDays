@@ -96,8 +96,8 @@ export function createFavoriteItem(product) {
   const heart = createRemoveFromFavButton(product);
   const children = createElement("div", "summary", undefined, [
     name,
-    heart,
     price,
+    heart,
   ]);
   const element = createElement("div", "favorite", undefined, [img, children]);
 

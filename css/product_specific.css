@@ -19,6 +19,9 @@ h1 {
   flex: 1;
 } */
 
+.productName {
+  text-align: right;
+}
 .size {
   font-weight: bold;
   display: flex;
@@ -34,7 +37,7 @@ h1 {
 }
 
 .price {
-  /* font-weight: bold; */
+  font-weight: bold;
   font-size: 1.2rem;
   /* text-align: left; */
 }

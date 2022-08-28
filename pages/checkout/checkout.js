@@ -1,6 +1,7 @@
 import { validateCheckoutForm } from "../../components/validateForm.js";
 import { displayMessage } from "../../components/displayMessage.js";
 import { displayCart } from "../../components/cart/displayCart.js";
+import { createCart } from "../../components/cart/createCart.js";
 
 const question = document.querySelector("#question");
 const sscHint = document.querySelector("#csc-hint");
@@ -26,4 +27,5 @@ checkoutForm.onsubmit = function (event) {
   }
 };
 
-displayCart(orderSummary);
+// displayCart(orderSummary);
+createCart(orderSummary);

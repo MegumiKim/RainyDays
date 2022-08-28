@@ -3,6 +3,7 @@ import {
   loadFromStorage,
   removeFromStorage,
 } from "../../constants/storage/localStorage.js";
+// import { createFavs } from "../../pages/my-page/myPage.js";
 import { displayMessage, disappearMessage } from "../displayMessage.js";
 
 const userMessage = document.querySelector(".user-message");
@@ -27,13 +28,11 @@ export function addToFav(event) {
     setTimeout(disappearMessage, 3000);
   } else {
     removeFromStorage(key, itemID);
-    // location.reload();
-    // userAlert = displayMessage("success", "Removed From My Favorite");
-    // userMessage.innerHTML = "";
     userMessage.innerHTML = displayMessage(
       "success",
       "Removed From My Favorite"
     );
     setTimeout(disappearMessage, 3000);
+    // createFavs();
   }
 }

@@ -1,4 +1,3 @@
-import { displayCart } from "../../components/cart/displayCart.js";
 import { displayMessage } from "../../components/displayMessage.js";
 import { createProductSpecificHtmlObject } from "../../components/createHtmlElements/createHtmlObjects.js";
 
@@ -21,7 +20,7 @@ async function fetchProduct() {
   } catch (error) {
     parent.innerHTML = displayMessage(
       "error",
-      "Ooops! Something went wrong while getting data for you"
+      "Ooops! Failed to get data for you"
     );
     console.log(error);
   }
