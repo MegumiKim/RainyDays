@@ -14,14 +14,15 @@ body {
 }
 
 main {
-  max-width: 800px;
-  margin: 0 auto;
+  /* max-width: 800px;
+  margin: 0 auto; */
   padding: 0 10%;
   align-content: flex-start;
 }
 
 .main_column {
   max-width: 400px;
+  margin: auto;
 }
 
 h1,
@@ -138,9 +139,6 @@ footer {
   border: none;
 }
 
-.fav-container {
-  display: none;
-}
 nav,
 #search,
 #hamburger-menu {
@@ -211,10 +209,11 @@ nav a:hover {
 
 .favorite {
   display: flex;
-  flex: 1;
+  flex-direction: column;
+  /* flex: 1; */
   flex-wrap: wrap;
-  max-width: 400px;
-  margin: 20px;
+  width: 200px;
+  margin: 20px auto;
   align-items: center;
   padding: 1em;
   border: solid var(--color_subtle) 3px;
@@ -224,4 +223,6 @@ nav a:hover {
 .fav-container {
   display: flex;
   flex-direction: column;
+  margin: auto;
+  max-width: 800px;
 }
