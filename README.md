@@ -27,3 +27,4 @@ git clone git@github.com:Noroff-FEU-Assignments/cross-course-project-MegumiKim.g
 ## Contact
 [My LinkedIn page](www.linkedin.com/in/kimuramegumi/)
 
+![rainydays_screen](https://user-images.githubusercontent.com/64102873/194509319-5e7b038a-62b0-4f53-96ae-6c14476973a0.JPG)
