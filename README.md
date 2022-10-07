@@ -13,7 +13,7 @@ Development Stages
 - User test - Adobe XD prototype.
 - Create itinial site - HTML and CSS.
 - Add functionality - JavaScript.
-- General product content - WP REST API
+- Generate product content - WP REST API
 
 ## Installing
 
