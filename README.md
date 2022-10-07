@@ -2,7 +2,7 @@
 Cross corse project at Noroff
 
 ## Description
-An e-commerce website for an fictious outdoor jacket brand. 
+An e-commerce website for an fictitious outdoor jacket brand. 
 Initially built with HTML and CSS. Later adding JavaScript and WordPress as a headless CMS.
 
 ### Development stages
