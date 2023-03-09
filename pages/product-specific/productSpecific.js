@@ -4,7 +4,8 @@ import { createProductSpecificHtmlObject } from "../../components/createHtmlElem
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const proxy = "https://noroffcors.herokuapp.com/";
+const proxy = "https://noroffcors.onrender.com/";
+
 const url =
   proxy + `https://kimuramegumi.site/test/wp-json/wc/store/products/${id}`;
 

@@ -4,6 +4,7 @@ import { displayMessage } from "../../components/displayMessage.js";
 export async function getItems(url, parent) {
   try {
     const response = await fetch(url);
+
     const products = await response.json();
 
     parent.innerHTML = "";
