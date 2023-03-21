@@ -1,0 +1,21 @@
+.corporate_info {
+  border: var(--color_subtle) 2px solid;
+  border-radius: 5px;
+  padding: 30px 40px;
+}
+
+#address {
+  margin: 20px auto;
+}
+
+.map {
+  margin-top: 20px;
+}
+
+#message {
+  min-height: 100px;
+}
+
+.cta {
+  margin-top: 20px;
+}

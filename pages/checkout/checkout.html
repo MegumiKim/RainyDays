@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="please fill necessary details for checkout"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/variables.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/checkout.css" />
+    <link rel="stylesheet" href="/CSS/media.css" />
+
+    <script
+      src="https://kit.fontawesome.com/175ecb4e25.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>RAINY DAYS | CHECKOUT</title>
+    <!-- Hotjar Tracking Code for https://gifted-hoover-253ce2.netlify.app -->
+
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="logo">
+        <img src="/images/logo.png" class="logo_img" alt="Rainydays_logo" />
+      </a>
+      <input type="checkbox" id="hamburger-menu" />
+      <label for="hamburger-menu" id="hamburger-icon"
+        ><i class="fas fa-bars"></i
+      ></label>
+
+      <div class="header-right">
+        <a href="/pages/log-in/log-in.html" class="log-in" alt="My Favorites"
+          ><i class="far fa-heart"></i
+        ></a>
+        <div class="bag-wrapper">
+          <i class="fas fa-shopping-bag my-bag"></i>
+          <div class="numberOfItemsInTheCart"></div>
+        </div>
+      </div>
+    </header>
+    <main class="main_column checkout">
+      <div class="breadcrumb">
+        <a href="javascript:history.back()" 
+          ><i class="fas fa-chevron-left" alt="go back"></i
+        ></a></a>
+        <a href="../../index.html">HOME /</a>
+        <a href="../products/products.html" >OUR PRODUCTS /</a>
+        <a href="../checkout/checkout.html" id="current">CHECKOUT</a>
+        <a> / PURCHASE CONFIRMATION</a>
+      </div>
+      </section>
+      <h1>CHECKOUT</h1>
+
+      <section class="section_form">
+        <form id="checkoutForm">
+
+          <fieldset class="shipping_form">
+            <h2>Shipping Address</h2>
+            <label for="name">NAME</label>
+            <input type="text" id="name" class="form__input" />
+            <div class="form-error name-error"></div>
+            <label for="address">ADDRESS (min 4 letters)</label>
+            <input type="text" id="address" class="form__input" />
+            <div class="form-error address-error"></div>
+            <label for="zip">ZIP CODE (4 digits)</label>
+            <input type="text" id="zip" maxlength="4" class="form__input" />
+            <div class="form-error zip-error"></div>
+            <label for="tel">PHONE NUMBER (min 4 digits)</label>
+            <input type="tel" id="tel" class="form__input" />
+            <div class="form-error tel-error"></div>
+            <label for="email">EMAIL (example@email.com)</label>
+            <input type="email" id="email" class="form__input" />
+            <div class="form-error email-error"></div>
+          </fieldset>
+          <fieldset class="payment_form">
+            <h2>Payment Details</h2>
+            <label for="card_type">CARD TYPE</label>
+            <select name="card_type" id="card_type" class="form__input">
+              <option value="visa">VISA</option>
+              <option value="master">MASTER</option>
+              <option value="amex">AMERICAN EXPRESS</option>
+            </select>
+            <label for="card-name">CARD HOLDER'S NAME</label>
+            <input type="name" id="card-name" class="form__input" />
+            <div class="form-error card-name-error"></div>
+            <label for="card-number">CARD NUMBER (min 4 digits)</label>
+            <input
+              name="card-number"
+              type="tel"
+              pattern="\d*"
+              maxlength="19"
+              class="form__input"
+              id="card-number"
+            />
+            <div class="form-error card-error"></div>
+            <label for="expiry">EXPIRY (4 digits)</label>
+            <input
+              id="expiry"
+              class="form__input"
+              name="credit-expiry"
+              type="tel"
+              class="form__input"
+              pattern="\d*"
+              maxlength="4"
+            />
+            <div class="form-error expiry-error"></div>
+            <label for="csc"
+              >SECURITY CODE (3 digits)
+
+                <i class="fa-regular fa-circle-question" id="question"></i>
+            <p id="csc-hint">3 digits printed on your card</p>
+            <input
+              type="tel"
+              id="csc"
+              class="form__input"
+              pattern="\d*"
+              maxlength="3"
+            />
+            <div class="form-error csc-error"></div>
+          </fieldset>
+          <div class="user-alert"></div>
+          <button type="submit" class="cta" id="pay-button">
+            Confirm & Pay
+          </button>
+        </form>
+      </section>
+      <section class="order_summary checkout">
+        <h2>Order Summary</h2>
+ <div class = 'my-bag'></div>
+ <div class = "cart"></div>
+      </section>
+    </main>
+    <footer>
+      <div class="copyright">RAINYDAYS &copy;</div>
+      <div class="social-media">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </footer>
+    <script src="./checkout.js" type="module"></script>
+  </body>
+</html>

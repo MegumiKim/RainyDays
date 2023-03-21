@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Order success! Thank you for your purchase.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/CSS/styles.css">
+  <link rel="stylesheet" href="/CSS/variables.css">
+  <link rel="stylesheet" href="/CSS/confirmation.css">
+  <link rel="stylesheet" href="/CSS/media.css">
+  <script src="https://kit.fontawesome.com/175ecb4e25.js" crossorigin="anonymous"></script>
+  <title>RAINY DAYS | ORDER CONFIRMATION</title>
+  <!-- Hotjar Tracking Code for https://gifted-hoover-253ce2.netlify.app -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:2964893,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+</head>
+<body>
+  <header>
+    <a href='../../index.html' class='logo'>
+      <img src='/images/logo.png' class='logo_img' alt='Rainydays_logo'>
+    </a>
+    <input type="checkbox" id="hamburger-menu">
+    <label for="hamburger-menu" id=hamburger-icon><i class="fas fa-bars"></i></label>
+    <nav>
+      <a href="../../index.html">HOME</a>
+      <a href="/pages/products/products.html">PRODUCTS</a>
+      <a href="/pages/about/about.html">ABOUT</a>
+      <a href="/pages/contact/contact.html">CONTACT</a>
+    </nav>
+    <div class="header-right">
+      <a href="/pages/log-in/log-in.html" class="log-in" 
+      ><i class="far fa-heart" alt="My Favorites"></i
+    ></a>
+    <div class="bag-wrapper">
+      <i class="fas fa-shopping-bag my-bag"></i>
+      <div class="numberOfItemsInTheCart"></div>
+    </div>
+    </div>
+  </header>
+  <main class='main_column'>
+    <div class="breadcrumb">
+      <a href="/pages/products/products.html"><i class="fas fa-chevron-left"></i></a>
+      <a href="../product-specific/product_specific.html">SUPER COMFY JACKET /</a>
+      <a href="../checkout/checkout.html">CHECKOUT /</a>
+      <a href="../checkout/checkout.html" id="current">PURCHASE CONFIRMATION</a>
+    </div>
+    <h1>Purchase confirmation</h1>
+    <p class='thank_you'>Congratulations!! <br>Your new jacket is on its way</br></p>
+        <section class='order_summary delivery'>
+          <h2>Delivery Summary</h2>
+          <div class="wrapper">
+            <h3>name</h3>
+            <p>Your Name</p>
+          </div>
+          <div class="wrapper">
+            <h3>delivery address</h3>
+            <p>Bergen Street 1 <br>1010 Oslo</br></p>
+          </div>
+          <div class="wrapper">
+            <h3>PHONE</h3>
+            <p>123 456 7890</p>
+          </div>
+          <div class="wrapper">
+            <h3>delivery date</h3>
+            <p>01.03.2022</p>
+          </div>
+        </section>
+        <section class="order_summary checkout">
+          <h2>Order Summary</h2>
+          <div class ='my-bag'></div>
+          <div class="cart"></div>
+        </section>
+        <p id='support'>Any issue? <br>Please contact <a class="contactLink" href='/pages/contact/contact.html' >customer service.</a></br></p>
+        <a href="/pages/products/products.html" class='cta'>See more products</a>
+      </main>
+    <footer>
+      <div class="copyright">RAINYDAYS &copy;</div>
+      <div class="social-media">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </footer>
+    <script src="/pages/order-confirmation/orderConfirmation.js" type="module"></script>
+  </body>
+</html>

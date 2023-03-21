@@ -1,0 +1,10 @@
+:root {
+  --color_header: #323440;
+  --color_white: #fff;
+  --color_yellow: #f2b441;
+  --color_blue: #096194;
+  --color_subtle: rgb(240, 236, 236);
+  --font_h1: "baloo 2";
+  --font_p: "Jost", "baloo 2", Verdana, Geneva, Tahoma, sans-serif;
+  --border_subtle: var(--color_subtle) 2px solid;
+}

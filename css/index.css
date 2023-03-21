@@ -1,0 +1,122 @@
+/* welcome */
+
+.index_main {
+  width: 100%;
+  padding: 0pt;
+}
+
+.welcome {
+  background: url("../images/home/home.jpg") no-repeat center/cover;
+  background-position-y: 10%;
+  background-position-x: right;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 60vh;
+  color: var(--color_white);
+}
+
+.welcome h1,
+.welcome h2 {
+  margin: 0 10%;
+  text-align: center;
+}
+
+h1 {
+  font: 1.8rem var(--font_h1);
+}
+
+.welcome h2 {
+  font-weight: normal;
+  text-transform: capitalize;
+}
+
+.welcome a {
+  margin-top: 30px;
+}
+
+.cta-welcome:hover {
+  color: var(--color_header);
+}
+
+/* .search_results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 800px;
+  padding: 40px 0px;
+  margin: auto;
+} */
+
+/* featured categories */
+
+.featured_categories {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 10%;
+}
+
+.featured_categories h2 {
+  margin: 20px 0;
+}
+
+.featured_grid {
+  display: grid;
+  gap: 40px 30px;
+}
+
+.category-name {
+  text-decoration: none;
+  color: var(--color_header);
+  display: block;
+  background-color: var(--color_white);
+  opacity: 85%;
+  position: relative;
+  top: 65%;
+  text-align: center;
+  font-size: 1.2em;
+}
+/* 
+.categories_button:hover {
+  opacity: 95%;
+} */
+
+.category {
+  min-height: 200px;
+  background-size: 100%;
+  text-decoration: none;
+}
+
+.category:hover {
+  opacity: 80%;
+}
+
+.women {
+  background-image: url("../images/home/women.jpg");
+  background-position-y: 55%;
+}
+
+.men {
+  background-image: url("../images/home/men.jpg");
+  background-position-y: 30%;
+}
+
+.new_arrivals {
+  background-image: url("../images/home/arrivals.jpg");
+  background-position-y: 10%;
+}
+
+.hiking {
+  background-image: url("../images/home/hiking.jpg");
+  background-position-y: 20%;
+}
+
+.winter {
+  background-image: url("../images/home/winter.jpg");
+  background-position-y: 40%;
+}
+
+.spring {
+  background-image: url("../images/home/spring.jpg");
+  background-position-y: 20%;
+}

@@ -1,0 +1,45 @@
+.about_text {
+  margin: 20px auto;
+}
+
+.about_container {
+  grid-row: 2;
+  min-height: 200px;
+  background-size: 30%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+h2 {
+  margin: 30px auto 0 auto;
+}
+
+.about_container h3 {
+  position: absolute;
+  top: 40%;
+  background-color: white;
+  opacity: 80%;
+  text-align: center;
+}
+.about_container.comfort,
+.about_container.durable {
+  background-image: url(../images/about/c.png);
+}
+
+.about_container.stylish {
+  background-image: url(../images/about/quality.png);
+}
+
+.link-to-contact-page {
+  margin: 2em 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.link-to-contact-page a {
+  text-decoration: underline;
+}

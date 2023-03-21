@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="RAINYDAYS' contact details." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&family=Jost:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/variables.css" />
+    <link rel="stylesheet" href="/CSS/styles.css" />
+    <link rel="stylesheet" href="/CSS/contact.css" />
+    <link rel="stylesheet" href="/CSS/media.css" />
+    <script
+      src="https://kit.fontawesome.com/175ecb4e25.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>RAINY DAYS | CONTACT</title>
+    <!-- Hotjar Tracking Code for https://gifted-hoover-253ce2.netlify.app -->
+
+  </head>
+  <body>
+    <header>
+      <a href="../../index.html" class="logo">
+        <img src="/images/logo.png" class="logo_img" alt="Rainydays_logo" />
+      </a>
+      <input type="checkbox" id="hamburger-menu" />
+      <label for="hamburger-menu" id="hamburger-icon"
+        ><i class="fas fa-bars"></i
+      ></label>
+      <nav>
+        <a href="../../index.html">HOME</a>
+        <a href="/pages/products/products.html">PRODUCTS</a>
+        <a href="/pages/about/about.html">ABOUT</a>
+        <a href="/pages/contact/contact.html" class="current-page">CONTACT</a>
+      </nav>
+      <div class="header-right">
+<!-- <div class="search_container">
+          <label for="search" id="search_icon" class="fas fa-search"></label>
+          <input type="text" id="search" placeholder="ex: comfy, warm" />
+        </div> -->
+        <a href="/pages/log-in/log-in.html" class="log-in"
+          ><i class="far fa-heart" alt="My Favorites"></i
+        ></a>
+        <div class="bag-wrapper">
+                <div class="bag-wrapper">
+        <i class="fas fa-shopping-bag my-bag"></i>
+        <div class="numberOfItemsInTheCart"></div>
+      </div>
+      </div>
+      </div>
+    </header>
+    <main>
+      <div class="breadcrumb">
+        <a href="javascript:history.back()" 
+          ><i class="fas fa-chevron-left" alt="go back"></i
+        ></a></a>
+        <a href="../../index.html">HOME /</a>
+        <a href="/pages/contact/contact.html" id="current">CONTACT</a>
+      </div>
+      <div class="under-breadcrumb">
+      <h1>CONTACT</h1>
+      <div class="main_column">
+      <section class="corporate_info">
+        <h2>RAINYDAYS' AS</h2>
+        <p id="address">Street 1 <br />1234 Oslo<br />Norway</p>
+
+        <p>+47 1234 5678</p>
+        <p>customer@rainydays.com</p>
+        <a class="map" href="https://goo.gl/maps/B74XLPdEAk8QVQrx7">
+          <img
+            src="../../images/about/oslomap.jpg"
+            alt="map indicating RANYDAY'S office location"
+          />
+        </a>
+      </section>
+
+      <!-- <form id="contact-form" action="message.php" method="post"> -->
+      <form class="contact-form">
+        <h2>Customer Service</h2>
+        <div class="user-alert"></div>
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          class="form__input"
+          placeholder=" min 2 letters "
+          required
+        />
+        <div class="form-error name-error"></div>
+        <label for="subject">Subject</label>
+        <input
+          type="text"
+          id="subject"
+          class="form__input"
+          placeholder=" min 5 letters"
+          required
+        />
+        <div class="form-error subject-error"></div>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          class="form__input"
+          placeholder=" example@email.com"
+          required
+        />
+        <div class="form-error email-error"></div>
+        <input type="checkbox" id="sign-up" name="sign-up" class="checkbox" />
+        <label for="sign-up">Sign-up for products updates</label>
+        <label for="texts">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          class="form__input"
+          placeholder=" min 5 letters"
+          required
+        ></textarea>
+        <div class="form-error message-error"></div>
+        <input type="submit" value="send" name="message" class="cta form" />
+      </form>
+      </div>
+    </div>
+    </main>
+    <footer>
+      <div class="copyright">RAINYDAYS &copy;</div>
+      <div class="social-media">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-twitter"></i>
+      </div>
+    </footer>
+    <div class="cart">
+
+    </div>
+    <script src="/components/cart/displayCart.js" type="module"></script>
+    <script src="/pages/contact/contact.js" type="module"></script>
+  </body>
+</html>
